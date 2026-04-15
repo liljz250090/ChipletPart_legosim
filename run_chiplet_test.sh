@@ -27,6 +27,7 @@ show_help() {
     echo "  --generations <num>   Specify number of generations for genetic algorithm (default: 50)"
     echo "  --population <num>    Specify population size for genetic algorithm (default: 50)"
     echo "  --evaluate-partition  Specify path to partition file for evaluation"
+    echo "  --3dblox             Use new/<testcase>.3dbx and new/<testcase>.3dbv as frontend input"
     echo "  --help                Display this help message"
     echo
     echo "Examples:"
@@ -34,6 +35,7 @@ show_help() {
     echo "  $0 design2 --genetic --tech-nodes 7nm,10nm,14nm --seed 123"
     echo "  $0 design3 --canonical-ga --tech-nodes 7nm,14nm,28nm --generations 30"
     echo "  $0 design4 --tech-enum --tech-nodes 7nm,14nm,28nm --max-partitions 3"
+    echo "  $0 ga100 --seed 1 --3dblox"
 }
 
 # Check if no arguments were provided
@@ -66,6 +68,7 @@ USE_TECH_ENUM=false
 DETAILED_OUTPUT=false
 TECH_NODES=""
 EVALUATE_PARTITION=""
+USE_3DBLOX=false
 
 # Parse command line arguments
 while [ "$#" -gt 0 ]; do
@@ -126,6 +129,10 @@ while [ "$#" -gt 0 ]; do
             EVALUATE_PARTITION="$2"
             shift 2
             ;;
+        --3dblox)
+            USE_3DBLOX=true
+            shift
+            ;;
         *)
             echo -e "${RED}Error: Unknown option: $1${NC}"
             show_help
@@ -160,18 +167,34 @@ ASSEMBLY="${TEST_DATA_DIR}/assembly_process_definitions.xml"
 TEST="${TEST_DATA_DIR}/test_definitions.xml"
 NETLIST="${TEST_DATA_DIR}/block_level_netlist.xml"
 BLOCKS="${TEST_DATA_DIR}/block_definitions.txt"
+DBX="${BASE_DIR}/new/${TEST_CASE_NAME}.3dbx"
+DBV="${BASE_DIR}/new/${TEST_CASE_NAME}.3dbv"
 
-# Check that all required files exist
-for file in "$IO" "$LAYER" "$WAFER" "$ASSEMBLY" "$TEST" "$NETLIST" "$BLOCKS"; do
-    if [ ! -f "$file" ]; then
-        echo -e "${RED}Error: File not found: $file${NC}"
-        echo "Please ensure the test data exists in ${TEST_DATA_DIR}."
-        exit 1
-    fi
-done
+if [ "$USE_3DBLOX" = true ]; then
+    for file in "$DBX" "$DBV"; do
+        if [ ! -f "$file" ]; then
+            echo -e "${RED}Error: File not found: $file${NC}"
+            echo "Please ensure the converted 3dblox files exist in ${BASE_DIR}/new."
+            exit 1
+        fi
+    done
+else
+    # Check that all required files exist
+    for file in "$IO" "$LAYER" "$WAFER" "$ASSEMBLY" "$TEST" "$NETLIST" "$BLOCKS"; do
+        if [ ! -f "$file" ]; then
+            echo -e "${RED}Error: File not found: $file${NC}"
+            echo "Please ensure the test data exists in ${TEST_DATA_DIR}."
+            exit 1
+        fi
+    done
+fi
 
 # Check if we're evaluating an existing partition
 if [ -n "$EVALUATE_PARTITION" ]; then
+    if [ "$USE_3DBLOX" = true ]; then
+        echo -e "${RED}Error: --evaluate-partition is not wired to the --3dblox script path yet.${NC}"
+        exit 1
+    fi
     if [ ! -f "$EVALUATE_PARTITION" ]; then
         echo -e "${RED}Error: Partition file not found: $EVALUATE_PARTITION${NC}"
         exit 1
@@ -230,21 +253,34 @@ if [ "$USE_TECH_ENUM" = true ]; then
     fi
     
     # Run the executable with technology enumeration
-    "$EXECUTABLE" \
-        "$IO" \
-        "$LAYER" \
-        "$WAFER" \
-        "$ASSEMBLY" \
-        "$TEST" \
-        "$NETLIST" \
-        "$BLOCKS" \
-        "$DEFAULT_REACH" \
-        "$DEFAULT_SEPARATION" \
-        --tech-enum \
-        --tech-nodes "$TECH_NODES" \
-        --max-partitions "$DEFAULT_MAX_PARTITIONS" \
-        $DETAIL_FLAG \
-        --seed "$DEFAULT_SEED"
+    if [ "$USE_3DBLOX" = true ]; then
+        "$EXECUTABLE" \
+            --3dblox "$DBX" \
+            --3dbv "$DBV" \
+            "$DEFAULT_REACH" \
+            "$DEFAULT_SEPARATION" \
+            --tech-enum \
+            --tech-nodes "$TECH_NODES" \
+            --max-partitions "$DEFAULT_MAX_PARTITIONS" \
+            $DETAIL_FLAG \
+            --seed "$DEFAULT_SEED"
+    else
+        "$EXECUTABLE" \
+            "$IO" \
+            "$LAYER" \
+            "$WAFER" \
+            "$ASSEMBLY" \
+            "$TEST" \
+            "$NETLIST" \
+            "$BLOCKS" \
+            "$DEFAULT_REACH" \
+            "$DEFAULT_SEPARATION" \
+            --tech-enum \
+            --tech-nodes "$TECH_NODES" \
+            --max-partitions "$DEFAULT_MAX_PARTITIONS" \
+            $DETAIL_FLAG \
+            --seed "$DEFAULT_SEED"
+    fi
         
 elif [ "$USE_CANONICAL_GA" = true ]; then
     # Make sure tech nodes are provided for canonical GA
@@ -265,21 +301,34 @@ elif [ "$USE_CANONICAL_GA" = true ]; then
     echo -e "${BLUE}Random seed: ${DEFAULT_SEED}${NC}"
     
     # Run the executable with canonical GA
-    "$EXECUTABLE" \
-        "$IO" \
-        "$LAYER" \
-        "$WAFER" \
-        "$ASSEMBLY" \
-        "$TEST" \
-        "$NETLIST" \
-        "$BLOCKS" \
-        "$DEFAULT_REACH" \
-        "$DEFAULT_SEPARATION" \
-        --canonical-ga \
-        --tech-nodes "$TECH_NODES" \
-        --generations "$DEFAULT_GENERATIONS" \
-        --population "$DEFAULT_POPULATION" \
-        --seed "$DEFAULT_SEED"
+    if [ "$USE_3DBLOX" = true ]; then
+        "$EXECUTABLE" \
+            --3dblox "$DBX" \
+            --3dbv "$DBV" \
+            "$DEFAULT_REACH" \
+            "$DEFAULT_SEPARATION" \
+            --canonical-ga \
+            --tech-nodes "$TECH_NODES" \
+            --generations "$DEFAULT_GENERATIONS" \
+            --population "$DEFAULT_POPULATION" \
+            --seed "$DEFAULT_SEED"
+    else
+        "$EXECUTABLE" \
+            "$IO" \
+            "$LAYER" \
+            "$WAFER" \
+            "$ASSEMBLY" \
+            "$TEST" \
+            "$NETLIST" \
+            "$BLOCKS" \
+            "$DEFAULT_REACH" \
+            "$DEFAULT_SEPARATION" \
+            --canonical-ga \
+            --tech-nodes "$TECH_NODES" \
+            --generations "$DEFAULT_GENERATIONS" \
+            --population "$DEFAULT_POPULATION" \
+            --seed "$DEFAULT_SEED"
+    fi
         
 elif [ "$USE_GENETIC" = true ]; then
     # Make sure tech nodes are provided for genetic partitioning
@@ -293,50 +342,61 @@ elif [ "$USE_GENETIC" = true ]; then
     echo -e "${BLUE}Generations: ${DEFAULT_GENERATIONS}, Population size: ${DEFAULT_POPULATION}${NC}"
     
     # Run the executable using technology assignment mode instead of genetic tech partitioning
-    echo "$EXECUTABLE" \
-        "$IO" \
-        "$LAYER" \
-        "$WAFER" \
-        "$ASSEMBLY" \
-        "$TEST" \
-        "$NETLIST" \
-        "$BLOCKS" \
-        "$DEFAULT_REACH" \
-        "$DEFAULT_SEPARATION" \
-        --genetic-tech-part \
-        --tech-nodes "$TECH_NODES" \
-        --generations "$DEFAULT_GENERATIONS" \
-        --population "$DEFAULT_POPULATION" \
-        --seed "$DEFAULT_SEED"
-    "$EXECUTABLE" \
-        "$IO" \
-        "$LAYER" \
-        "$WAFER" \
-        "$ASSEMBLY" \
-        "$TEST" \
-        "$NETLIST" \
-        "$BLOCKS" \
-        "$DEFAULT_REACH" \
-        "$DEFAULT_SEPARATION" \
-        "$TECH_NODES" \
-        --seed "$DEFAULT_SEED"
+    if [ "$USE_3DBLOX" = true ]; then
+        "$EXECUTABLE" \
+            --3dblox "$DBX" \
+            --3dbv "$DBV" \
+            "$DEFAULT_REACH" \
+            "$DEFAULT_SEPARATION" \
+            --genetic-tech-part \
+            --tech-nodes "$TECH_NODES" \
+            --generations "$DEFAULT_GENERATIONS" \
+            --population "$DEFAULT_POPULATION" \
+            --seed "$DEFAULT_SEED"
+    else
+        "$EXECUTABLE" \
+            "$IO" \
+            "$LAYER" \
+            "$WAFER" \
+            "$ASSEMBLY" \
+            "$TEST" \
+            "$NETLIST" \
+            "$BLOCKS" \
+            "$DEFAULT_REACH" \
+            "$DEFAULT_SEPARATION" \
+            --genetic-tech-part \
+            --tech-nodes "$TECH_NODES" \
+            --generations "$DEFAULT_GENERATIONS" \
+            --population "$DEFAULT_POPULATION" \
+            --seed "$DEFAULT_SEED"
+    fi
 else
     echo -e "${GREEN}Running standard partitioning for test case: ${TEST_CASE_NAME}${NC}"
     echo -e "${BLUE}Tech node: ${DEFAULT_TECH}${NC}"
     
     # Run the executable with standard partitioning
-    "$EXECUTABLE" \
-        "$IO" \
-        "$LAYER" \
-        "$WAFER" \
-        "$ASSEMBLY" \
-        "$TEST" \
-        "$NETLIST" \
-        "$BLOCKS" \
-        "$DEFAULT_REACH" \
-        "$DEFAULT_SEPARATION" \
-        "$DEFAULT_TECH" \
-        --seed "$DEFAULT_SEED"
+    if [ "$USE_3DBLOX" = true ]; then
+        "$EXECUTABLE" \
+            --3dblox "$DBX" \
+            --3dbv "$DBV" \
+            "$DEFAULT_REACH" \
+            "$DEFAULT_SEPARATION" \
+            "$DEFAULT_TECH" \
+            --seed "$DEFAULT_SEED"
+    else
+        "$EXECUTABLE" \
+            "$IO" \
+            "$LAYER" \
+            "$WAFER" \
+            "$ASSEMBLY" \
+            "$TEST" \
+            "$NETLIST" \
+            "$BLOCKS" \
+            "$DEFAULT_REACH" \
+            "$DEFAULT_SEPARATION" \
+            "$DEFAULT_TECH" \
+            --seed "$DEFAULT_SEED"
+    fi
 fi
 
 exit_code=$?

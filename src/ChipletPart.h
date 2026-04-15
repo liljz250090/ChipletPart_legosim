@@ -35,6 +35,7 @@
 #pragma once
 //#include "FMRefiner.h"
 #include "Hypergraph.h"
+#include "ChipletPartIR.h"
 #include "Utilities.h"
 //#include "floorplan.h"
 
@@ -63,6 +64,12 @@ namespace chiplet {
 class ChipletPart {
 
 public:
+  enum class InputSource {
+    kLegacyXml,
+    kOpenDB,
+    k3DBlox
+  };
+
   ChipletPart();  // Default constructor
   
   // Constructor that accepts a seed
@@ -90,6 +97,12 @@ public:
   void ReadChipletGraphFromXML(std::string chiplet_io_file,
                               std::string chiplet_netlist_file,
                               std::string chiplet_blocks_file);
+  void Set3DBloxInput(const std::string& dbx_file, const std::string& dbv_file = std::string());
+
+  // OpenDB becomes a first-class frontend without changing the core algorithm.
+  void SetOpenDBInput(void* db_block_handle);
+  void ClearFrontendInput();
+  InputSource GetInputSource() const { return input_source_; }
 
   void TechAssignPartition(
       std::string chiplet_io_file,
@@ -220,6 +233,16 @@ public:
     bool detailed_output = false);
 
 private:
+  IRDesign ReadDesignFromXMLFiles(const std::string& chiplet_io_file,
+                                  const std::string& chiplet_netlist_file,
+                                  const std::string& chiplet_blocks_file);
+  void LoadFromIRDesign(const IRDesign& design);
+  void ReadChipletGraphFromOpenDB();
+  void ReadChipletGraphFrom3DBlox();
+  void PrepareInputGraph(const std::string& chiplet_io_file,
+                         const std::string& chiplet_netlist_file,
+                         const std::string& chiplet_blocks_file);
+  void WriteSolutionToOpenDBIfNeeded();
   // Helper method that converts XML files to hypergraph representation
   void ConvertXMLToHypergraph(const std::string& netlist_file,
                              const std::string& block_def_file);
@@ -300,6 +323,11 @@ private:
   std::unordered_map<std::string, float> io_map_;
   std::vector<float> reach_;
   std::vector<float> io_sizes_;
+  IRDesign current_design_;
+  InputSource input_source_ = InputSource::kLegacyXml;
+  void* opendb_block_handle_ = nullptr;
+  std::string threedblox_dbx_file_;
+  std::string threedblox_dbv_file_;
   // Map to store vertex names (for debugging and output)
   std::unordered_map<int, std::string> vertex_index_to_name_;
   std::unordered_map<std::string, int> vertex_name_to_index_;

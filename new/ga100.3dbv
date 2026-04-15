@@ -1,0 +1,8189 @@
+Header:
+  version: '2.0'
+  unit: micron
+  precision: 1000
+ChipletDef:
+  sm_0:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_0
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_1:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_1
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_2:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_2
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_3:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_3
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_4:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_4
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_5:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_5
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_6:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_6
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_7:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_7
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_8:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_8
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_9:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_9
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_10:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_10
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_11:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_11
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_12:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_12
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_13:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_13
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_14:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_14
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_15:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_15
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_16:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_16
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_17:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_17
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_18:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_18
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_19:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_19
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_20:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_20
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_21:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_21
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_22:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_22
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_23:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_23
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_24:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_24
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_25:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_25
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_26:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_26
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_27:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_27
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_28:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_28
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_29:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_29
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_30:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_30
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_31:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_31
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_32:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_32
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_33:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_33
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_34:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_34
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_35:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_35
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_36:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_36
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_37:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_37
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_38:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_38
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_39:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_39
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_40:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_40
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_41:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_41
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_42:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_42
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_43:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_43
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_44:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_44
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_45:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_45
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_46:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_46
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_47:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_47
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_48:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_48
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_49:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_49
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_50:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_50
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_51:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_51
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_52:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_52
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_53:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_53
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_54:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_54
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_55:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_55
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_56:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_56
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_57:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_57
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_58:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_58
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_59:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_59
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_60:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_60
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_61:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_61
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_62:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_62
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_63:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_63
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_64:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_64
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_65:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_65
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_66:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_66
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_67:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_67
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_68:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_68
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_69:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_69
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_70:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_70
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_71:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_71
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_72:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_72
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_73:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_73
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_74:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_74
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_75:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_75
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_76:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_76
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_77:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_77
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_78:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_78
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_79:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_79
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_80:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_80
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_81:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_81
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_82:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_82
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_83:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_83
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_84:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_84
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_85:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_85
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_86:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_86
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_87:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_87
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_88:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_88
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_89:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_89
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_90:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_90
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_91:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_91
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_92:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_92
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_93:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_93
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_94:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_94
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_95:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_95
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_96:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_96
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_97:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_97
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_98:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_98
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_99:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_99
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_100:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_100
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_101:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_101
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_102:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_102
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_103:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_103
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_104:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_104
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_105:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_105
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_106:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_106
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_107:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_107
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_108:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_108
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_109:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_109
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_110:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_110
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_111:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_111
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_112:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_112
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_113:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_113
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_114:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_114
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_115:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_115
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_116:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_116
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_117:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_117
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_118:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_118
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_119:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_119
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_120:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_120
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_121:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_121
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_122:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_122
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_123:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_123
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_124:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_124
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_125:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_125
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_126:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_126
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  sm_127:
+    type: die
+    design_area:
+    - 1865.476
+    - 1865.476
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1865.476
+          - 0.0
+        - - 1865.476
+          - 1865.476
+        - - 0.0
+          - 1865.476
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: sm_127
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  l2_0:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_0
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0000
+        - link_0001
+        - link_0002
+        - link_0003
+        - link_0004
+        - link_0005
+        - link_0006
+        - link_0007
+        - link_0008
+        - link_0009
+  l2_1:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_1
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0010
+        - link_0011
+        - link_0012
+        - link_0013
+        - link_0014
+        - link_0015
+        - link_0016
+        - link_0017
+        - link_0018
+        - link_0019
+  l2_2:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_2
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0020
+        - link_0021
+        - link_0022
+        - link_0023
+        - link_0024
+        - link_0025
+        - link_0026
+        - link_0027
+        - link_0028
+        - link_0029
+  l2_3:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_3
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0030
+        - link_0031
+        - link_0032
+        - link_0033
+        - link_0034
+        - link_0035
+        - link_0036
+        - link_0037
+        - link_0038
+        - link_0039
+  l2_4:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_4
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0040
+        - link_0041
+        - link_0042
+        - link_0043
+        - link_0044
+        - link_0045
+        - link_0046
+        - link_0047
+        - link_0048
+        - link_0049
+  l2_5:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_5
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0050
+        - link_0051
+        - link_0052
+        - link_0053
+        - link_0054
+        - link_0055
+        - link_0056
+        - link_0057
+        - link_0058
+        - link_0059
+  l2_6:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_6
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0060
+        - link_0061
+        - link_0062
+        - link_0063
+        - link_0064
+        - link_0065
+        - link_0066
+        - link_0067
+        - link_0068
+        - link_0069
+  l2_7:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_7
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0070
+        - link_0071
+        - link_0072
+        - link_0073
+        - link_0074
+        - link_0075
+        - link_0076
+        - link_0077
+        - link_0078
+        - link_0079
+  l2_8:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_8
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0080
+        - link_0081
+        - link_0082
+        - link_0083
+        - link_0084
+        - link_0085
+        - link_0086
+        - link_0087
+        - link_0088
+        - link_0089
+  l2_9:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_9
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0090
+        - link_0091
+        - link_0092
+        - link_0093
+        - link_0094
+        - link_0095
+        - link_0096
+        - link_0097
+        - link_0098
+        - link_0099
+  l2_10:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_10
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0100
+        - link_0101
+        - link_0102
+        - link_0103
+        - link_0104
+        - link_0105
+        - link_0106
+        - link_0107
+        - link_0108
+        - link_0109
+  l2_11:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_11
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0110
+        - link_0111
+        - link_0112
+        - link_0113
+        - link_0114
+        - link_0115
+        - link_0116
+        - link_0117
+        - link_0118
+        - link_0119
+  l2_12:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_12
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0120
+        - link_0121
+        - link_0122
+        - link_0123
+        - link_0124
+        - link_0125
+        - link_0126
+        - link_0127
+        - link_0128
+        - link_0129
+  l2_13:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_13
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0130
+        - link_0131
+        - link_0132
+        - link_0133
+        - link_0134
+        - link_0135
+        - link_0136
+        - link_0137
+        - link_0138
+        - link_0139
+  l2_14:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_14
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0140
+        - link_0141
+        - link_0142
+        - link_0143
+        - link_0144
+        - link_0145
+        - link_0146
+        - link_0147
+        - link_0148
+        - link_0149
+  l2_15:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_15
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0150
+        - link_0151
+        - link_0152
+        - link_0153
+        - link_0154
+        - link_0155
+        - link_0156
+        - link_0157
+        - link_0158
+        - link_0159
+  l2_16:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_16
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0160
+        - link_0161
+        - link_0162
+        - link_0163
+        - link_0164
+        - link_0165
+        - link_0166
+        - link_0167
+        - link_0168
+        - link_0169
+  l2_17:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_17
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0170
+        - link_0171
+        - link_0172
+        - link_0173
+        - link_0174
+        - link_0175
+        - link_0176
+        - link_0177
+        - link_0178
+        - link_0179
+  l2_18:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_18
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0180
+        - link_0181
+        - link_0182
+        - link_0183
+        - link_0184
+        - link_0185
+        - link_0186
+        - link_0187
+        - link_0188
+        - link_0189
+  l2_19:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_19
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0190
+        - link_0191
+        - link_0192
+        - link_0193
+        - link_0194
+        - link_0195
+        - link_0196
+        - link_0197
+        - link_0198
+        - link_0199
+  l2_20:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_20
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0200
+        - link_0201
+        - link_0202
+        - link_0203
+        - link_0204
+        - link_0205
+        - link_0206
+        - link_0207
+        - link_0208
+        - link_0209
+  l2_21:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_21
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0210
+        - link_0211
+        - link_0212
+        - link_0213
+        - link_0214
+        - link_0215
+        - link_0216
+        - link_0217
+        - link_0218
+        - link_0219
+  l2_22:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_22
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0220
+        - link_0221
+        - link_0222
+        - link_0223
+        - link_0224
+        - link_0225
+        - link_0226
+        - link_0227
+        - link_0228
+        - link_0229
+  l2_23:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_23
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0230
+        - link_0231
+        - link_0232
+        - link_0233
+        - link_0234
+        - link_0235
+        - link_0236
+        - link_0237
+        - link_0238
+        - link_0239
+  l2_24:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_24
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0240
+        - link_0241
+        - link_0242
+        - link_0243
+        - link_0244
+        - link_0245
+        - link_0246
+        - link_0247
+        - link_0248
+        - link_0249
+  l2_25:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_25
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0250
+        - link_0251
+        - link_0252
+        - link_0253
+        - link_0254
+        - link_0255
+        - link_0256
+        - link_0257
+        - link_0258
+        - link_0259
+  l2_26:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_26
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0260
+        - link_0261
+        - link_0262
+        - link_0263
+        - link_0264
+        - link_0265
+        - link_0266
+        - link_0267
+        - link_0268
+        - link_0269
+  l2_27:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_27
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0270
+        - link_0271
+        - link_0272
+        - link_0273
+        - link_0274
+        - link_0275
+        - link_0276
+        - link_0277
+        - link_0278
+        - link_0279
+  l2_28:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_28
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0280
+        - link_0281
+        - link_0282
+        - link_0283
+        - link_0284
+        - link_0285
+        - link_0286
+        - link_0287
+        - link_0288
+        - link_0289
+  l2_29:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_29
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0290
+        - link_0291
+        - link_0292
+        - link_0293
+        - link_0294
+        - link_0295
+        - link_0296
+        - link_0297
+        - link_0298
+        - link_0299
+  l2_30:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_30
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0300
+        - link_0301
+        - link_0302
+        - link_0303
+        - link_0304
+        - link_0305
+        - link_0306
+        - link_0307
+        - link_0308
+        - link_0309
+  l2_31:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_31
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0310
+        - link_0311
+        - link_0312
+        - link_0313
+        - link_0314
+        - link_0315
+        - link_0316
+        - link_0317
+        - link_0318
+        - link_0319
+  l2_32:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_32
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0320
+        - link_0321
+        - link_0322
+        - link_0323
+        - link_0324
+        - link_0325
+        - link_0326
+        - link_0327
+        - link_0328
+        - link_0329
+  l2_33:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_33
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0330
+        - link_0331
+        - link_0332
+        - link_0333
+        - link_0334
+        - link_0335
+        - link_0336
+        - link_0337
+        - link_0338
+        - link_0339
+  l2_34:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_34
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0340
+        - link_0341
+        - link_0342
+        - link_0343
+        - link_0344
+        - link_0345
+        - link_0346
+        - link_0347
+        - link_0348
+        - link_0349
+  l2_35:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_35
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0350
+        - link_0351
+        - link_0352
+        - link_0353
+        - link_0354
+        - link_0355
+        - link_0356
+        - link_0357
+        - link_0358
+        - link_0359
+  l2_36:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_36
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0360
+        - link_0361
+        - link_0362
+        - link_0363
+        - link_0364
+        - link_0365
+        - link_0366
+        - link_0367
+        - link_0368
+        - link_0369
+  l2_37:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_37
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0370
+        - link_0371
+        - link_0372
+        - link_0373
+        - link_0374
+        - link_0375
+        - link_0376
+        - link_0377
+        - link_0378
+        - link_0379
+  l2_38:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_38
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0380
+        - link_0381
+        - link_0382
+        - link_0383
+        - link_0384
+        - link_0385
+        - link_0386
+        - link_0387
+        - link_0388
+        - link_0389
+  l2_39:
+    type: die
+    design_area:
+    - 2747.726
+    - 2747.726
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2747.726
+          - 0.0
+        - - 2747.726
+          - 2747.726
+        - - 0.0
+          - 2747.726
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: l2_39
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0390
+        - link_0391
+        - link_0392
+        - link_0393
+        - link_0394
+        - link_0395
+        - link_0396
+        - link_0397
+        - link_0398
+        - link_0399
+  pcie:
+    type: die
+    design_area:
+    - 2275.961
+    - 2275.961
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2275.961
+          - 0.0
+        - - 2275.961
+          - 2275.961
+        - - 0.0
+          - 2275.961
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: pcie
+          area_mm2: 5.18
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0008
+        - link_0009
+        - link_0018
+        - link_0019
+        - link_0028
+        - link_0029
+        - link_0038
+        - link_0039
+        - link_0048
+        - link_0049
+        - link_0058
+        - link_0059
+        - link_0068
+        - link_0069
+        - link_0078
+        - link_0079
+        - link_0088
+        - link_0089
+        - link_0098
+        - link_0099
+        - link_0108
+        - link_0109
+        - link_0118
+        - link_0119
+        - link_0128
+        - link_0129
+        - link_0138
+        - link_0139
+        - link_0148
+        - link_0149
+        - link_0158
+        - link_0159
+        - link_0168
+        - link_0169
+        - link_0178
+        - link_0179
+        - link_0188
+        - link_0189
+        - link_0198
+        - link_0199
+        - link_0208
+        - link_0209
+        - link_0218
+        - link_0219
+        - link_0228
+        - link_0229
+        - link_0238
+        - link_0239
+        - link_0248
+        - link_0249
+        - link_0258
+        - link_0259
+        - link_0268
+        - link_0269
+        - link_0278
+        - link_0279
+        - link_0288
+        - link_0289
+        - link_0298
+        - link_0299
+        - link_0308
+        - link_0309
+        - link_0318
+        - link_0319
+        - link_0328
+        - link_0329
+        - link_0338
+        - link_0339
+        - link_0348
+        - link_0349
+        - link_0358
+        - link_0359
+        - link_0368
+        - link_0369
+        - link_0378
+        - link_0379
+        - link_0388
+        - link_0389
+        - link_0398
+        - link_0399
+  hbm_1024_phy_0:
+    type: die
+    design_area:
+    - 3144.837
+    - 3144.837
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 3144.837
+          - 0.0
+        - - 3144.837
+          - 3144.837
+        - - 0.0
+          - 3144.837
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: hbm_1024_phy_0
+          area_mm2: 9.89
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        used_io_types: []
+        incident_interconnects: []
+  hbm_1024_phy_1:
+    type: die
+    design_area:
+    - 3144.837
+    - 3144.837
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 3144.837
+          - 0.0
+        - - 3144.837
+          - 3144.837
+        - - 0.0
+          - 3144.837
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: hbm_1024_phy_1
+          area_mm2: 9.89
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        used_io_types: []
+        incident_interconnects: []
+  hbm_1024_phy_2:
+    type: die
+    design_area:
+    - 3144.837
+    - 3144.837
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 3144.837
+          - 0.0
+        - - 3144.837
+          - 3144.837
+        - - 0.0
+          - 3144.837
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: hbm_1024_phy_2
+          area_mm2: 9.89
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        used_io_types: []
+        incident_interconnects: []
+  hbm_1024_phy_3:
+    type: die
+    design_area:
+    - 3144.837
+    - 3144.837
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 3144.837
+          - 0.0
+        - - 3144.837
+          - 3144.837
+        - - 0.0
+          - 3144.837
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: hbm_1024_phy_3
+          area_mm2: 9.89
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        used_io_types: []
+        incident_interconnects: []
+  hbm_1024_phy_4:
+    type: die
+    design_area:
+    - 3144.837
+    - 3144.837
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 3144.837
+          - 0.0
+        - - 3144.837
+          - 3144.837
+        - - 0.0
+          - 3144.837
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: hbm_1024_phy_4
+          area_mm2: 9.89
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        used_io_types: []
+        incident_interconnects: []
+  hbm_1024_phy_5:
+    type: die
+    design_area:
+    - 3144.837
+    - 3144.837
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 3144.837
+          - 0.0
+        - - 3144.837
+          - 3144.837
+        - - 0.0
+          - 3144.837
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: hbm_1024_phy_5
+          area_mm2: 9.89
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        used_io_types: []
+        incident_interconnects: []
+  hbm_1536_ctrl_0:
+    type: die
+    design_area:
+    - 2849.561
+    - 2849.561
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2849.561
+          - 0.0
+        - - 2849.561
+          - 2849.561
+        - - 0.0
+          - 2849.561
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: hbm_1536_ctrl_0
+          area_mm2: 8.12
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0000
+        - link_0001
+        - link_0010
+        - link_0011
+        - link_0020
+        - link_0021
+        - link_0030
+        - link_0031
+        - link_0040
+        - link_0041
+        - link_0050
+        - link_0051
+        - link_0060
+        - link_0061
+        - link_0070
+        - link_0071
+        - link_0080
+        - link_0081
+        - link_0090
+        - link_0091
+        - link_0100
+        - link_0101
+        - link_0110
+        - link_0111
+        - link_0120
+        - link_0121
+        - link_0130
+        - link_0131
+        - link_0140
+        - link_0141
+        - link_0150
+        - link_0151
+        - link_0160
+        - link_0161
+        - link_0170
+        - link_0171
+        - link_0180
+        - link_0181
+        - link_0190
+        - link_0191
+        - link_0200
+        - link_0201
+        - link_0210
+        - link_0211
+        - link_0220
+        - link_0221
+        - link_0230
+        - link_0231
+        - link_0240
+        - link_0241
+        - link_0250
+        - link_0251
+        - link_0260
+        - link_0261
+        - link_0270
+        - link_0271
+        - link_0280
+        - link_0281
+        - link_0290
+        - link_0291
+        - link_0300
+        - link_0301
+        - link_0310
+        - link_0311
+        - link_0320
+        - link_0321
+        - link_0330
+        - link_0331
+        - link_0340
+        - link_0341
+        - link_0350
+        - link_0351
+        - link_0360
+        - link_0361
+        - link_0370
+        - link_0371
+        - link_0380
+        - link_0381
+        - link_0390
+        - link_0391
+  hbm_1536_ctrl_1:
+    type: die
+    design_area:
+    - 2849.561
+    - 2849.561
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2849.561
+          - 0.0
+        - - 2849.561
+          - 2849.561
+        - - 0.0
+          - 2849.561
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: hbm_1536_ctrl_1
+          area_mm2: 8.12
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0002
+        - link_0003
+        - link_0012
+        - link_0013
+        - link_0022
+        - link_0023
+        - link_0032
+        - link_0033
+        - link_0042
+        - link_0043
+        - link_0052
+        - link_0053
+        - link_0062
+        - link_0063
+        - link_0072
+        - link_0073
+        - link_0082
+        - link_0083
+        - link_0092
+        - link_0093
+        - link_0102
+        - link_0103
+        - link_0112
+        - link_0113
+        - link_0122
+        - link_0123
+        - link_0132
+        - link_0133
+        - link_0142
+        - link_0143
+        - link_0152
+        - link_0153
+        - link_0162
+        - link_0163
+        - link_0172
+        - link_0173
+        - link_0182
+        - link_0183
+        - link_0192
+        - link_0193
+        - link_0202
+        - link_0203
+        - link_0212
+        - link_0213
+        - link_0222
+        - link_0223
+        - link_0232
+        - link_0233
+        - link_0242
+        - link_0243
+        - link_0252
+        - link_0253
+        - link_0262
+        - link_0263
+        - link_0272
+        - link_0273
+        - link_0282
+        - link_0283
+        - link_0292
+        - link_0293
+        - link_0302
+        - link_0303
+        - link_0312
+        - link_0313
+        - link_0322
+        - link_0323
+        - link_0332
+        - link_0333
+        - link_0342
+        - link_0343
+        - link_0352
+        - link_0353
+        - link_0362
+        - link_0363
+        - link_0372
+        - link_0373
+        - link_0382
+        - link_0383
+        - link_0392
+        - link_0393
+  hbm_1536_ctrl_2:
+    type: die
+    design_area:
+    - 2849.561
+    - 2849.561
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2849.561
+          - 0.0
+        - - 2849.561
+          - 2849.561
+        - - 0.0
+          - 2849.561
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: hbm_1536_ctrl_2
+          area_mm2: 8.12
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0004
+        - link_0005
+        - link_0014
+        - link_0015
+        - link_0024
+        - link_0025
+        - link_0034
+        - link_0035
+        - link_0044
+        - link_0045
+        - link_0054
+        - link_0055
+        - link_0064
+        - link_0065
+        - link_0074
+        - link_0075
+        - link_0084
+        - link_0085
+        - link_0094
+        - link_0095
+        - link_0104
+        - link_0105
+        - link_0114
+        - link_0115
+        - link_0124
+        - link_0125
+        - link_0134
+        - link_0135
+        - link_0144
+        - link_0145
+        - link_0154
+        - link_0155
+        - link_0164
+        - link_0165
+        - link_0174
+        - link_0175
+        - link_0184
+        - link_0185
+        - link_0194
+        - link_0195
+        - link_0204
+        - link_0205
+        - link_0214
+        - link_0215
+        - link_0224
+        - link_0225
+        - link_0234
+        - link_0235
+        - link_0244
+        - link_0245
+        - link_0254
+        - link_0255
+        - link_0264
+        - link_0265
+        - link_0274
+        - link_0275
+        - link_0284
+        - link_0285
+        - link_0294
+        - link_0295
+        - link_0304
+        - link_0305
+        - link_0314
+        - link_0315
+        - link_0324
+        - link_0325
+        - link_0334
+        - link_0335
+        - link_0344
+        - link_0345
+        - link_0354
+        - link_0355
+        - link_0364
+        - link_0365
+        - link_0374
+        - link_0375
+        - link_0384
+        - link_0385
+        - link_0394
+        - link_0395
+  hbm_1536_ctrl_3:
+    type: die
+    design_area:
+    - 2849.561
+    - 2849.561
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2849.561
+          - 0.0
+        - - 2849.561
+          - 2849.561
+        - - 0.0
+          - 2849.561
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: hbm_1536_ctrl_3
+          area_mm2: 8.12
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0006
+        - link_0007
+        - link_0016
+        - link_0017
+        - link_0026
+        - link_0027
+        - link_0036
+        - link_0037
+        - link_0046
+        - link_0047
+        - link_0056
+        - link_0057
+        - link_0066
+        - link_0067
+        - link_0076
+        - link_0077
+        - link_0086
+        - link_0087
+        - link_0096
+        - link_0097
+        - link_0106
+        - link_0107
+        - link_0116
+        - link_0117
+        - link_0126
+        - link_0127
+        - link_0136
+        - link_0137
+        - link_0146
+        - link_0147
+        - link_0156
+        - link_0157
+        - link_0166
+        - link_0167
+        - link_0176
+        - link_0177
+        - link_0186
+        - link_0187
+        - link_0196
+        - link_0197
+        - link_0206
+        - link_0207
+        - link_0216
+        - link_0217
+        - link_0226
+        - link_0227
+        - link_0236
+        - link_0237
+        - link_0246
+        - link_0247
+        - link_0256
+        - link_0257
+        - link_0266
+        - link_0267
+        - link_0276
+        - link_0277
+        - link_0286
+        - link_0287
+        - link_0296
+        - link_0297
+        - link_0306
+        - link_0307
+        - link_0316
+        - link_0317
+        - link_0326
+        - link_0327
+        - link_0336
+        - link_0337
+        - link_0346
+        - link_0347
+        - link_0356
+        - link_0357
+        - link_0366
+        - link_0367
+        - link_0376
+        - link_0377
+        - link_0386
+        - link_0387
+        - link_0396
+        - link_0397

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 project(ChipletPart VERSION 1.0)
 
 # Specify the C++ standard.
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -60,12 +60,14 @@ endif()
 # METIS and GKlib (local installation)
 # ---------------------------------------------------------------------------
 # Set the METIS root directory based on your local installation.
-set(METIS_ROOT "/home/fetzfs_projects/TritonPart/bodhi/branch_chiplet/branch_JETCAS/ChipletPart/METIS")
+set(METIS_ROOT "/home/liljz25/ChipletPart/METIS")
 # Define GKlib root directory.
-set(GKLIB_ROOT "/home/fetzfs_projects/TritonPart/bodhi/branch_chiplet/branch_JETCAS/ChipletPart/GKlib")
+set(GKLIB_ROOT "/home/liljz25/ChipletPart/GKlib")
+
 
 # Include GKlib headers so that types like idx_t and real_t are defined.
 include_directories(${GKLIB_ROOT})
+include_directories(${GKLIB_ROOT}/include)
 
 if(EXISTS "${METIS_ROOT}/include/metis.h")
     add_definitions(-DIDXTYPEWIDTH=64)
@@ -74,9 +76,9 @@ if(EXISTS "${METIS_ROOT}/include/metis.h")
     include_directories(${METIS_ROOT}/include)
     
     # Build GKlib as a static library.
-    file(GLOB GKLIB_SOURCES "${GKLIB_ROOT}/*.c")
+    file(GLOB GKLIB_SOURCES "${GKLIB_ROOT}/*.c" "${GKLIB_ROOT}/src/*.c")
     if(GKLIB_SOURCES)
-        add_library(gk STATIC ${GKLIB_SOURCES})
+        add_library(GKlib STATIC ${GKLIB_SOURCES})
         message(STATUS "Built GKlib static library from ${GKLIB_ROOT}")
     else()
         message(FATAL_ERROR "No GKlib source files found in ${GKLIB_ROOT}")
@@ -126,6 +128,11 @@ else()
 endif()
 
 # ---------------------------------------------------------------------------
+# yaml-cpp
+# ---------------------------------------------------------------------------
+find_package(yaml-cpp REQUIRED)
+
+# ---------------------------------------------------------------------------
 # Pugixml
 # ---------------------------------------------------------------------------
 add_library(pugixml STATIC ${PROJECT_SOURCE_DIR}/src/pugixml.cpp)
@@ -135,6 +142,7 @@ include_directories(${PROJECT_SOURCE_DIR})
 # Global include directories
 # ---------------------------------------------------------------------------
 include_directories(${PROJECT_SOURCE_DIR})
+include_directories(${PROJECT_SOURCE_DIR}/src)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 include_directories(${PROJECT_SOURCE_DIR}/cost_model)
 include_directories(${PROJECT_SOURCE_DIR}/cost_model/include)
@@ -144,6 +152,12 @@ include_directories(${PROJECT_SOURCE_DIR}/cost_model/include)
 # ---------------------------------------------------------------------------
 option(BUILD_COST_MODEL "Build the cost model component" ON)
 option(BUILD_MAIN_APP "Build the main ChipletPart application" ON)
+option(ENABLE_OPENDB_BACKEND "Build the OpenDB reader backend for ChipletPart" OFF)
+
+if(ENABLE_OPENDB_BACKEND)
+    include_directories(/home/liljz25/OpenROAD-flow-scripts/tools/OpenROAD/src/odb/include)
+    include_directories(/home/liljz25/OpenROAD-flow-scripts/tools/OpenROAD/src/utl/include)
+endif()
 
 if(BUILD_COST_MODEL)
     add_subdirectory(cost_model)
@@ -155,6 +169,9 @@ if(BUILD_MAIN_APP)
         src/Hypergraph.cpp 
         src/Utilities.cpp 
         src/ChipletPart.cpp
+        src/ChipletPart3DBloxReader.cpp
+        src/ChipletPartOpenDBReader.cpp
+        src/ChipletPartOpenDBWriter.cpp
         src/FMRefiner.cpp 
         src/PriorityQueue.cpp 
         src/GeneticTechPartitioner.cpp
@@ -163,6 +180,10 @@ if(BUILD_MAIN_APP)
         src/KLRefiner.h
         src/Console.h
         src/ChipletPart.h
+        src/ChipletPartIR.h
+        src/ChipletPart3DBloxReader.h
+        src/ChipletPartOpenDBReader.h
+        src/ChipletPartOpenDBWriter.h
         src/FMRefiner.h
         src/PriorityQueue.h
         src/Utilities.h
@@ -175,11 +196,17 @@ if(BUILD_MAIN_APP)
         src/KLRefiner.h
         src/omp_utils.h)
         
-    target_link_libraries(chipletPart PRIVATE cost_model pugixml ${Boost_LIBRARIES} Eigen3::Eigen)
+    target_link_libraries(chipletPart PRIVATE cost_model pugixml yaml-cpp ${Boost_LIBRARIES} Eigen3::Eigen)
+    if(ENABLE_OPENDB_BACKEND)
+        target_compile_definitions(chipletPart PRIVATE CHIPLETPART_ENABLE_OPENDB_BACKEND=1)
+        target_link_libraries(chipletPart PRIVATE
+            /home/liljz25/OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/db/libdb.a
+            /home/liljz25/OpenROAD-flow-scripts/tools/OpenROAD/build/src/utl/libutl_lib.a)
+    endif()
     
     # Link METIS and GKlib if available and not disabled (on non-Apple platforms)
     if(HAVE_METIS AND (NOT APPLE))
-        target_link_libraries(chipletPart PRIVATE metis gk)
+        target_link_libraries(chipletPart PRIVATE metis GKlib)
     endif()
     
     # Link OpenMP if found.

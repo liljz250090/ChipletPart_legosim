@@ -34,9 +34,11 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "ChipletPart.h"
+#include "ChipletPart3DBloxReader.h"
 #include "Hypergraph.h"
 #include "Utilities.h"
 #include "evaluator_cpp.h" // Include the cost model evaluator_cpp.h instead of evaluator.h
+#include <chrono>
 #include <iomanip>
 #include <iostream>
 #include <memory>
@@ -105,11 +107,14 @@ void displayHeader() {
 void displayUsage(const char* programName) {
   std::cout << "Usage: " << programName << " [options] <arguments>" << std::endl;
   std::cout << "Standard mode: " << programName << " <io_file> <layer_file> <wafer_process_file> <assembly_process_file> <test_file> <netlist_file> <blocks_file> <reach> <separation> <tech_node> [--seed <value>]" << std::endl;
+  std::cout << "3dblox mode: " << programName << " --3dblox <design.3dbx> [--3dbv <library.3dbv>] <reach> <separation> <tech_node> [--seed <value>]" << std::endl;
   std::cout << "Evaluation mode: " << programName << " <partition_file> <io_file> <layer_file> <wafer_process_file> <assembly_process_file> <test_file> <netlist_file> <blocks_file> <reach> <separation> <tech_node> [--seed <value>]" << std::endl;
   std::cout << "Canonical GA: " << programName << " <io_file> <layer_file> <wafer_process_file> <assembly_process_file> <test_file> <netlist_file> <blocks_file> <reach> <separation> --canonical-ga --tech-nodes <list> [--seed <value>] [--generations <value>] [--population <value>]" << std::endl;
   std::cout << "Tech Enumeration: " << programName << " <io_file> <layer_file> <wafer_process_file> <assembly_process_file> <test_file> <netlist_file> <blocks_file> <reach> <separation> --tech-enum --tech-nodes <list> [--max-partitions <value>] [--detailed-output] [--seed <value>]" << std::endl;
   std::cout << "Options:" << std::endl;
   std::cout << "  --seed <value>        : Random seed for reproducible results (default: 42)" << std::endl;
+  std::cout << "  --3dblox <file>       : Read a self-contained 3dblox design (.3dbx) as the frontend input" << std::endl;
+  std::cout << "  --3dbv <file>         : Optional companion 3dbv file for 3dblox mode" << std::endl;
   std::cout << "  --canonical-ga        : Use canonical genetic algorithm for technology assignment" << std::endl;
   std::cout << "  --tech-enum           : Enumerate all canonical technology assignments up to max partitions" << std::endl;
   std::cout << "  --tech-nodes <list>   : Comma-separated list of technology nodes (e.g., '7nm,14nm,28nm')" << std::endl;
@@ -119,6 +124,7 @@ void displayUsage(const char* programName) {
   std::cout << "  --detailed-output     : Generate detailed output for tech enumeration" << std::endl;
   std::cout << "Examples:" << std::endl;
   std::cout << "  " << programName << " io.xml layer.xml wafer.xml assembly.xml test.xml netlist.xml blocks.txt 0.5 0.25 7nm" << std::endl;
+  std::cout << "  " << programName << " --3dblox ga100.3dbx --3dbv ga100.3dbv 0.5 0.25 7nm" << std::endl;
   std::cout << "  " << programName << " io.xml layer.xml wafer.xml assembly.xml test.xml netlist.xml blocks.txt 0.5 0.25 --canonical-ga --tech-nodes 7nm,14nm,28nm --seed 123" << std::endl;
   std::cout << "  " << programName << " io.xml layer.xml wafer.xml assembly.xml test.xml netlist.xml blocks.txt 0.5 0.25 --tech-enum --tech-nodes 7nm,14nm,28nm --max-partitions 3" << std::endl;
 }
@@ -227,13 +233,13 @@ void run_tech_enum(
     int argc, 
     char** argv, 
     chiplet::ChipletPart& chiplet_part, 
-    std::string& chiplet_io_file,
-    std::string& chiplet_layer_file,
-    std::string& chiplet_wafer_process_file,
-    std::string& chiplet_assembly_process_file,
-    std::string& chiplet_test_file,
-    std::string& chiplet_netlist_file,
-    std::string& chiplet_blocks_file,
+    const std::string& chiplet_io_file,
+    const std::string& chiplet_layer_file,
+    const std::string& chiplet_wafer_process_file,
+    const std::string& chiplet_assembly_process_file,
+    const std::string& chiplet_test_file,
+    const std::string& chiplet_netlist_file,
+    const std::string& chiplet_blocks_file,
     float reach,
     float separation,
     int seed) {
@@ -344,13 +350,13 @@ void run_canonical_ga(
     int argc, 
     char** argv, 
     chiplet::ChipletPart& chiplet_part, 
-    std::string& chiplet_io_file,
-    std::string& chiplet_layer_file,
-    std::string& chiplet_wafer_process_file,
-    std::string& chiplet_assembly_process_file,
-    std::string& chiplet_test_file,
-    std::string& chiplet_netlist_file,
-    std::string& chiplet_blocks_file,
+    const std::string& chiplet_io_file,
+    const std::string& chiplet_layer_file,
+    const std::string& chiplet_wafer_process_file,
+    const std::string& chiplet_assembly_process_file,
+    const std::string& chiplet_test_file,
+    const std::string& chiplet_netlist_file,
+    const std::string& chiplet_blocks_file,
     float reach,
     float separation,
     int seed,
@@ -433,6 +439,11 @@ void run_canonical_ga(
 
 int main(int argc, char *argv[]) {
   try {
+    std::string dbxFile;
+    const bool has3DBloxInput = getArgValue(argc, argv, "--3dblox", dbxFile);
+    std::string dbvFile;
+    const bool has3DBVInput = getArgValue(argc, argv, "--3dbv", dbvFile);
+
     // Process seed parameter
     std::string seedStr;
     bool hasSeed = getArgValue(argc, argv, "--seed", seedStr);
@@ -495,6 +506,176 @@ int main(int argc, char *argv[]) {
     
     // Create ChipletPart instance
     auto chiplet_part = std::make_shared<chiplet::ChipletPart>(seed);
+
+    if (has3DBloxInput) {
+      std::vector<std::string> cleanArgs;
+      for (int i = 1; i < argc; ++i) {
+        const std::string arg = argv[i];
+        if (arg == "--seed" || arg == "--3dblox" || arg == "--3dbv"
+            || arg == "--canonical-ga" || arg == "--tech-enum"
+            || arg == "--genetic-tech-part" || arg == "--detailed-output") {
+          ++i;
+          if (arg == "--canonical-ga" || arg == "--tech-enum"
+              || arg == "--genetic-tech-part" || arg == "--detailed-output") {
+            --i;
+          }
+          continue;
+        }
+        if (arg == "--generations" || arg == "--population"
+            || arg == "--max-partitions") {
+          ++i;
+          continue;
+        }
+        if (arg == "--tech-nodes") {
+          while (i + 1 < argc) {
+            const std::string next_arg = argv[i + 1];
+            if (next_arg.rfind("--", 0) == 0) {
+              break;
+            }
+            ++i;
+          }
+          continue;
+        }
+        cleanArgs.push_back(arg);
+      }
+
+      chiplet::ChipletPart3DBloxReader reader;
+      const auto temp_root = std::filesystem::temp_directory_path()
+                             / ("chipletpart_3dblox_" + std::to_string(
+                                                    static_cast<long long>(
+                                                        std::chrono::high_resolution_clock::now()
+                                                            .time_since_epoch()
+                                                            .count())));
+      const auto legacy_files = reader.MaterializeLegacyInputs(dbxFile, temp_root);
+
+      if (hasSeed) {
+        chiplet_part->SetSeed(seed);
+      }
+      chiplet_part->Set3DBloxInput(dbxFile, dbvFile);
+
+      Console::Info("Partitioning using 3dblox frontend input");
+      Console::Info("Materialized temporary collateral in " + legacy_files.base_dir.string());
+
+      if (useTechEnum) {
+        if (cleanArgs.size() != 2) {
+          Console::Error("3dblox tech-enum mode expects <reach> <separation>");
+          displayUsage(argv[0]);
+          return 1;
+        }
+        float reach = safeStof(cleanArgs[0], "reach");
+        float separation = safeStof(cleanArgs[1], "separation");
+        run_tech_enum(argc,
+                      argv,
+                      *chiplet_part,
+                      legacy_files.io_file,
+                      legacy_files.layer_file,
+                      legacy_files.wafer_process_file,
+                      legacy_files.assembly_process_file,
+                      legacy_files.test_file,
+                      legacy_files.netlist_file,
+                      legacy_files.blocks_file,
+                      reach,
+                      separation,
+                      seed);
+        return 0;
+      }
+
+      if (useCanonicalGA) {
+        if (cleanArgs.size() != 2) {
+          Console::Error("3dblox canonical-ga mode expects <reach> <separation>");
+          displayUsage(argv[0]);
+          return 1;
+        }
+        float reach = safeStof(cleanArgs[0], "reach");
+        float separation = safeStof(cleanArgs[1], "separation");
+        run_canonical_ga(argc,
+                         argv,
+                         *chiplet_part,
+                         legacy_files.io_file,
+                         legacy_files.layer_file,
+                         legacy_files.wafer_process_file,
+                         legacy_files.assembly_process_file,
+                         legacy_files.test_file,
+                         legacy_files.netlist_file,
+                         legacy_files.blocks_file,
+                         reach,
+                         separation,
+                         seed,
+                         population,
+                         generations);
+        return 0;
+      }
+
+      if (useGeneticTechPart) {
+        if (cleanArgs.size() != 2) {
+          Console::Error("3dblox genetic-tech-part mode expects <reach> <separation>");
+          displayUsage(argv[0]);
+          return 1;
+        }
+
+        std::vector<std::string> techNodes;
+        std::string techNodesStr;
+        if (getArgValue(argc, argv, "--tech-nodes", techNodesStr)) {
+          techNodes = parseTechList(techNodesStr);
+        }
+        if (techNodes.empty()) {
+          Console::Error("No tech nodes specified for genetic tech partitioning");
+          return 1;
+        }
+
+        float reach = safeStof(cleanArgs[0], "reach");
+        float separation = safeStof(cleanArgs[1], "separation");
+        chiplet_part->GeneticTechPart(legacy_files.io_file,
+                                      legacy_files.layer_file,
+                                      legacy_files.wafer_process_file,
+                                      legacy_files.assembly_process_file,
+                                      legacy_files.test_file,
+                                      legacy_files.netlist_file,
+                                      legacy_files.blocks_file,
+                                      reach,
+                                      separation,
+                                      techNodes,
+                                      population,
+                                      generations);
+        return 0;
+      }
+
+      if (cleanArgs.size() != 3) {
+        Console::Error("3dblox mode expects <reach> <separation> <tech_node>");
+        displayUsage(argv[0]);
+        return 1;
+      }
+
+      const float reach = safeStof(cleanArgs[0], "reach");
+      const float separation = safeStof(cleanArgs[1], "separation");
+      const std::string tech = cleanArgs[2];
+
+      if (tech.find(',') != std::string::npos) {
+        std::vector<std::string> techs = parseTechList(tech);
+        chiplet_part->TechAssignPartition(legacy_files.io_file,
+                                          legacy_files.layer_file,
+                                          legacy_files.wafer_process_file,
+                                          legacy_files.assembly_process_file,
+                                          legacy_files.test_file,
+                                          legacy_files.netlist_file,
+                                          legacy_files.blocks_file,
+                                          reach,
+                                          separation,
+                                          techs);
+      } else {
+        chiplet_part->Partition(legacy_files.io_file,
+                                legacy_files.layer_file,
+                                legacy_files.wafer_process_file,
+                                legacy_files.assembly_process_file,
+                                legacy_files.test_file,
+                                legacy_files.netlist_file,
+                                legacy_files.blocks_file,
+                                reach,
+                                separation,
+                                tech);
+      }
+      return 0;
+    }
     
     // Technology enumeration mode
     if (useTechEnum) {
@@ -834,9 +1015,6 @@ int main(int argc, char *argv[]) {
       std::string tech = cleanArgs[10];
       
       std::cout << "[INFO] Evaluating partition" << std::endl;
-      
-      // Read the XML files to create the hypergraph
-      chiplet_part->ReadChipletGraphFromXML(io_definitions_file, block_level_netlist_file, block_definitions_file);
       
       chiplet_part->EvaluatePartition(
           hypergraph_part, io_definitions_file, layer_definitions_file, wafer_process_definitions_file,

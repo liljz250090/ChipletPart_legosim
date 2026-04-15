@@ -34,6 +34,9 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "ChipletPart.h"
+#include "ChipletPartOpenDBReader.h"
+#include "ChipletPartOpenDBWriter.h"
+#include "ChipletPart3DBloxReader.h"
 #include "Hypergraph.h"
 #include "FMRefiner.h" // Add include for ChipletRefiner
 #include "KLRefiner.h" // Add include for KLRefiner
@@ -1145,7 +1148,7 @@ void ChipletPart::TechAssignPartition(
   rng_.seed(seed_);
   auto start_time = std::chrono::high_resolution_clock::now();
   // Generate the hypergraph from XML files
-  ReadChipletGraphFromXML(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
+  PrepareInputGraph(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
 
   GeneticTechPart(chiplet_io_file, chiplet_layer_file, chiplet_wafer_process_file,
               chiplet_assembly_process_file, chiplet_test_file, chiplet_netlist_file,
@@ -1238,7 +1241,7 @@ void ChipletPart::GeneticTechPart(
   // Ensure hypergraph is built
   if (hypergraph_ == nullptr) {
     Console::Info("Building hypergraph from provided files...");
-    ReadChipletGraphFromXML(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
+    PrepareInputGraph(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
     
     if (hypergraph_ == nullptr) {
       Console::Error("Failed to create hypergraph from input files!");
@@ -1304,6 +1307,7 @@ void ChipletPart::GeneticTechPart(
   // Store the solution in our class for further use if needed
   solution_ = solution.partition;
   num_parts_ = solution.num_partitions;
+  WriteSolutionToOpenDBIfNeeded();
   
   Console::Success("Enhanced genetic algorithm completed successfully!");
 }
@@ -1317,7 +1321,7 @@ void ChipletPart::GeneticPart(
     float reach, float separation, std::vector<std::string> &tech_nodes) {
 
   // Generate the hypergraph from XML files
-  ReadChipletGraphFromXML(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
+  PrepareInputGraph(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
 
   int no_improvement_counter = 0;
   int max_no_improvement_generations = 2;
@@ -1668,7 +1672,7 @@ void ChipletPart::Partition(
   std::cout << std::endl;
   
   // Generate the hypergraph from XML files
-  ReadChipletGraphFromXML(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
+  PrepareInputGraph(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
   
   // set max moves to 50% of the number of vertices
   if (hypergraph_->GetNumVertices() > 200) {
@@ -2362,6 +2366,9 @@ void ChipletPart::Partition(
       }
       Console::Success("Best partition saved to " + partition_file);
     }
+    solution_ = best_result.partition;
+    num_parts_ = best_result.num_parts;
+    WriteSolutionToOpenDBIfNeeded();
     
     // Output aspect ratios of best solution
     /*std::ofstream aspect_ratios_output("chipletpart.aspect_ratios");
@@ -2422,7 +2429,7 @@ void ChipletPart::EvaluatePartition(
   std::cout << "[INFO] Tech: " << tech << std::endl;
 
   // Generate the hypergraph from XML files
-  ReadChipletGraphFromXML(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
+  PrepareInputGraph(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
 
   auto start_time_stamp_global = std::chrono::high_resolution_clock::now();
   Matrix<float> upper_block_balance;
@@ -3159,58 +3166,153 @@ std::vector<int> ChipletPart::KWayCuts(int &num_parts) {
 void ChipletPart::ReadChipletGraphFromXML(std::string chiplet_io_file,
                                         std::string chiplet_netlist_file,
                                         std::string chiplet_blocks_file) {
-  // First read the IO file to get the reach values for each IO type
-  if (!chiplet_io_file.empty()) {
-    pugi::xml_document doc;
-    pugi::xml_parse_result result = doc.load_file(chiplet_io_file.c_str());
-    if (!result) {
-      std::cerr << "Error parsing IO file: " << result.description() << std::endl;
-      return;
-    }
-    
-    pugi::xml_node ios = doc.child("ios");
-    for (pugi::xml_node io = ios.child("io"); io; io = io.next_sibling("io")) {
-      // Read the 'type' attribute
-      std::string type = io.attribute("type").as_string();
-
-      // Read the 'reach' attribute
-      double reach = io.attribute("reach").as_double();
-
-      // Add to hash map
-      io_map_[type] = reach;
-    }
-  } else {
-    std::cerr << "Error: No IO file specified" << std::endl;
-    return;
-  }
-  
-  // Now convert the XML netlist file and block definitions file to a hypergraph
-  ConvertXMLToHypergraph(chiplet_netlist_file, chiplet_blocks_file);
-  
-  // Create the hypergraph object from the data we've collected
-  hypergraph_ = std::make_shared<Hypergraph>(
-      vertex_dimensions_, hyperedge_dimensions_, hyperedges_, vertex_weights_,
-      hyperedge_weights_, reach_, io_sizes_);
-      
-  std::cout << "[INFO] Number of IP blocks in chiplet graph: " << num_vertices_
-            << std::endl;
-  std::cout << "[INFO] Number of nets in chiplet graph: " << hyperedges_.size()
-            << std::endl;
-            
-  // Write vertex mapping file for debugging/reference
-  std::ofstream map_file("output.map");
-  if (map_file.is_open()) {
-    for (const auto& pair : vertex_index_to_name_) {
-      map_file << pair.first + 1 << " " << pair.second << std::endl;
-    }
-    map_file.close();
-    std::cout << "[INFO] Wrote vertex mapping to output.map" << std::endl;
-  }
+  input_source_ = InputSource::kLegacyXml;
+  opendb_block_handle_ = nullptr;
+  threedblox_dbx_file_.clear();
+  threedblox_dbv_file_.clear();
+  LoadFromIRDesign(
+      ReadDesignFromXMLFiles(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file));
 }
 
 void ChipletPart::ConvertXMLToHypergraph(const std::string& netlist_file,
                                        const std::string& block_def_file) {
-  // Clear existing hypergraph data
+  LoadFromIRDesign(ReadDesignFromXMLFiles(
+      /*chiplet_io_file=*/std::string(),
+      netlist_file,
+      block_def_file));
+}
+
+// Constructor to initialize rng_ with seed_
+ChipletPart::ChipletPart() {
+  // Initialize the random number generator with the default seed
+  rng_.seed(seed_);
+}
+
+void ChipletPart::SetOpenDBInput(void* db_block_handle)
+{
+  input_source_ = InputSource::kOpenDB;
+  opendb_block_handle_ = db_block_handle;
+  threedblox_dbx_file_.clear();
+  threedblox_dbv_file_.clear();
+}
+
+void ChipletPart::Set3DBloxInput(const std::string& dbx_file,
+                                 const std::string& dbv_file)
+{
+  input_source_ = InputSource::k3DBlox;
+  opendb_block_handle_ = nullptr;
+  threedblox_dbx_file_ = dbx_file;
+  threedblox_dbv_file_ = dbv_file;
+}
+
+void ChipletPart::ClearFrontendInput()
+{
+  input_source_ = InputSource::kLegacyXml;
+  opendb_block_handle_ = nullptr;
+  threedblox_dbx_file_.clear();
+  threedblox_dbv_file_.clear();
+}
+
+IRDesign ChipletPart::ReadDesignFromXMLFiles(const std::string& chiplet_io_file,
+                                             const std::string& chiplet_netlist_file,
+                                             const std::string& chiplet_blocks_file)
+{
+  IRDesign design;
+
+  io_map_.clear();
+  if (!chiplet_io_file.empty()) {
+    pugi::xml_document io_doc;
+    pugi::xml_parse_result io_result = io_doc.load_file(chiplet_io_file.c_str());
+    if (!io_result) {
+      throw std::runtime_error("Error parsing IO file: "
+                               + std::string(io_result.description()));
+    }
+
+    pugi::xml_node ios = io_doc.child("ios");
+    for (pugi::xml_node io = ios.child("io"); io; io = io.next_sibling("io")) {
+      const std::string type = io.attribute("type").as_string();
+      io_map_[type] = static_cast<float>(io.attribute("reach").as_double());
+    }
+  }
+
+  std::unordered_map<std::string, IRBlock> block_map;
+  std::ifstream block_file(chiplet_blocks_file);
+  if (!block_file.is_open()) {
+    throw std::runtime_error("Could not open block definition file: "
+                             + chiplet_blocks_file);
+  }
+
+  std::string line;
+  while (std::getline(block_file, line)) {
+    std::istringstream iss(line);
+    IRBlock block;
+    int is_memory = 0;
+    if (!(iss >> block.name >> block.area >> block.power >> block.tech >> is_memory)) {
+      continue;
+    }
+    block.is_memory = (is_memory != 0);
+    design.blocks.push_back(block);
+    block_map[block.name] = block;
+  }
+
+  pugi::xml_document netlist_doc;
+  pugi::xml_parse_result netlist_result
+      = netlist_doc.load_file(chiplet_netlist_file.c_str());
+  if (!netlist_result) {
+    throw std::runtime_error("Error parsing netlist file: "
+                             + std::string(netlist_result.description()));
+  }
+
+  pugi::xml_node netlist_root = netlist_doc.child("netlist");
+  int generated_net_id = 0;
+  for (pugi::xml_node net = netlist_root.child("net"); net;
+       net = net.next_sibling("net")) {
+    IRNet ir_net;
+    ir_net.name = net.attribute("name").as_string();
+    if (ir_net.name.empty()) {
+      ir_net.name = "net_" + std::to_string(generated_net_id++);
+    }
+    ir_net.type = net.attribute("type").as_string();
+    ir_net.weight = net.attribute("bandwidth").as_float(1.0f);
+    ir_net.average_bandwidth_utilization
+        = net.attribute("average_bandwidth_utilization").as_float(0.5f);
+    ir_net.io_size = 1.0f;
+    auto io_it = io_map_.find(ir_net.type);
+    ir_net.reach = (io_it != io_map_.end()) ? io_it->second : -1.0f;
+
+    const std::string block0_name = net.attribute("block0").as_string();
+    const std::string block1_name = net.attribute("block1").as_string();
+    if (!block0_name.empty()) {
+      ir_net.pins.push_back(block0_name);
+      if (block_map.find(block0_name) == block_map.end()) {
+        IRBlock block;
+        block.name = block0_name;
+        design.blocks.push_back(block);
+        block_map[block0_name] = block;
+      }
+    }
+    if (!block1_name.empty()) {
+      ir_net.pins.push_back(block1_name);
+      if (block_map.find(block1_name) == block_map.end()) {
+        IRBlock block;
+        block.name = block1_name;
+        design.blocks.push_back(block);
+        block_map[block1_name] = block;
+      }
+    }
+
+    if (ir_net.pins.size() >= 2) {
+      design.nets.push_back(ir_net);
+    }
+  }
+
+  return design;
+}
+
+void ChipletPart::LoadFromIRDesign(const IRDesign& design)
+{
+  current_design_ = design;
+
   hyperedges_.clear();
   hyperedge_weights_.clear();
   vertex_weights_.clear();
@@ -3218,137 +3320,97 @@ void ChipletPart::ConvertXMLToHypergraph(const std::string& netlist_file,
   io_sizes_.clear();
   vertex_index_to_name_.clear();
   vertex_name_to_index_.clear();
-  
-  // Read the netlist file
-  pugi::xml_document netlist_doc;
-  pugi::xml_parse_result netlist_result = netlist_doc.load_file(netlist_file.c_str());
-  if (!netlist_result) {
-    std::cerr << "Error parsing netlist file: " << netlist_result.description() << std::endl;
-    return;
-  }
-  
-  std::cout << "[INFO] Converting netlist XML to hypergraph..." << std::endl;
-  
-  // Get the number of edges (nets) in the graph
-  pugi::xml_node netlist_root = netlist_doc.child("netlist");
-  int num_edges = 0;
-  for (pugi::xml_node net = netlist_root.child("net"); net; net = net.next_sibling("net")) {
-    num_edges++;
-  }
-  
-  // Initialize variables for creating the hypergraph
-  num_hyperedges_ = num_edges;
+  hypergraph_ = nullptr;
   num_vertices_ = 0;
-  
-  // Prepare collections for hypergraph construction
-  std::vector<std::vector<int>> net_array;
-  std::vector<float> net_weight_array;
-  std::vector<float> reach_array;
-  std::vector<float> io_size_array;
-  
-  // Process each net in the netlist
-  for (pugi::xml_node net = netlist_root.child("net"); net; net = net.next_sibling("net")) {
-    // Get the type of the net
-    std::string type = net.attribute("type").as_string();
-    
-    // Find the reach of the net
-    float reach = -1.0;
-    if (io_map_.find(type) != io_map_.end()) {
-      reach = io_map_[type];
+
+  for (const auto& block : design.blocks) {
+    if (vertex_name_to_index_.find(block.name) != vertex_name_to_index_.end()) {
+      continue;
     }
-    reach_array.push_back(reach);
-    
-    // Default IO size to 1.0 for now
-    io_size_array.push_back(1.0);
-    
-    // Process the blocks in this net
-    std::string block0_name = net.attribute("block0").as_string();
-    std::string block1_name = net.attribute("block1").as_string();
-    
-    // Add blocks to the vertex mapping if they don't exist
-    int block0_index, block1_index;
-    
-    if (vertex_name_to_index_.find(block0_name) != vertex_name_to_index_.end()) {
-      block0_index = vertex_name_to_index_[block0_name];
-    } else {
-      block0_index = num_vertices_;
-      vertex_name_to_index_[block0_name] = num_vertices_;
-      vertex_index_to_name_[num_vertices_] = block0_name;
-      num_vertices_++;
-    }
-    
-    if (vertex_name_to_index_.find(block1_name) != vertex_name_to_index_.end()) {
-      block1_index = vertex_name_to_index_[block1_name];
-    } else {
-      block1_index = num_vertices_;
-      vertex_name_to_index_[block1_name] = num_vertices_;
-      vertex_index_to_name_[num_vertices_] = block1_name;
-      num_vertices_++;
-    }
-    
-    // Get the bandwidth as the edge weight
-    float bandwidth = net.attribute("bandwidth").as_float(1.0); // Default to 1.0 if not specified
-    net_weight_array.push_back(bandwidth);
-    
-    // Add the edge to the net array
-    net_array.push_back({block0_index, block1_index});
+    vertex_name_to_index_[block.name] = num_vertices_;
+    vertex_index_to_name_[num_vertices_] = block.name;
+    vertex_weights_.push_back({block.area});
+    num_vertices_++;
   }
-  
-  // Read block definitions file to get vertex weights (area)
-  std::unordered_map<std::string, float> vertex_area;
-  std::ifstream block_file(block_def_file);
-  if (block_file.is_open()) {
-    std::string line;
-    while (std::getline(block_file, line)) {
-      std::istringstream iss(line);
-      std::string vertex_name;
-      float area, power;
-      std::string tech;
-      
-      if (!(iss >> vertex_name >> area >> power >> tech)) {
-        continue; // Skip malformed lines
+
+  for (const auto& net : design.nets) {
+    for (const auto& pin : net.pins) {
+      if (vertex_name_to_index_.find(pin) != vertex_name_to_index_.end()) {
+        continue;
       }
-      
-      vertex_area[vertex_name] = area;
+      vertex_name_to_index_[pin] = num_vertices_;
+      vertex_index_to_name_[num_vertices_] = pin;
+      vertex_weights_.push_back({1.0f});
+      num_vertices_++;
     }
-    block_file.close();
-  } else {
-    std::cerr << "Error: Could not open block definition file: " << block_def_file << std::endl;
-    return;
   }
-  
-  // Initialize hyperedges and weights
-  hyperedges_ = net_array;
-  
-  for (const auto& weight : net_weight_array) {
-    hyperedge_weights_.push_back({weight});
-  }
-  
-  // Set reach values
-  reach_ = reach_array;
-  io_sizes_ = io_size_array;
-  
-  // Initialize vertex weights from block definitions
-  vertex_weights_.resize(num_vertices_);
-  for (int i = 0; i < num_vertices_; i++) {
-    const std::string& vertex_name = vertex_index_to_name_[i];
-    float area = 1.0; // Default area
-    
-    if (vertex_area.find(vertex_name) != vertex_area.end()) {
-      area = vertex_area[vertex_name];
+
+  // All frontend-specific parsing should converge here before any
+  // hypergraph construction happens.
+  for (const auto& net : design.nets) {
+    std::vector<int> edge;
+    edge.reserve(net.pins.size());
+    for (const auto& pin : net.pins) {
+      edge.push_back(vertex_name_to_index_.at(pin));
     }
-    
-    vertex_weights_[i] = {area};
+    if (edge.size() < 2) {
+      continue;
+    }
+    hyperedges_.push_back(edge);
+    hyperedge_weights_.push_back({net.weight});
+    reach_.push_back(net.reach);
+    io_sizes_.push_back(net.io_size);
   }
-  
-  std::cout << "[INFO] Created hypergraph with " << num_vertices_ << " vertices and "
-            << num_hyperedges_ << " hyperedges" << std::endl;
+
+  num_hyperedges_ = hyperedges_.size();
+  hypergraph_ = std::make_shared<Hypergraph>(vertex_dimensions_,
+                                             hyperedge_dimensions_,
+                                             hyperedges_,
+                                             vertex_weights_,
+                                             hyperedge_weights_,
+                                             reach_,
+                                             io_sizes_);
+
+  std::cout << "[INFO] Number of IP blocks in chiplet graph: " << num_vertices_
+            << std::endl;
+  std::cout << "[INFO] Number of nets in chiplet graph: " << hyperedges_.size()
+            << std::endl;
+
+  std::ofstream map_file("output.map");
+  if (map_file.is_open()) {
+    for (const auto& pair : vertex_index_to_name_) {
+      map_file << pair.first + 1 << " " << pair.second << std::endl;
+    }
+  }
 }
 
-// Constructor to initialize rng_ with seed_
-ChipletPart::ChipletPart() {
-  // Initialize the random number generator with the default seed
-  rng_.seed(seed_);
+void ChipletPart::ReadChipletGraphFromOpenDB()
+{
+  ChipletPartOpenDBReader reader;
+  LoadFromIRDesign(reader.ReadDesign(opendb_block_handle_));
+}
+
+void ChipletPart::ReadChipletGraphFrom3DBlox()
+{
+  ChipletPart3DBloxReader reader;
+  LoadFromIRDesign(reader.ReadDesign(threedblox_dbx_file_, threedblox_dbv_file_));
+}
+
+void ChipletPart::PrepareInputGraph(const std::string& chiplet_io_file,
+                                    const std::string& chiplet_netlist_file,
+                                    const std::string& chiplet_blocks_file)
+{
+  if (input_source_ == InputSource::kOpenDB) {
+    ReadChipletGraphFromOpenDB();
+    return;
+  }
+
+  if (input_source_ == InputSource::k3DBlox) {
+    ReadChipletGraphFrom3DBlox();
+    return;
+  }
+
+  ReadChipletGraphFromXML(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
 }
 
 void ChipletPart::QuickTechPartition(
@@ -3372,7 +3434,7 @@ void ChipletPart::QuickTechPartition(
   
   // Generate the hypergraph from XML files if not already done
   if (hypergraph_ == nullptr) {
-    ReadChipletGraphFromXML(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
+    PrepareInputGraph(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
   }
   
   // Run METIS partitioning with the specified number of parts
@@ -3447,6 +3509,7 @@ void ChipletPart::QuickTechPartition(
   
   // Store the resulting partition for later use
   solution_ = partition;
+  WriteSolutionToOpenDBIfNeeded();
 }
 
 void ChipletPart::CanonicalGeneticTechPart(
@@ -3482,7 +3545,7 @@ void ChipletPart::CanonicalGeneticTechPart(
       std::cout << "[INFO] Building hypergraph from provided files..." << std::endl;
       auto start_time_hypergraph = std::chrono::high_resolution_clock::now();
       
-      ReadChipletGraphFromXML(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
+      PrepareInputGraph(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
       
       auto end_time_hypergraph = std::chrono::high_resolution_clock::now();
       auto duration_hypergraph = std::chrono::duration_cast<std::chrono::milliseconds>(
@@ -3619,6 +3682,7 @@ void ChipletPart::CanonicalGeneticTechPart(
     // Store the solution in our class
     solution_ = solution.partition;
     num_parts_ = solution.tech_nodes.size();
+    WriteSolutionToOpenDBIfNeeded();
     
     // Calculate total runtime
     auto end_time_total = std::chrono::high_resolution_clock::now();
@@ -3674,6 +3738,35 @@ void ChipletPart::CanonicalGeneticTechPart(
   }
 }
 
+void ChipletPart::WriteSolutionToOpenDBIfNeeded()
+{
+  if (input_source_ != InputSource::kOpenDB || opendb_block_handle_ == nullptr
+      || solution_.empty()) {
+    return;
+  }
+
+  try {
+    ChipletPartOpenDBWriter writer;
+    const auto stats
+        = writer.WritePartition(opendb_block_handle_, solution_, vertex_index_to_name_);
+    Console::Info("OpenDB partition writeback complete: insts="
+                  + std::to_string(stats.insts_written)
+                  + ", bterms=" + std::to_string(stats.bterms_written)
+                  + ", groups=" + std::to_string(stats.groups_created)
+                  + ", partition_count=" + std::to_string(stats.partition_count));
+    if (stats.missing_vertices > 0 || stats.missing_insts > 0
+        || stats.missing_bterms > 0) {
+      Console::Warning("OpenDB writeback skipped some objects: missing_vertices="
+                       + std::to_string(stats.missing_vertices)
+                       + ", missing_insts=" + std::to_string(stats.missing_insts)
+                       + ", missing_bterms="
+                       + std::to_string(stats.missing_bterms));
+    }
+  } catch (const std::exception& e) {
+    Console::Warning(std::string("OpenDB writeback skipped: ") + e.what());
+  }
+}
+
 // Evaluate a technology partition assignment for genetic algorithm
 std::tuple<float, std::vector<int>> ChipletPart::EvaluateTechPartition(
     std::string chiplet_io_file,
@@ -3707,7 +3800,7 @@ std::tuple<float, std::vector<int>> ChipletPart::EvaluateTechPartition(
         // Generate the hypergraph from XML files if not already done
         if (!hypergraph_ || hypergraph_->GetNumVertices() == 0) {
             try {
-                ReadChipletGraphFromXML(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
+                PrepareInputGraph(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
                 if (!hypergraph_ || hypergraph_->GetNumVertices() == 0) {
                     Console::Error("Failed to create hypergraph");
                     return {std::numeric_limits<float>::max(), std::vector<int>()};
@@ -3764,6 +3857,7 @@ std::tuple<float, std::vector<int>> ChipletPart::EvaluateTechPartition(
                 
                 // Store the partition in the solution_ member for later use
                 solution_ = single_partition;
+                WriteSolutionToOpenDBIfNeeded();
                 
                 // Restore original num_parts_
                 num_parts_ = original_num_parts;
@@ -3987,6 +4081,7 @@ std::tuple<float, std::vector<int>> ChipletPart::EvaluateTechPartition(
         
         // Store the best partition in the solution_ member for later use
         solution_ = best_partition;
+        WriteSolutionToOpenDBIfNeeded();
         
         // Restore original num_parts_
         num_parts_ = original_num_parts;
@@ -4054,7 +4149,7 @@ std::tuple<float, std::vector<int>, std::vector<std::string>> ChipletPart::Enume
     // Ensure the hypergraph is loaded
     if (!hypergraph_ || hypergraph_->GetNumVertices() == 0) {
         try {
-            ReadChipletGraphFromXML(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
+            PrepareInputGraph(chiplet_io_file, chiplet_netlist_file, chiplet_blocks_file);
             if (!hypergraph_ || hypergraph_->GetNumVertices() == 0) {
                 Console::Error("Failed to create hypergraph");
                 return {std::numeric_limits<float>::max(), {}, {}};
