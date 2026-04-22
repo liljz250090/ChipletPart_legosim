@@ -1,0 +1,18 @@
+build/
+build-*/
+runlog/
+testlog/
+output.map
+*.log
+*.o
+*.so
+*.a
+*.pyc
+__pycache__/
+
+# Generated partitioned ODBs and transient outputs
+*.partitioned.odb
+ga_timing.log
+ga_generations_timing.log
+ga_operations_timing.log
+

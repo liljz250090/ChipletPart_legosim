@@ -1,0 +1,6090 @@
+Header:
+  version: '2.0'
+  unit: micron
+  precision: 1000
+  include:
+  - ga100_odb.3dbv
+Design:
+  name: GA100Top
+  external:
+    chipletpart_vendor_data:
+      source_schema: ChipletPart
+      self_contained: true
+      dataset:
+        blocks:
+        - name: sm_0
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_1
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_2
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_3
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_4
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_5
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_6
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_7
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_8
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_9
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_10
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_11
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_12
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_13
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_14
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_15
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_16
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_17
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_18
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_19
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_20
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_21
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_22
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_23
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_24
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_25
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_26
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_27
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_28
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_29
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_30
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_31
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_32
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_33
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_34
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_35
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_36
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_37
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_38
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_39
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_40
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_41
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_42
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_43
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_44
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_45
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_46
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_47
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_48
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_49
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_50
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_51
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_52
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_53
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_54
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_55
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_56
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_57
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_58
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_59
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_60
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_61
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_62
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_63
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_64
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_65
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_66
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_67
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_68
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_69
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_70
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_71
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_72
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_73
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_74
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_75
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_76
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_77
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_78
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_79
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_80
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_81
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_82
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_83
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_84
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_85
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_86
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_87
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_88
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_89
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_90
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_91
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_92
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_93
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_94
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_95
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_96
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_97
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_98
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_99
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_100
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_101
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_102
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_103
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_104
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_105
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_106
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_107
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_108
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_109
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_110
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_111
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_112
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_113
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_114
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_115
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_116
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_117
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_118
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_119
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_120
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_121
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_122
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_123
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_124
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_125
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_126
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: sm_127
+          area_mm2: 3.48
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: l2_0
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_1
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_2
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_3
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_4
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_5
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_6
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_7
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_8
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_9
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_10
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_11
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_12
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_13
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_14
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_15
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_16
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_17
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_18
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_19
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_20
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_21
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_22
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_23
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_24
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_25
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_26
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_27
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_28
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_29
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_30
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_31
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_32
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_33
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_34
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_35
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_36
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_37
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_38
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: l2_39
+          area_mm2: 7.55
+          power_w: 3.0
+          technology: 7nm
+          is_memory: true
+        - name: pcie
+          area_mm2: 5.18
+          power_w: 2.0
+          technology: 7nm
+          is_memory: false
+        - name: hbm_1024_phy_0
+          area_mm2: 9.89
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        - name: hbm_1024_phy_1
+          area_mm2: 9.89
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        - name: hbm_1024_phy_2
+          area_mm2: 9.89
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        - name: hbm_1024_phy_3
+          area_mm2: 9.89
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        - name: hbm_1024_phy_4
+          area_mm2: 9.89
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        - name: hbm_1024_phy_5
+          area_mm2: 9.89
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        - name: hbm_1536_ctrl_0
+          area_mm2: 8.12
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        - name: hbm_1536_ctrl_1
+          area_mm2: 8.12
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        - name: hbm_1536_ctrl_2
+          area_mm2: 8.12
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        - name: hbm_1536_ctrl_3
+          area_mm2: 8.12
+          power_w: 2.0
+          technology: 7nm
+          is_memory: true
+        interconnects:
+        - name: link_0000
+          type: 2Gbs_100vCDM_2mm
+          source: l2_0
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0001
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0002
+          type: 2Gbs_100vCDM_2mm
+          source: l2_0
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0003
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0004
+          type: 2Gbs_100vCDM_2mm
+          source: l2_0
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0005
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0006
+          type: 2Gbs_100vCDM_2mm
+          source: l2_0
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0007
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0008
+          type: 2Gbs_100vCDM_2mm
+          source: l2_0
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0009
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_0
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0010
+          type: 2Gbs_100vCDM_2mm
+          source: l2_1
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0011
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0012
+          type: 2Gbs_100vCDM_2mm
+          source: l2_1
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0013
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0014
+          type: 2Gbs_100vCDM_2mm
+          source: l2_1
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0015
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0016
+          type: 2Gbs_100vCDM_2mm
+          source: l2_1
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0017
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0018
+          type: 2Gbs_100vCDM_2mm
+          source: l2_1
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0019
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_1
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0020
+          type: 2Gbs_100vCDM_2mm
+          source: l2_2
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0021
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0022
+          type: 2Gbs_100vCDM_2mm
+          source: l2_2
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0023
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0024
+          type: 2Gbs_100vCDM_2mm
+          source: l2_2
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0025
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0026
+          type: 2Gbs_100vCDM_2mm
+          source: l2_2
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0027
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0028
+          type: 2Gbs_100vCDM_2mm
+          source: l2_2
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0029
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_2
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0030
+          type: 2Gbs_100vCDM_2mm
+          source: l2_3
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0031
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0032
+          type: 2Gbs_100vCDM_2mm
+          source: l2_3
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0033
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0034
+          type: 2Gbs_100vCDM_2mm
+          source: l2_3
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0035
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0036
+          type: 2Gbs_100vCDM_2mm
+          source: l2_3
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0037
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0038
+          type: 2Gbs_100vCDM_2mm
+          source: l2_3
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0039
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_3
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0040
+          type: 2Gbs_100vCDM_2mm
+          source: l2_4
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0041
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_4
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0042
+          type: 2Gbs_100vCDM_2mm
+          source: l2_4
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0043
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_4
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0044
+          type: 2Gbs_100vCDM_2mm
+          source: l2_4
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0045
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_4
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0046
+          type: 2Gbs_100vCDM_2mm
+          source: l2_4
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0047
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_4
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0048
+          type: 2Gbs_100vCDM_2mm
+          source: l2_4
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0049
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_4
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0050
+          type: 2Gbs_100vCDM_2mm
+          source: l2_5
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0051
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_5
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0052
+          type: 2Gbs_100vCDM_2mm
+          source: l2_5
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0053
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_5
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0054
+          type: 2Gbs_100vCDM_2mm
+          source: l2_5
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0055
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_5
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0056
+          type: 2Gbs_100vCDM_2mm
+          source: l2_5
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0057
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_5
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0058
+          type: 2Gbs_100vCDM_2mm
+          source: l2_5
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0059
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_5
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0060
+          type: 2Gbs_100vCDM_2mm
+          source: l2_6
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0061
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_6
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0062
+          type: 2Gbs_100vCDM_2mm
+          source: l2_6
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0063
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_6
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0064
+          type: 2Gbs_100vCDM_2mm
+          source: l2_6
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0065
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_6
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0066
+          type: 2Gbs_100vCDM_2mm
+          source: l2_6
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0067
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_6
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0068
+          type: 2Gbs_100vCDM_2mm
+          source: l2_6
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0069
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_6
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0070
+          type: 2Gbs_100vCDM_2mm
+          source: l2_7
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0071
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_7
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0072
+          type: 2Gbs_100vCDM_2mm
+          source: l2_7
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0073
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_7
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0074
+          type: 2Gbs_100vCDM_2mm
+          source: l2_7
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0075
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_7
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0076
+          type: 2Gbs_100vCDM_2mm
+          source: l2_7
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0077
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_7
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0078
+          type: 2Gbs_100vCDM_2mm
+          source: l2_7
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0079
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_7
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0080
+          type: 2Gbs_100vCDM_2mm
+          source: l2_8
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0081
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_8
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0082
+          type: 2Gbs_100vCDM_2mm
+          source: l2_8
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0083
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_8
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0084
+          type: 2Gbs_100vCDM_2mm
+          source: l2_8
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0085
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_8
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0086
+          type: 2Gbs_100vCDM_2mm
+          source: l2_8
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0087
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_8
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0088
+          type: 2Gbs_100vCDM_2mm
+          source: l2_8
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0089
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_8
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0090
+          type: 2Gbs_100vCDM_2mm
+          source: l2_9
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0091
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_9
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0092
+          type: 2Gbs_100vCDM_2mm
+          source: l2_9
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0093
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_9
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0094
+          type: 2Gbs_100vCDM_2mm
+          source: l2_9
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0095
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_9
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0096
+          type: 2Gbs_100vCDM_2mm
+          source: l2_9
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0097
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_9
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0098
+          type: 2Gbs_100vCDM_2mm
+          source: l2_9
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0099
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_9
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0100
+          type: 2Gbs_100vCDM_2mm
+          source: l2_10
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0101
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_10
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0102
+          type: 2Gbs_100vCDM_2mm
+          source: l2_10
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0103
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_10
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0104
+          type: 2Gbs_100vCDM_2mm
+          source: l2_10
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0105
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_10
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0106
+          type: 2Gbs_100vCDM_2mm
+          source: l2_10
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0107
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_10
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0108
+          type: 2Gbs_100vCDM_2mm
+          source: l2_10
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0109
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_10
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0110
+          type: 2Gbs_100vCDM_2mm
+          source: l2_11
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0111
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_11
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0112
+          type: 2Gbs_100vCDM_2mm
+          source: l2_11
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0113
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_11
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0114
+          type: 2Gbs_100vCDM_2mm
+          source: l2_11
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0115
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_11
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0116
+          type: 2Gbs_100vCDM_2mm
+          source: l2_11
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0117
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_11
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0118
+          type: 2Gbs_100vCDM_2mm
+          source: l2_11
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0119
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_11
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0120
+          type: 2Gbs_100vCDM_2mm
+          source: l2_12
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0121
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_12
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0122
+          type: 2Gbs_100vCDM_2mm
+          source: l2_12
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0123
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_12
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0124
+          type: 2Gbs_100vCDM_2mm
+          source: l2_12
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0125
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_12
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0126
+          type: 2Gbs_100vCDM_2mm
+          source: l2_12
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0127
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_12
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0128
+          type: 2Gbs_100vCDM_2mm
+          source: l2_12
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0129
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_12
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0130
+          type: 2Gbs_100vCDM_2mm
+          source: l2_13
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0131
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_13
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0132
+          type: 2Gbs_100vCDM_2mm
+          source: l2_13
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0133
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_13
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0134
+          type: 2Gbs_100vCDM_2mm
+          source: l2_13
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0135
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_13
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0136
+          type: 2Gbs_100vCDM_2mm
+          source: l2_13
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0137
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_13
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0138
+          type: 2Gbs_100vCDM_2mm
+          source: l2_13
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0139
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_13
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0140
+          type: 2Gbs_100vCDM_2mm
+          source: l2_14
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0141
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_14
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0142
+          type: 2Gbs_100vCDM_2mm
+          source: l2_14
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0143
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_14
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0144
+          type: 2Gbs_100vCDM_2mm
+          source: l2_14
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0145
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_14
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0146
+          type: 2Gbs_100vCDM_2mm
+          source: l2_14
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0147
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_14
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0148
+          type: 2Gbs_100vCDM_2mm
+          source: l2_14
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0149
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_14
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0150
+          type: 2Gbs_100vCDM_2mm
+          source: l2_15
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0151
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_15
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0152
+          type: 2Gbs_100vCDM_2mm
+          source: l2_15
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0153
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_15
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0154
+          type: 2Gbs_100vCDM_2mm
+          source: l2_15
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0155
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_15
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0156
+          type: 2Gbs_100vCDM_2mm
+          source: l2_15
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0157
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_15
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0158
+          type: 2Gbs_100vCDM_2mm
+          source: l2_15
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0159
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_15
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0160
+          type: 2Gbs_100vCDM_2mm
+          source: l2_16
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0161
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_16
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0162
+          type: 2Gbs_100vCDM_2mm
+          source: l2_16
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0163
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_16
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0164
+          type: 2Gbs_100vCDM_2mm
+          source: l2_16
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0165
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_16
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0166
+          type: 2Gbs_100vCDM_2mm
+          source: l2_16
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0167
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_16
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0168
+          type: 2Gbs_100vCDM_2mm
+          source: l2_16
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0169
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_16
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0170
+          type: 2Gbs_100vCDM_2mm
+          source: l2_17
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0171
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_17
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0172
+          type: 2Gbs_100vCDM_2mm
+          source: l2_17
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0173
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_17
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0174
+          type: 2Gbs_100vCDM_2mm
+          source: l2_17
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0175
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_17
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0176
+          type: 2Gbs_100vCDM_2mm
+          source: l2_17
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0177
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_17
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0178
+          type: 2Gbs_100vCDM_2mm
+          source: l2_17
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0179
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_17
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0180
+          type: 2Gbs_100vCDM_2mm
+          source: l2_18
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0181
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_18
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0182
+          type: 2Gbs_100vCDM_2mm
+          source: l2_18
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0183
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_18
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0184
+          type: 2Gbs_100vCDM_2mm
+          source: l2_18
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0185
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_18
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0186
+          type: 2Gbs_100vCDM_2mm
+          source: l2_18
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0187
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_18
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0188
+          type: 2Gbs_100vCDM_2mm
+          source: l2_18
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0189
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_18
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0190
+          type: 2Gbs_100vCDM_2mm
+          source: l2_19
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0191
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_19
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0192
+          type: 2Gbs_100vCDM_2mm
+          source: l2_19
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0193
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_19
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0194
+          type: 2Gbs_100vCDM_2mm
+          source: l2_19
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0195
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_19
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0196
+          type: 2Gbs_100vCDM_2mm
+          source: l2_19
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0197
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_19
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0198
+          type: 2Gbs_100vCDM_2mm
+          source: l2_19
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0199
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_19
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0200
+          type: 2Gbs_100vCDM_2mm
+          source: l2_20
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0201
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_20
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0202
+          type: 2Gbs_100vCDM_2mm
+          source: l2_20
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0203
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_20
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0204
+          type: 2Gbs_100vCDM_2mm
+          source: l2_20
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0205
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_20
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0206
+          type: 2Gbs_100vCDM_2mm
+          source: l2_20
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0207
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_20
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0208
+          type: 2Gbs_100vCDM_2mm
+          source: l2_20
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0209
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_20
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0210
+          type: 2Gbs_100vCDM_2mm
+          source: l2_21
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0211
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_21
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0212
+          type: 2Gbs_100vCDM_2mm
+          source: l2_21
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0213
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_21
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0214
+          type: 2Gbs_100vCDM_2mm
+          source: l2_21
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0215
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_21
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0216
+          type: 2Gbs_100vCDM_2mm
+          source: l2_21
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0217
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_21
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0218
+          type: 2Gbs_100vCDM_2mm
+          source: l2_21
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0219
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_21
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0220
+          type: 2Gbs_100vCDM_2mm
+          source: l2_22
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0221
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_22
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0222
+          type: 2Gbs_100vCDM_2mm
+          source: l2_22
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0223
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_22
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0224
+          type: 2Gbs_100vCDM_2mm
+          source: l2_22
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0225
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_22
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0226
+          type: 2Gbs_100vCDM_2mm
+          source: l2_22
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0227
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_22
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0228
+          type: 2Gbs_100vCDM_2mm
+          source: l2_22
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0229
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_22
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0230
+          type: 2Gbs_100vCDM_2mm
+          source: l2_23
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0231
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_23
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0232
+          type: 2Gbs_100vCDM_2mm
+          source: l2_23
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0233
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_23
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0234
+          type: 2Gbs_100vCDM_2mm
+          source: l2_23
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0235
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_23
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0236
+          type: 2Gbs_100vCDM_2mm
+          source: l2_23
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0237
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_23
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0238
+          type: 2Gbs_100vCDM_2mm
+          source: l2_23
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0239
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_23
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0240
+          type: 2Gbs_100vCDM_2mm
+          source: l2_24
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0241
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_24
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0242
+          type: 2Gbs_100vCDM_2mm
+          source: l2_24
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0243
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_24
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0244
+          type: 2Gbs_100vCDM_2mm
+          source: l2_24
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0245
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_24
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0246
+          type: 2Gbs_100vCDM_2mm
+          source: l2_24
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0247
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_24
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0248
+          type: 2Gbs_100vCDM_2mm
+          source: l2_24
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0249
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_24
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0250
+          type: 2Gbs_100vCDM_2mm
+          source: l2_25
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0251
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_25
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0252
+          type: 2Gbs_100vCDM_2mm
+          source: l2_25
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0253
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_25
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0254
+          type: 2Gbs_100vCDM_2mm
+          source: l2_25
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0255
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_25
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0256
+          type: 2Gbs_100vCDM_2mm
+          source: l2_25
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0257
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_25
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0258
+          type: 2Gbs_100vCDM_2mm
+          source: l2_25
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0259
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_25
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0260
+          type: 2Gbs_100vCDM_2mm
+          source: l2_26
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0261
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_26
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0262
+          type: 2Gbs_100vCDM_2mm
+          source: l2_26
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0263
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_26
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0264
+          type: 2Gbs_100vCDM_2mm
+          source: l2_26
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0265
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_26
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0266
+          type: 2Gbs_100vCDM_2mm
+          source: l2_26
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0267
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_26
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0268
+          type: 2Gbs_100vCDM_2mm
+          source: l2_26
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0269
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_26
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0270
+          type: 2Gbs_100vCDM_2mm
+          source: l2_27
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0271
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_27
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0272
+          type: 2Gbs_100vCDM_2mm
+          source: l2_27
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0273
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_27
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0274
+          type: 2Gbs_100vCDM_2mm
+          source: l2_27
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0275
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_27
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0276
+          type: 2Gbs_100vCDM_2mm
+          source: l2_27
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0277
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_27
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0278
+          type: 2Gbs_100vCDM_2mm
+          source: l2_27
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0279
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_27
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0280
+          type: 2Gbs_100vCDM_2mm
+          source: l2_28
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0281
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_28
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0282
+          type: 2Gbs_100vCDM_2mm
+          source: l2_28
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0283
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_28
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0284
+          type: 2Gbs_100vCDM_2mm
+          source: l2_28
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0285
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_28
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0286
+          type: 2Gbs_100vCDM_2mm
+          source: l2_28
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0287
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_28
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0288
+          type: 2Gbs_100vCDM_2mm
+          source: l2_28
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0289
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_28
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0290
+          type: 2Gbs_100vCDM_2mm
+          source: l2_29
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0291
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_29
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0292
+          type: 2Gbs_100vCDM_2mm
+          source: l2_29
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0293
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_29
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0294
+          type: 2Gbs_100vCDM_2mm
+          source: l2_29
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0295
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_29
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0296
+          type: 2Gbs_100vCDM_2mm
+          source: l2_29
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0297
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_29
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0298
+          type: 2Gbs_100vCDM_2mm
+          source: l2_29
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0299
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_29
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0300
+          type: 2Gbs_100vCDM_2mm
+          source: l2_30
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0301
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_30
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0302
+          type: 2Gbs_100vCDM_2mm
+          source: l2_30
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0303
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_30
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0304
+          type: 2Gbs_100vCDM_2mm
+          source: l2_30
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0305
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_30
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0306
+          type: 2Gbs_100vCDM_2mm
+          source: l2_30
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0307
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_30
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0308
+          type: 2Gbs_100vCDM_2mm
+          source: l2_30
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0309
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_30
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0310
+          type: 2Gbs_100vCDM_2mm
+          source: l2_31
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0311
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_31
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0312
+          type: 2Gbs_100vCDM_2mm
+          source: l2_31
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0313
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_31
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0314
+          type: 2Gbs_100vCDM_2mm
+          source: l2_31
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0315
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_31
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0316
+          type: 2Gbs_100vCDM_2mm
+          source: l2_31
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0317
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_31
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0318
+          type: 2Gbs_100vCDM_2mm
+          source: l2_31
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0319
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_31
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0320
+          type: 2Gbs_100vCDM_2mm
+          source: l2_32
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0321
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_32
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0322
+          type: 2Gbs_100vCDM_2mm
+          source: l2_32
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0323
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_32
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0324
+          type: 2Gbs_100vCDM_2mm
+          source: l2_32
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0325
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_32
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0326
+          type: 2Gbs_100vCDM_2mm
+          source: l2_32
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0327
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_32
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0328
+          type: 2Gbs_100vCDM_2mm
+          source: l2_32
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0329
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_32
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0330
+          type: 2Gbs_100vCDM_2mm
+          source: l2_33
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0331
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_33
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0332
+          type: 2Gbs_100vCDM_2mm
+          source: l2_33
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0333
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_33
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0334
+          type: 2Gbs_100vCDM_2mm
+          source: l2_33
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0335
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_33
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0336
+          type: 2Gbs_100vCDM_2mm
+          source: l2_33
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0337
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_33
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0338
+          type: 2Gbs_100vCDM_2mm
+          source: l2_33
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0339
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_33
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0340
+          type: 2Gbs_100vCDM_2mm
+          source: l2_34
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0341
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_34
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0342
+          type: 2Gbs_100vCDM_2mm
+          source: l2_34
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0343
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_34
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0344
+          type: 2Gbs_100vCDM_2mm
+          source: l2_34
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0345
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_34
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0346
+          type: 2Gbs_100vCDM_2mm
+          source: l2_34
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0347
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_34
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0348
+          type: 2Gbs_100vCDM_2mm
+          source: l2_34
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0349
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_34
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0350
+          type: 2Gbs_100vCDM_2mm
+          source: l2_35
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0351
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_35
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0352
+          type: 2Gbs_100vCDM_2mm
+          source: l2_35
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0353
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_35
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0354
+          type: 2Gbs_100vCDM_2mm
+          source: l2_35
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0355
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_35
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0356
+          type: 2Gbs_100vCDM_2mm
+          source: l2_35
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0357
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_35
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0358
+          type: 2Gbs_100vCDM_2mm
+          source: l2_35
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0359
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_35
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0360
+          type: 2Gbs_100vCDM_2mm
+          source: l2_36
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0361
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_36
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0362
+          type: 2Gbs_100vCDM_2mm
+          source: l2_36
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0363
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_36
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0364
+          type: 2Gbs_100vCDM_2mm
+          source: l2_36
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0365
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_36
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0366
+          type: 2Gbs_100vCDM_2mm
+          source: l2_36
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0367
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_36
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0368
+          type: 2Gbs_100vCDM_2mm
+          source: l2_36
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0369
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_36
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0370
+          type: 2Gbs_100vCDM_2mm
+          source: l2_37
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0371
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_37
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0372
+          type: 2Gbs_100vCDM_2mm
+          source: l2_37
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0373
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_37
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0374
+          type: 2Gbs_100vCDM_2mm
+          source: l2_37
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0375
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_37
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0376
+          type: 2Gbs_100vCDM_2mm
+          source: l2_37
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0377
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_37
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0378
+          type: 2Gbs_100vCDM_2mm
+          source: l2_37
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0379
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_37
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0380
+          type: 2Gbs_100vCDM_2mm
+          source: l2_38
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0381
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_38
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0382
+          type: 2Gbs_100vCDM_2mm
+          source: l2_38
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0383
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_38
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0384
+          type: 2Gbs_100vCDM_2mm
+          source: l2_38
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0385
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_38
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0386
+          type: 2Gbs_100vCDM_2mm
+          source: l2_38
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0387
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_38
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0388
+          type: 2Gbs_100vCDM_2mm
+          source: l2_38
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0389
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_38
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0390
+          type: 2Gbs_100vCDM_2mm
+          source: l2_39
+          sink: hbm_1536_ctrl_0
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0391
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_0
+          sink: l2_39
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0392
+          type: 2Gbs_100vCDM_2mm
+          source: l2_39
+          sink: hbm_1536_ctrl_1
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0393
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_1
+          sink: l2_39
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0394
+          type: 2Gbs_100vCDM_2mm
+          source: l2_39
+          sink: hbm_1536_ctrl_2
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0395
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_2
+          sink: l2_39
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0396
+          type: 2Gbs_100vCDM_2mm
+          source: l2_39
+          sink: hbm_1536_ctrl_3
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0397
+          type: 2Gbs_100vCDM_2mm
+          source: hbm_1536_ctrl_3
+          sink: l2_39
+          bb_count: null
+          bandwidth_gbps: 9.675
+          average_bandwidth_utilization: 0.5
+        - name: link_0398
+          type: 2Gbs_100vCDM_2mm
+          source: l2_39
+          sink: pcie
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        - name: link_0399
+          type: 2Gbs_100vCDM_2mm
+          source: pcie
+          sink: l2_39
+          bb_count: null
+          bandwidth_gbps: 0.8
+          average_bandwidth_utilization: 0.5
+        io_library:
+        - type: UCIe_standard
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 10.0
+        - type: UCIe_standard_1
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 1.0
+        - type: UCIe_standard_2
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: UCIe_standard_5
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 5.0
+        - type: UCIe_standard_10
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 10.0
+        - type: UCIe_standard_20
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 20.0
+        - type: UCIe_advanced
+          tx_area: 0.4055184
+          rx_area: 0.4055184
+          shoreline: 0.3888
+          bandwidth: 4096
+          wire_count: 140
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 10.0
+        - type: 2Gbs_100vCDM_2mm
+          tx_area: 0.0002
+          rx_area: 0.0002
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: 2Gbs_100vCDM_5mm
+          tx_area: 0.0002
+          rx_area: 0.0002
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 5.0
+        - type: 2Gbs_100vCDM_10mm
+          tx_area: 0.0002
+          rx_area: 0.0002
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 10.0
+        - type: 2Gbs_100vCDM_20mm
+          tx_area: 0.0002
+          rx_area: 0.0002
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 20.0
+        - type: 2Gbs_0vCDM_2mm
+          tx_area: 4.763e-05
+          rx_area: 4.763e-05
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: 2Gbs_10vCDM_2mm
+          tx_area: 6.265e-05
+          rx_area: 6.265e-05
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: 2Gbs_125vCDM_2mm
+          tx_area: 9.27e-05
+          rx_area: 9.27e-05
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: 2Gbs_250vCDM_2mm
+          tx_area: 0.00013025
+          rx_area: 0.00013025
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: 2Gbs_500vCDM_2mm
+          tx_area: 0.00019775
+          rx_area: 0.00019785
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: PCIe
+          tx_area: 2.0
+          rx_area: 2.0
+          shoreline: 1.0
+          bandwidth: 2048
+          wire_count: 140
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 10.0
+        - type: GPIO
+          tx_area: 0.001
+          rx_area: 0.001
+          shoreline: 0.02
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: GPIO_external_small
+          tx_area: 0.001
+          rx_area: 0.001
+          shoreline: 0.04
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: GPIO_external
+          tx_area: 0.00314
+          rx_area: 0.00314
+          shoreline: 0.04
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: IO_100v
+          tx_area: 0.0002
+          rx_area: 0.0002
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: IO_50v
+          tx_area: 0.00013
+          rx_area: 0.00013
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: IO_30v
+          tx_area: 0.000116
+          rx_area: 0.000116
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: IO_10v
+          tx_area: 9.2e-05
+          rx_area: 9.2e-05
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: IO_3v
+          tx_area: 8.0e-05
+          rx_area: 8.0e-05
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: temp_io
+          tx_area: 0.0
+          rx_area: 0.0
+          shoreline: 1.0
+          bandwidth: 1
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.0
+          reach: 10.0
+        layer_library:
+        - name: organic_substrate
+          active: false
+          cost_per_mm2: 0.0001
+          gates_per_mm2: 0.0
+          defect_density: 0.0
+          critical_area_ratio: 0.0
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.0
+          nre_mask_cost: 0
+          stitching_yield: 1.0
+        - name: 5nm_active
+          active: true
+          cost_per_mm2: 0.5
+          gates_per_mm2: 1000000000
+          defect_density: 0.005
+          critical_area_ratio: 0.8
+          clustering_factor: 2
+          transistor_density: 117.3
+          litho_percent: 0.2
+          nre_mask_cost: 10000
+          stitching_yield: 0.9
+        - name: 5nm_advanced_metal
+          active: false
+          cost_per_mm2: 0.3
+          defect_density: 0.0003
+          critical_area_ratio: 0.5
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.4
+          nre_mask_cost: 5000
+          stitching_yield: 0.95
+        - name: 5nm_intermediate_metal
+          active: false
+          cost_per_mm2: 0.1
+          defect_density: 0.005
+          critical_area_ratio: 0.3
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.3
+          nre_mask_cost: 1000
+          stitching_yield: 0.99
+        - name: 5nm_global_metal
+          active: false
+          cost_per_mm2: 0.01
+          defect_density: 0.005
+          critical_area_ratio: 0.1
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.2
+          nre_mask_cost: 500
+          stitching_yield: 0.999
+        - name: combined_40nm
+          active: true
+          cost_per_mm2: 0.033497
+          defect_density: 0.005
+          critical_area_ratio: 0.5
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.15
+          nre_mask_cost: 100000
+          stitching_yield: 0.5
+        - name: combined_45nm
+          active: true
+          cost_per_mm2: 0.032171
+          defect_density: 0.005
+          critical_area_ratio: 0.6
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.15
+          nre_mask_cost: 100000
+          stitching_yield: 0.5
+        - name: combined_interposer_silicon
+          active: false
+          cost_per_mm2: 0.021905
+          defect_density: 1.0e-05
+          critical_area_ratio: 0.3
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.1
+          nre_mask_cost: 5000
+          stitching_yield: 0.99
+        - name: combined_interposer_glass
+          active: false
+          cost_per_mm2: 0.0021905
+          defect_density: 1.0e-05
+          critical_area_ratio: 0.3
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.1
+          nre_mask_cost: 5000
+          stitching_yield: 0.99
+        - name: combined_interposer_organic
+          active: false
+          cost_per_mm2: 5.382e-07
+          defect_density: 1.0e-06
+          critical_area_ratio: 0.2
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.0
+          nre_mask_cost: 500
+          stitching_yield: 1.0
+        - name: combined_12nm
+          active: true
+          cost_per_mm2: 0.05636207
+          defect_density: 0.005
+          critical_area_ratio: 0.6
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.25
+          nre_mask_cost: 500000
+          stitching_yield: 0.5
+        - name: combined_hbm2_12nm
+          active: true
+          cost_per_mm2: 0.1654538
+          defect_density: 0.005
+          critical_area_ratio: 0.6
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.25
+          nre_mask_cost: 500000
+          stitching_yield: 0.5
+        - name: combined_10nm
+          active: true
+          cost_per_mm2: 0.084769
+          defect_density: 0.005
+          critical_area_ratio: 0.62
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.25
+          nre_mask_cost: 500000
+          stitching_yield: 0.5
+        - name: combined_7nm
+          active: true
+          cost_per_mm2: 0.132219
+          defect_density: 0.005
+          critical_area_ratio: 0.64
+          clustering_factor: 2
+          transistor_density: 91.2
+          litho_percent: 0.27
+          nre_mask_cost: 1000000
+          stitching_yield: 0.5
+        - name: combined_hbm_7nm
+          active: true
+          cost_per_mm2: 1.10136
+          defect_density: 0.005
+          critical_area_ratio: 0.6
+          clustering_factor: 2
+          transistor_density: 729.6
+          litho_percent: 0.27
+          nre_mask_cost: 1000000
+          stitching_yield: 0.5
+        - name: combined_5nm
+          active: true
+          cost_per_mm2: 0.25024
+          defect_density: 0.005
+          critical_area_ratio: 0.67
+          clustering_factor: 2
+          transistor_density: 117.3
+          litho_percent: 0.3
+          nre_mask_cost: 3000000
+          stitching_yield: 0.5
+        - name: combined_3nm
+          active: true
+          cost_per_mm2: 0.29461
+          defect_density: 0.005
+          critical_area_ratio: 0.7
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.35
+          nre_mask_cost: 5000000
+          stitching_yield: 0.5
+        - name: combined_3nm_0.001
+          active: true
+          cost_per_mm2: 0.29461
+          defect_density: 0.001
+          critical_area_ratio: 0.7
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.35
+          nre_mask_cost: 5000000
+          stitching_yield: 0.5
+        - name: combined_3nm_0.005
+          active: true
+          cost_per_mm2: 0.29461
+          defect_density: 0.005
+          critical_area_ratio: 0.7
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.35
+          nre_mask_cost: 5000000
+          stitching_yield: 0.5
+        - name: combined_3nm_0.01
+          active: true
+          cost_per_mm2: 0.29461
+          defect_density: 0.01
+          critical_area_ratio: 0.7
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.35
+          nre_mask_cost: 5000000
+          stitching_yield: 0.5
+        wafer_process_library:
+        - name: process_1
+          wafer_diameter: 300
+          edge_exclusion: 0.1
+          wafer_process_yield: 1.0
+          dicing_distance: 0.13
+          reticle_x: 26
+          reticle_y: 33
+          wafer_fill_grid: true
+          nre_front_end_cost_per_mm2_memory: 0.0
+          nre_back_end_cost_per_mm2_memory: 0.0
+          nre_front_end_cost_per_mm2_logic: 0.0
+          nre_back_end_cost_per_mm2_logic: 500000
+          nre_front_end_cost_per_mm2_analog: 0.0
+          nre_back_end_cost_per_mm2_analog: 0.0
+        - name: maskless_interposer_process
+          wafer_diameter: 600
+          edge_exclusion: 0.1
+          wafer_process_yield: 1.0
+          dicing_distance: 0.13
+          reticle_x: 200
+          reticle_y: 200
+          wafer_fill_grid: true
+          nre_front_end_cost_per_mm2_memory: 0.0
+          nre_back_end_cost_per_mm2_memory: 0.0
+          nre_front_end_cost_per_mm2_logic: 0.0
+          nre_back_end_cost_per_mm2_logic: 0.0
+          nre_front_end_cost_per_mm2_analog: 0.0
+          nre_back_end_cost_per_mm2_analog: 0.0
+        assembly_process_library:
+        - name: organic_25_simultaneous_bonding
+          materials_cost_per_mm2: 0.1
+          bb_cost_per_second: null
+          picknplace_machine_cost: 800000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 800000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 10
+          die_separation: 1.0
+          edge_exclusion: 2.0
+          max_pad_current_density: 100.0
+          bonding_pitch: 0.025
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: organic_55_simultaneous_bonding
+          materials_cost_per_mm2: 0.1
+          bb_cost_per_second: null
+          picknplace_machine_cost: 1000000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 300000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 10
+          die_separation: 1.0
+          edge_exclusion: 2.0
+          max_pad_current_density: 100.0
+          bonding_pitch: 0.055
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: organic_simultaneous_bonding
+          materials_cost_per_mm2: 0.1
+          bb_cost_per_second: null
+          picknplace_machine_cost: 600000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 200000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 64
+          die_separation: 1.0
+          edge_exclusion: 2.0
+          max_pad_current_density: 100.0
+          bonding_pitch: 0.11
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: silicon_45_individual_bonding
+          materials_cost_per_mm2: 0.1
+          bb_cost_per_second: null
+          picknplace_machine_cost: 500000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 500000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 1
+          die_separation: 0.1
+          edge_exclusion: 0.1
+          max_pad_current_density: 10000.0
+          bonding_pitch: 0.045
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: silicon_individual_bonding
+          materials_cost_per_mm2: 0.0
+          bb_cost_per_second: null
+          picknplace_machine_cost: 1800000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 1800000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 1
+          die_separation: 0.1
+          edge_exclusion: 0.1
+          max_pad_current_density: 10000.0
+          bonding_pitch: 0.01
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: silicon_simultaneous_bonding
+          materials_cost_per_mm2: 0.0
+          bb_cost_per_second: null
+          picknplace_machine_cost: 1800000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 1800000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 64
+          die_separation: 0.1
+          edge_exclusion: 0.1
+          max_pad_current_density: 10000.0
+          bonding_pitch: 0.01
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: glass_individual_bonding
+          materials_cost_per_mm2: 0.0
+          bb_cost_per_second: null
+          picknplace_machine_cost: 1800000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 1800000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 1
+          die_separation: 0.1
+          edge_exclusion: 0.1
+          max_pad_current_density: 10000.0
+          bonding_pitch: 0.01
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: w2w_hybrid_bonding
+          materials_cost_per_mm2: 0.1
+          bb_cost_per_second: null
+          picknplace_machine_cost: 1000000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1000
+          bonding_machine_cost: 1000000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 1000
+          die_separation: 0.1
+          edge_exclusion: 0.1
+          max_pad_current_density: 10000.0
+          bonding_pitch: 0.001
+          alignment_yield: 0.99999
+          bonding_yield: 0.99999999
+          dielectric_bond_defect_density: 0.0001
+        - name: dummy_assembly_process
+          materials_cost_per_mm2: 0.0
+          bb_cost_per_second: null
+          picknplace_machine_cost: 0
+          picknplace_machine_lifetime: 1
+          picknplace_machine_uptime: 1.0
+          picknplace_technician_yearly_cost: 0
+          picknplace_time: 1
+          picknplace_group: 1
+          bonding_machine_cost: 0
+          bonding_machine_lifetime: 1
+          bonding_machine_uptime: 1.0
+          bonding_technician_yearly_cost: 0
+          bonding_time: 1
+          bonding_group: 1
+          die_separation: 0.0
+          edge_exclusion: 0.0
+          max_pad_current_density: 1.0
+          bonding_pitch: 1.0
+          alignment_yield: 1.0
+          bonding_yield: 1.0
+          dielectric_bond_defect_density: 0.0
+        test_process_library:
+        - name: test_process_0
+          time_per_test_cycle: 1.0e-09
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: null
+          bb_self_scan_chain_length: null
+          self_defect_coverage: 0.9
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0.9
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: notest
+          time_per_test_cycle: 0.1
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: false
+          bb_self_pattern_count: null
+          bb_self_scan_chain_length: null
+          self_defect_coverage: 0
+          self_test_reuse: 1
+          self_num_scan_chains: 0
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: false
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 0
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: KGD_free_test
+          time_per_test_cycle: 0.1
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 0
+          bb_self_scan_chain_length: 0
+          self_defect_coverage: 1.0
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 1.0
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: KGD_interposer_free_test
+          time_per_test_cycle: 0.1
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 0
+          bb_self_scan_chain_length: 0
+          self_defect_coverage: 1.0
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 1.0
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_1.0
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 1000
+          bb_self_scan_chain_length: 100000
+          self_defect_coverage: 1.0
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 8
+          bb_assembly_scan_chain_length: 100
+          assembly_defect_coverage: 1.0
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.999
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 0
+          bb_self_scan_chain_length: 0
+          self_defect_coverage: 0.999
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0.999
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.99
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 0
+          bb_self_scan_chain_length: 0
+          self_defect_coverage: 0.99
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0.99
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.95
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 200
+          bb_self_scan_chain_length: 100000
+          self_defect_coverage: 0.95
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 4
+          bb_assembly_scan_chain_length: 100
+          assembly_defect_coverage: 0.95
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.9
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 100
+          bb_self_scan_chain_length: 100000
+          self_defect_coverage: 0.9
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 2
+          bb_assembly_scan_chain_length: 100
+          assembly_defect_coverage: 0.9
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.5
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 10
+          bb_self_scan_chain_length: 100000
+          self_defect_coverage: 0.5
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 1
+          bb_assembly_scan_chain_length: 100
+          assembly_defect_coverage: 0.5
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.1
+          time_per_test_cycle: 0.1
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 0
+          bb_self_scan_chain_length: 0
+          self_defect_coverage: 0.1
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0.1
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: self_test_only_KGD_free_test
+          time_per_test_cycle: 0.1
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: null
+          bb_self_scan_chain_length: null
+          self_defect_coverage: 1.0
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: false
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0.0
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 0
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        statistics:
+          block_count: 179
+          interconnect_count: 400
+          io_type_count: 26
+          layer_count: 20
+          wafer_process_count: 2
+          assembly_process_count: 9
+          test_process_count: 12
+      modeling_assumptions:
+        chiplet_type_mapping: All original ChipletPart blocks are represented as synthetic 3dblox dies.
+        chiplet_shape_mapping: Each block is converted into a square die with side sqrt(area_mm2) * 1000 microns.
+        region_mapping: Each die uses one synthetic front-side region named core_reg.
+        stack_mapping: All dies are placed on a 2D shelf grid at z = 0 with orient = R0.
+        connection_mapping: No native 3dblox Connection section is emitted because the source testcase does not provide region-to-region physical connectivity.
+        collateral_mapping: No standard external collateral keys are populated because the source testcase does not include LEF/liberty/tech/deck collateral.
+ChipletInst:
+  sm_0:
+    reference: sm_0
+  sm_1:
+    reference: sm_1
+  sm_2:
+    reference: sm_2
+  sm_3:
+    reference: sm_3
+  sm_4:
+    reference: sm_4
+  sm_5:
+    reference: sm_5
+  sm_6:
+    reference: sm_6
+  sm_7:
+    reference: sm_7
+  sm_8:
+    reference: sm_8
+  sm_9:
+    reference: sm_9
+  sm_10:
+    reference: sm_10
+  sm_11:
+    reference: sm_11
+  sm_12:
+    reference: sm_12
+  sm_13:
+    reference: sm_13
+  sm_14:
+    reference: sm_14
+  sm_15:
+    reference: sm_15
+  sm_16:
+    reference: sm_16
+  sm_17:
+    reference: sm_17
+  sm_18:
+    reference: sm_18
+  sm_19:
+    reference: sm_19
+  sm_20:
+    reference: sm_20
+  sm_21:
+    reference: sm_21
+  sm_22:
+    reference: sm_22
+  sm_23:
+    reference: sm_23
+  sm_24:
+    reference: sm_24
+  sm_25:
+    reference: sm_25
+  sm_26:
+    reference: sm_26
+  sm_27:
+    reference: sm_27
+  sm_28:
+    reference: sm_28
+  sm_29:
+    reference: sm_29
+  sm_30:
+    reference: sm_30
+  sm_31:
+    reference: sm_31
+  sm_32:
+    reference: sm_32
+  sm_33:
+    reference: sm_33
+  sm_34:
+    reference: sm_34
+  sm_35:
+    reference: sm_35
+  sm_36:
+    reference: sm_36
+  sm_37:
+    reference: sm_37
+  sm_38:
+    reference: sm_38
+  sm_39:
+    reference: sm_39
+  sm_40:
+    reference: sm_40
+  sm_41:
+    reference: sm_41
+  sm_42:
+    reference: sm_42
+  sm_43:
+    reference: sm_43
+  sm_44:
+    reference: sm_44
+  sm_45:
+    reference: sm_45
+  sm_46:
+    reference: sm_46
+  sm_47:
+    reference: sm_47
+  sm_48:
+    reference: sm_48
+  sm_49:
+    reference: sm_49
+  sm_50:
+    reference: sm_50
+  sm_51:
+    reference: sm_51
+  sm_52:
+    reference: sm_52
+  sm_53:
+    reference: sm_53
+  sm_54:
+    reference: sm_54
+  sm_55:
+    reference: sm_55
+  sm_56:
+    reference: sm_56
+  sm_57:
+    reference: sm_57
+  sm_58:
+    reference: sm_58
+  sm_59:
+    reference: sm_59
+  sm_60:
+    reference: sm_60
+  sm_61:
+    reference: sm_61
+  sm_62:
+    reference: sm_62
+  sm_63:
+    reference: sm_63
+  sm_64:
+    reference: sm_64
+  sm_65:
+    reference: sm_65
+  sm_66:
+    reference: sm_66
+  sm_67:
+    reference: sm_67
+  sm_68:
+    reference: sm_68
+  sm_69:
+    reference: sm_69
+  sm_70:
+    reference: sm_70
+  sm_71:
+    reference: sm_71
+  sm_72:
+    reference: sm_72
+  sm_73:
+    reference: sm_73
+  sm_74:
+    reference: sm_74
+  sm_75:
+    reference: sm_75
+  sm_76:
+    reference: sm_76
+  sm_77:
+    reference: sm_77
+  sm_78:
+    reference: sm_78
+  sm_79:
+    reference: sm_79
+  sm_80:
+    reference: sm_80
+  sm_81:
+    reference: sm_81
+  sm_82:
+    reference: sm_82
+  sm_83:
+    reference: sm_83
+  sm_84:
+    reference: sm_84
+  sm_85:
+    reference: sm_85
+  sm_86:
+    reference: sm_86
+  sm_87:
+    reference: sm_87
+  sm_88:
+    reference: sm_88
+  sm_89:
+    reference: sm_89
+  sm_90:
+    reference: sm_90
+  sm_91:
+    reference: sm_91
+  sm_92:
+    reference: sm_92
+  sm_93:
+    reference: sm_93
+  sm_94:
+    reference: sm_94
+  sm_95:
+    reference: sm_95
+  sm_96:
+    reference: sm_96
+  sm_97:
+    reference: sm_97
+  sm_98:
+    reference: sm_98
+  sm_99:
+    reference: sm_99
+  sm_100:
+    reference: sm_100
+  sm_101:
+    reference: sm_101
+  sm_102:
+    reference: sm_102
+  sm_103:
+    reference: sm_103
+  sm_104:
+    reference: sm_104
+  sm_105:
+    reference: sm_105
+  sm_106:
+    reference: sm_106
+  sm_107:
+    reference: sm_107
+  sm_108:
+    reference: sm_108
+  sm_109:
+    reference: sm_109
+  sm_110:
+    reference: sm_110
+  sm_111:
+    reference: sm_111
+  sm_112:
+    reference: sm_112
+  sm_113:
+    reference: sm_113
+  sm_114:
+    reference: sm_114
+  sm_115:
+    reference: sm_115
+  sm_116:
+    reference: sm_116
+  sm_117:
+    reference: sm_117
+  sm_118:
+    reference: sm_118
+  sm_119:
+    reference: sm_119
+  sm_120:
+    reference: sm_120
+  sm_121:
+    reference: sm_121
+  sm_122:
+    reference: sm_122
+  sm_123:
+    reference: sm_123
+  sm_124:
+    reference: sm_124
+  sm_125:
+    reference: sm_125
+  sm_126:
+    reference: sm_126
+  sm_127:
+    reference: sm_127
+  l2_0:
+    reference: l2_0
+  l2_1:
+    reference: l2_1
+  l2_2:
+    reference: l2_2
+  l2_3:
+    reference: l2_3
+  l2_4:
+    reference: l2_4
+  l2_5:
+    reference: l2_5
+  l2_6:
+    reference: l2_6
+  l2_7:
+    reference: l2_7
+  l2_8:
+    reference: l2_8
+  l2_9:
+    reference: l2_9
+  l2_10:
+    reference: l2_10
+  l2_11:
+    reference: l2_11
+  l2_12:
+    reference: l2_12
+  l2_13:
+    reference: l2_13
+  l2_14:
+    reference: l2_14
+  l2_15:
+    reference: l2_15
+  l2_16:
+    reference: l2_16
+  l2_17:
+    reference: l2_17
+  l2_18:
+    reference: l2_18
+  l2_19:
+    reference: l2_19
+  l2_20:
+    reference: l2_20
+  l2_21:
+    reference: l2_21
+  l2_22:
+    reference: l2_22
+  l2_23:
+    reference: l2_23
+  l2_24:
+    reference: l2_24
+  l2_25:
+    reference: l2_25
+  l2_26:
+    reference: l2_26
+  l2_27:
+    reference: l2_27
+  l2_28:
+    reference: l2_28
+  l2_29:
+    reference: l2_29
+  l2_30:
+    reference: l2_30
+  l2_31:
+    reference: l2_31
+  l2_32:
+    reference: l2_32
+  l2_33:
+    reference: l2_33
+  l2_34:
+    reference: l2_34
+  l2_35:
+    reference: l2_35
+  l2_36:
+    reference: l2_36
+  l2_37:
+    reference: l2_37
+  l2_38:
+    reference: l2_38
+  l2_39:
+    reference: l2_39
+  pcie:
+    reference: pcie
+  hbm_1024_phy_0:
+    reference: hbm_1024_phy_0
+  hbm_1024_phy_1:
+    reference: hbm_1024_phy_1
+  hbm_1024_phy_2:
+    reference: hbm_1024_phy_2
+  hbm_1024_phy_3:
+    reference: hbm_1024_phy_3
+  hbm_1024_phy_4:
+    reference: hbm_1024_phy_4
+  hbm_1024_phy_5:
+    reference: hbm_1024_phy_5
+  hbm_1536_ctrl_0:
+    reference: hbm_1536_ctrl_0
+  hbm_1536_ctrl_1:
+    reference: hbm_1536_ctrl_1
+  hbm_1536_ctrl_2:
+    reference: hbm_1536_ctrl_2
+  hbm_1536_ctrl_3:
+    reference: hbm_1536_ctrl_3
+Stack:
+  sm_0:
+    loc:
+    - 0.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  sm_1:
+    loc:
+    - 2500.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  sm_2:
+    loc:
+    - 5000.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  sm_3:
+    loc:
+    - 7500.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  sm_4:
+    loc:
+    - 10000.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  sm_5:
+    loc:
+    - 12500.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  sm_6:
+    loc:
+    - 15000.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  sm_7:
+    loc:
+    - 17500.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  sm_8:
+    loc:
+    - 20000.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  sm_9:
+    loc:
+    - 22500.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  sm_10:
+    loc:
+    - 25000.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  sm_11:
+    loc:
+    - 27500.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  sm_12:
+    loc:
+    - 30000.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  sm_13:
+    loc:
+    - 32500.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  sm_14:
+    loc:
+    - 35000.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  sm_15:
+    loc:
+    - 37500.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  sm_16:
+    loc:
+    - 0.0
+    - 2500.0
+    z: 0.0
+    orient: R0
+  sm_17:
+    loc:
+    - 2500.0
+    - 2500.0
+    z: 0.0
+    orient: R0
+  sm_18:
+    loc:
+    - 5000.0
+    - 2500.0
+    z: 0.0
+    orient: R0
+  sm_19:
+    loc:
+    - 7500.0
+    - 2500.0
+    z: 0.0
+    orient: R0
+  sm_20:
+    loc:
+    - 10000.0
+    - 2500.0
+    z: 0.0
+    orient: R0
+  sm_21:
+    loc:
+    - 12500.0
+    - 2500.0
+    z: 0.0
+    orient: R0
+  sm_22:
+    loc:
+    - 15000.0
+    - 2500.0
+    z: 0.0
+    orient: R0
+  sm_23:
+    loc:
+    - 17500.0
+    - 2500.0
+    z: 0.0
+    orient: R0
+  sm_24:
+    loc:
+    - 20000.0
+    - 2500.0
+    z: 0.0
+    orient: R0
+  sm_25:
+    loc:
+    - 22500.0
+    - 2500.0
+    z: 0.0
+    orient: R0
+  sm_26:
+    loc:
+    - 25000.0
+    - 2500.0
+    z: 0.0
+    orient: R0
+  sm_27:
+    loc:
+    - 27500.0
+    - 2500.0
+    z: 0.0
+    orient: R0
+  sm_28:
+    loc:
+    - 30000.0
+    - 2500.0
+    z: 0.0
+    orient: R0
+  sm_29:
+    loc:
+    - 32500.0
+    - 2500.0
+    z: 0.0
+    orient: R0
+  sm_30:
+    loc:
+    - 35000.0
+    - 2500.0
+    z: 0.0
+    orient: R0
+  sm_31:
+    loc:
+    - 37500.0
+    - 2500.0
+    z: 0.0
+    orient: R0
+  sm_32:
+    loc:
+    - 0.0
+    - 5000.0
+    z: 0.0
+    orient: R0
+  sm_33:
+    loc:
+    - 2500.0
+    - 5000.0
+    z: 0.0
+    orient: R0
+  sm_34:
+    loc:
+    - 5000.0
+    - 5000.0
+    z: 0.0
+    orient: R0
+  sm_35:
+    loc:
+    - 7500.0
+    - 5000.0
+    z: 0.0
+    orient: R0
+  sm_36:
+    loc:
+    - 10000.0
+    - 5000.0
+    z: 0.0
+    orient: R0
+  sm_37:
+    loc:
+    - 12500.0
+    - 5000.0
+    z: 0.0
+    orient: R0
+  sm_38:
+    loc:
+    - 15000.0
+    - 5000.0
+    z: 0.0
+    orient: R0
+  sm_39:
+    loc:
+    - 17500.0
+    - 5000.0
+    z: 0.0
+    orient: R0
+  sm_40:
+    loc:
+    - 20000.0
+    - 5000.0
+    z: 0.0
+    orient: R0
+  sm_41:
+    loc:
+    - 22500.0
+    - 5000.0
+    z: 0.0
+    orient: R0
+  sm_42:
+    loc:
+    - 25000.0
+    - 5000.0
+    z: 0.0
+    orient: R0
+  sm_43:
+    loc:
+    - 27500.0
+    - 5000.0
+    z: 0.0
+    orient: R0
+  sm_44:
+    loc:
+    - 30000.0
+    - 5000.0
+    z: 0.0
+    orient: R0
+  sm_45:
+    loc:
+    - 32500.0
+    - 5000.0
+    z: 0.0
+    orient: R0
+  sm_46:
+    loc:
+    - 35000.0
+    - 5000.0
+    z: 0.0
+    orient: R0
+  sm_47:
+    loc:
+    - 37500.0
+    - 5000.0
+    z: 0.0
+    orient: R0
+  sm_48:
+    loc:
+    - 0.0
+    - 7500.0
+    z: 0.0
+    orient: R0
+  sm_49:
+    loc:
+    - 2500.0
+    - 7500.0
+    z: 0.0
+    orient: R0
+  sm_50:
+    loc:
+    - 5000.0
+    - 7500.0
+    z: 0.0
+    orient: R0
+  sm_51:
+    loc:
+    - 7500.0
+    - 7500.0
+    z: 0.0
+    orient: R0
+  sm_52:
+    loc:
+    - 10000.0
+    - 7500.0
+    z: 0.0
+    orient: R0
+  sm_53:
+    loc:
+    - 12500.0
+    - 7500.0
+    z: 0.0
+    orient: R0
+  sm_54:
+    loc:
+    - 15000.0
+    - 7500.0
+    z: 0.0
+    orient: R0
+  sm_55:
+    loc:
+    - 17500.0
+    - 7500.0
+    z: 0.0
+    orient: R0
+  sm_56:
+    loc:
+    - 20000.0
+    - 7500.0
+    z: 0.0
+    orient: R0
+  sm_57:
+    loc:
+    - 22500.0
+    - 7500.0
+    z: 0.0
+    orient: R0
+  sm_58:
+    loc:
+    - 25000.0
+    - 7500.0
+    z: 0.0
+    orient: R0
+  sm_59:
+    loc:
+    - 27500.0
+    - 7500.0
+    z: 0.0
+    orient: R0
+  sm_60:
+    loc:
+    - 30000.0
+    - 7500.0
+    z: 0.0
+    orient: R0
+  sm_61:
+    loc:
+    - 32500.0
+    - 7500.0
+    z: 0.0
+    orient: R0
+  sm_62:
+    loc:
+    - 35000.0
+    - 7500.0
+    z: 0.0
+    orient: R0
+  sm_63:
+    loc:
+    - 37500.0
+    - 7500.0
+    z: 0.0
+    orient: R0
+  sm_64:
+    loc:
+    - 0.0
+    - 10000.0
+    z: 0.0
+    orient: R0
+  sm_65:
+    loc:
+    - 2500.0
+    - 10000.0
+    z: 0.0
+    orient: R0
+  sm_66:
+    loc:
+    - 5000.0
+    - 10000.0
+    z: 0.0
+    orient: R0
+  sm_67:
+    loc:
+    - 7500.0
+    - 10000.0
+    z: 0.0
+    orient: R0
+  sm_68:
+    loc:
+    - 10000.0
+    - 10000.0
+    z: 0.0
+    orient: R0
+  sm_69:
+    loc:
+    - 12500.0
+    - 10000.0
+    z: 0.0
+    orient: R0
+  sm_70:
+    loc:
+    - 15000.0
+    - 10000.0
+    z: 0.0
+    orient: R0
+  sm_71:
+    loc:
+    - 17500.0
+    - 10000.0
+    z: 0.0
+    orient: R0
+  sm_72:
+    loc:
+    - 20000.0
+    - 10000.0
+    z: 0.0
+    orient: R0
+  sm_73:
+    loc:
+    - 22500.0
+    - 10000.0
+    z: 0.0
+    orient: R0
+  sm_74:
+    loc:
+    - 25000.0
+    - 10000.0
+    z: 0.0
+    orient: R0
+  sm_75:
+    loc:
+    - 27500.0
+    - 10000.0
+    z: 0.0
+    orient: R0
+  sm_76:
+    loc:
+    - 30000.0
+    - 10000.0
+    z: 0.0
+    orient: R0
+  sm_77:
+    loc:
+    - 32500.0
+    - 10000.0
+    z: 0.0
+    orient: R0
+  sm_78:
+    loc:
+    - 35000.0
+    - 10000.0
+    z: 0.0
+    orient: R0
+  sm_79:
+    loc:
+    - 37500.0
+    - 10000.0
+    z: 0.0
+    orient: R0
+  sm_80:
+    loc:
+    - 0.0
+    - 12500.0
+    z: 0.0
+    orient: R0
+  sm_81:
+    loc:
+    - 2500.0
+    - 12500.0
+    z: 0.0
+    orient: R0
+  sm_82:
+    loc:
+    - 5000.0
+    - 12500.0
+    z: 0.0
+    orient: R0
+  sm_83:
+    loc:
+    - 7500.0
+    - 12500.0
+    z: 0.0
+    orient: R0
+  sm_84:
+    loc:
+    - 10000.0
+    - 12500.0
+    z: 0.0
+    orient: R0
+  sm_85:
+    loc:
+    - 12500.0
+    - 12500.0
+    z: 0.0
+    orient: R0
+  sm_86:
+    loc:
+    - 15000.0
+    - 12500.0
+    z: 0.0
+    orient: R0
+  sm_87:
+    loc:
+    - 17500.0
+    - 12500.0
+    z: 0.0
+    orient: R0
+  sm_88:
+    loc:
+    - 20000.0
+    - 12500.0
+    z: 0.0
+    orient: R0
+  sm_89:
+    loc:
+    - 22500.0
+    - 12500.0
+    z: 0.0
+    orient: R0
+  sm_90:
+    loc:
+    - 25000.0
+    - 12500.0
+    z: 0.0
+    orient: R0
+  sm_91:
+    loc:
+    - 27500.0
+    - 12500.0
+    z: 0.0
+    orient: R0
+  sm_92:
+    loc:
+    - 30000.0
+    - 12500.0
+    z: 0.0
+    orient: R0
+  sm_93:
+    loc:
+    - 32500.0
+    - 12500.0
+    z: 0.0
+    orient: R0
+  sm_94:
+    loc:
+    - 35000.0
+    - 12500.0
+    z: 0.0
+    orient: R0
+  sm_95:
+    loc:
+    - 37500.0
+    - 12500.0
+    z: 0.0
+    orient: R0
+  sm_96:
+    loc:
+    - 0.0
+    - 15000.0
+    z: 0.0
+    orient: R0
+  sm_97:
+    loc:
+    - 2500.0
+    - 15000.0
+    z: 0.0
+    orient: R0
+  sm_98:
+    loc:
+    - 5000.0
+    - 15000.0
+    z: 0.0
+    orient: R0
+  sm_99:
+    loc:
+    - 7500.0
+    - 15000.0
+    z: 0.0
+    orient: R0
+  sm_100:
+    loc:
+    - 10000.0
+    - 15000.0
+    z: 0.0
+    orient: R0
+  sm_101:
+    loc:
+    - 12500.0
+    - 15000.0
+    z: 0.0
+    orient: R0
+  sm_102:
+    loc:
+    - 15000.0
+    - 15000.0
+    z: 0.0
+    orient: R0
+  sm_103:
+    loc:
+    - 17500.0
+    - 15000.0
+    z: 0.0
+    orient: R0
+  sm_104:
+    loc:
+    - 20000.0
+    - 15000.0
+    z: 0.0
+    orient: R0
+  sm_105:
+    loc:
+    - 22500.0
+    - 15000.0
+    z: 0.0
+    orient: R0
+  sm_106:
+    loc:
+    - 25000.0
+    - 15000.0
+    z: 0.0
+    orient: R0
+  sm_107:
+    loc:
+    - 27500.0
+    - 15000.0
+    z: 0.0
+    orient: R0
+  sm_108:
+    loc:
+    - 30000.0
+    - 15000.0
+    z: 0.0
+    orient: R0
+  sm_109:
+    loc:
+    - 32500.0
+    - 15000.0
+    z: 0.0
+    orient: R0
+  sm_110:
+    loc:
+    - 35000.0
+    - 15000.0
+    z: 0.0
+    orient: R0
+  sm_111:
+    loc:
+    - 37500.0
+    - 15000.0
+    z: 0.0
+    orient: R0
+  sm_112:
+    loc:
+    - 0.0
+    - 17500.0
+    z: 0.0
+    orient: R0
+  sm_113:
+    loc:
+    - 2500.0
+    - 17500.0
+    z: 0.0
+    orient: R0
+  sm_114:
+    loc:
+    - 5000.0
+    - 17500.0
+    z: 0.0
+    orient: R0
+  sm_115:
+    loc:
+    - 7500.0
+    - 17500.0
+    z: 0.0
+    orient: R0
+  sm_116:
+    loc:
+    - 10000.0
+    - 17500.0
+    z: 0.0
+    orient: R0
+  sm_117:
+    loc:
+    - 12500.0
+    - 17500.0
+    z: 0.0
+    orient: R0
+  sm_118:
+    loc:
+    - 15000.0
+    - 17500.0
+    z: 0.0
+    orient: R0
+  sm_119:
+    loc:
+    - 17500.0
+    - 17500.0
+    z: 0.0
+    orient: R0
+  sm_120:
+    loc:
+    - 20000.0
+    - 17500.0
+    z: 0.0
+    orient: R0
+  sm_121:
+    loc:
+    - 22500.0
+    - 17500.0
+    z: 0.0
+    orient: R0
+  sm_122:
+    loc:
+    - 25000.0
+    - 17500.0
+    z: 0.0
+    orient: R0
+  sm_123:
+    loc:
+    - 27500.0
+    - 17500.0
+    z: 0.0
+    orient: R0
+  sm_124:
+    loc:
+    - 30000.0
+    - 17500.0
+    z: 0.0
+    orient: R0
+  sm_125:
+    loc:
+    - 32500.0
+    - 17500.0
+    z: 0.0
+    orient: R0
+  sm_126:
+    loc:
+    - 35000.0
+    - 17500.0
+    z: 0.0
+    orient: R0
+  sm_127:
+    loc:
+    - 37500.0
+    - 17500.0
+    z: 0.0
+    orient: R0
+  l2_0:
+    loc:
+    - 0.0
+    - 20000.0
+    z: 0.0
+    orient: R0
+  l2_1:
+    loc:
+    - 2500.0
+    - 20000.0
+    z: 0.0
+    orient: R0
+  l2_2:
+    loc:
+    - 5000.0
+    - 20000.0
+    z: 0.0
+    orient: R0
+  l2_3:
+    loc:
+    - 7500.0
+    - 20000.0
+    z: 0.0
+    orient: R0
+  l2_4:
+    loc:
+    - 10000.0
+    - 20000.0
+    z: 0.0
+    orient: R0
+  l2_5:
+    loc:
+    - 12500.0
+    - 20000.0
+    z: 0.0
+    orient: R0
+  l2_6:
+    loc:
+    - 15000.0
+    - 20000.0
+    z: 0.0
+    orient: R0
+  l2_7:
+    loc:
+    - 17500.0
+    - 20000.0
+    z: 0.0
+    orient: R0
+  l2_8:
+    loc:
+    - 20000.0
+    - 20000.0
+    z: 0.0
+    orient: R0
+  l2_9:
+    loc:
+    - 22500.0
+    - 20000.0
+    z: 0.0
+    orient: R0
+  l2_10:
+    loc:
+    - 25000.0
+    - 20000.0
+    z: 0.0
+    orient: R0
+  l2_11:
+    loc:
+    - 27500.0
+    - 20000.0
+    z: 0.0
+    orient: R0
+  l2_12:
+    loc:
+    - 30000.0
+    - 20000.0
+    z: 0.0
+    orient: R0
+  l2_13:
+    loc:
+    - 32500.0
+    - 20000.0
+    z: 0.0
+    orient: R0
+  l2_14:
+    loc:
+    - 35000.0
+    - 20000.0
+    z: 0.0
+    orient: R0
+  l2_15:
+    loc:
+    - 37500.0
+    - 20000.0
+    z: 0.0
+    orient: R0
+  l2_16:
+    loc:
+    - 0.0
+    - 22500.0
+    z: 0.0
+    orient: R0
+  l2_17:
+    loc:
+    - 2500.0
+    - 22500.0
+    z: 0.0
+    orient: R0
+  l2_18:
+    loc:
+    - 5000.0
+    - 22500.0
+    z: 0.0
+    orient: R0
+  l2_19:
+    loc:
+    - 7500.0
+    - 22500.0
+    z: 0.0
+    orient: R0
+  l2_20:
+    loc:
+    - 10000.0
+    - 22500.0
+    z: 0.0
+    orient: R0
+  l2_21:
+    loc:
+    - 12500.0
+    - 22500.0
+    z: 0.0
+    orient: R0
+  l2_22:
+    loc:
+    - 15000.0
+    - 22500.0
+    z: 0.0
+    orient: R0
+  l2_23:
+    loc:
+    - 17500.0
+    - 22500.0
+    z: 0.0
+    orient: R0
+  l2_24:
+    loc:
+    - 20000.0
+    - 22500.0
+    z: 0.0
+    orient: R0
+  l2_25:
+    loc:
+    - 22500.0
+    - 22500.0
+    z: 0.0
+    orient: R0
+  l2_26:
+    loc:
+    - 25000.0
+    - 22500.0
+    z: 0.0
+    orient: R0
+  l2_27:
+    loc:
+    - 27500.0
+    - 22500.0
+    z: 0.0
+    orient: R0
+  l2_28:
+    loc:
+    - 30000.0
+    - 22500.0
+    z: 0.0
+    orient: R0
+  l2_29:
+    loc:
+    - 32500.0
+    - 22500.0
+    z: 0.0
+    orient: R0
+  l2_30:
+    loc:
+    - 35000.0
+    - 22500.0
+    z: 0.0
+    orient: R0
+  l2_31:
+    loc:
+    - 37500.0
+    - 22500.0
+    z: 0.0
+    orient: R0
+  l2_32:
+    loc:
+    - 0.0
+    - 25000.0
+    z: 0.0
+    orient: R0
+  l2_33:
+    loc:
+    - 2500.0
+    - 25000.0
+    z: 0.0
+    orient: R0
+  l2_34:
+    loc:
+    - 5000.0
+    - 25000.0
+    z: 0.0
+    orient: R0
+  l2_35:
+    loc:
+    - 7500.0
+    - 25000.0
+    z: 0.0
+    orient: R0
+  l2_36:
+    loc:
+    - 10000.0
+    - 25000.0
+    z: 0.0
+    orient: R0
+  l2_37:
+    loc:
+    - 12500.0
+    - 25000.0
+    z: 0.0
+    orient: R0
+  l2_38:
+    loc:
+    - 15000.0
+    - 25000.0
+    z: 0.0
+    orient: R0
+  l2_39:
+    loc:
+    - 17500.0
+    - 25000.0
+    z: 0.0
+    orient: R0
+  pcie:
+    loc:
+    - 20000.0
+    - 25000.0
+    z: 0.0
+    orient: R0
+  hbm_1024_phy_0:
+    loc:
+    - 22500.0
+    - 25000.0
+    z: 0.0
+    orient: R0
+  hbm_1024_phy_1:
+    loc:
+    - 25000.0
+    - 25000.0
+    z: 0.0
+    orient: R0
+  hbm_1024_phy_2:
+    loc:
+    - 27500.0
+    - 25000.0
+    z: 0.0
+    orient: R0
+  hbm_1024_phy_3:
+    loc:
+    - 30000.0
+    - 25000.0
+    z: 0.0
+    orient: R0
+  hbm_1024_phy_4:
+    loc:
+    - 32500.0
+    - 25000.0
+    z: 0.0
+    orient: R0
+  hbm_1024_phy_5:
+    loc:
+    - 35000.0
+    - 25000.0
+    z: 0.0
+    orient: R0
+  hbm_1536_ctrl_0:
+    loc:
+    - 37500.0
+    - 25000.0
+    z: 0.0
+    orient: R0
+  hbm_1536_ctrl_1:
+    loc:
+    - 0.0
+    - 27500.0
+    z: 0.0
+    orient: R0
+  hbm_1536_ctrl_2:
+    loc:
+    - 2500.0
+    - 27500.0
+    z: 0.0
+    orient: R0
+  hbm_1536_ctrl_3:
+    loc:
+    - 5000.0
+    - 27500.0
+    z: 0.0
+    orient: R0
