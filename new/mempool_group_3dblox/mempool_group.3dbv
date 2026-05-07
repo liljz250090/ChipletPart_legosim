@@ -1,0 +1,1967 @@
+Header:
+  version: '2.0'
+  unit: micron
+  precision: 1000
+ChipletDef:
+  gen_axi_group_cuts\[0\].i_axi_cut:
+    type: die
+    design_area:
+    - 1012.645
+    - 1012.645
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1012.645
+          - 0.0
+        - - 1012.645
+          - 1012.645
+        - - 0.0
+          - 1012.645
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_axi_group_cuts\[0\].i_axi_cut
+          area_mm2: 1.02545
+          power_w: 0.08050935040799415
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0120
+  gen_dmas\[0\].i_axi_dma_backend:
+    type: die
+    design_area:
+    - 1252.741
+    - 1252.741
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1252.741
+          - 0.0
+        - - 1252.741
+          - 1252.741
+        - - 0.0
+          - 1252.741
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_dmas\[0\].i_axi_dma_backend
+          area_mm2: 1.56936
+          power_w: 0.12321239861162386
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0000
+        - link_0121
+  gen_dmas\[0\].i_axi_to_reqrsp:
+    type: die
+    design_area:
+    - 388.426
+    - 388.426
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 388.426
+          - 0.0
+        - - 388.426
+          - 388.426
+        - - 0.0
+          - 388.426
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_dmas\[0\].i_axi_to_reqrsp
+          area_mm2: 0.150875
+          power_w: 0.011845383239364295
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0001
+  gen_dmas\[0\].i_dma_axi_xbar:
+    type: die
+    design_area:
+    - 1725.992
+    - 1725.992
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1725.992
+          - 0.0
+        - - 1725.992
+          - 1725.992
+        - - 0.0
+          - 1725.992
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_dmas\[0\].i_dma_axi_xbar
+          area_mm2: 2.97905
+          power_w: 0.23388890763365836
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0000
+        - link_0001
+  gen_dmas\[0\].i_reqrsp_demux:
+    type: die
+    design_area:
+    - 382.389
+    - 382.389
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 382.389
+          - 0.0
+        - - 382.389
+          - 382.389
+        - - 0.0
+          - 382.389
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_dmas\[0\].i_reqrsp_demux
+          area_mm2: 0.146221
+          power_w: 0.011479991931354343
+          technology: 45nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  gen_dmas\[1\].i_axi_dma_backend:
+    type: die
+    design_area:
+    - 1253.834
+    - 1253.834
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1253.834
+          - 0.0
+        - - 1253.834
+          - 1253.834
+        - - 0.0
+          - 1253.834
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_dmas\[1\].i_axi_dma_backend
+          area_mm2: 1.5720999999999998
+          power_w: 0.12342751940748703
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0002
+        - link_0122
+  gen_dmas\[1\].i_axi_to_reqrsp:
+    type: die
+    design_area:
+    - 390.781
+    - 390.781
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 390.781
+          - 0.0
+        - - 390.781
+          - 390.781
+        - - 0.0
+          - 390.781
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_dmas\[1\].i_axi_to_reqrsp
+          area_mm2: 0.15271
+          power_w: 0.011989451363601135
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0003
+  gen_dmas\[1\].i_dma_axi_xbar:
+    type: die
+    design_area:
+    - 1731.213
+    - 1731.213
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1731.213
+          - 0.0
+        - - 1731.213
+          - 1731.213
+        - - 0.0
+          - 1731.213
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_dmas\[1\].i_dma_axi_xbar
+          area_mm2: 2.9971
+          power_w: 0.23530603550421694
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0002
+        - link_0003
+  gen_dmas\[1\].i_reqrsp_demux:
+    type: die
+    design_area:
+    - 388.392
+    - 388.392
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 388.392
+          - 0.0
+        - - 388.392
+          - 388.392
+        - - 0.0
+          - 388.392
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_dmas\[1\].i_reqrsp_demux
+          area_mm2: 0.150848
+          power_w: 0.011843263435901408
+          technology: 45nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  gen_dmas\[2\].i_axi_dma_backend:
+    type: die
+    design_area:
+    - 1250.5
+    - 1250.5
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1250.5
+          - 0.0
+        - - 1250.5
+          - 1250.5
+        - - 0.0
+          - 1250.5
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_dmas\[2\].i_axi_dma_backend
+          area_mm2: 1.5637499999999998
+          power_w: 0.12277195055877987
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0004
+        - link_0123
+  gen_dmas\[2\].i_axi_to_reqrsp:
+    type: die
+    design_area:
+    - 391.394
+    - 391.394
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 391.394
+          - 0.0
+        - - 391.394
+          - 391.394
+        - - 0.0
+          - 391.394
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_dmas\[2\].i_axi_to_reqrsp
+          area_mm2: 0.15318900000000002
+          power_w: 0.012027058247257512
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0005
+  gen_dmas\[2\].i_dma_axi_xbar:
+    type: die
+    design_area:
+    - 1726.369
+    - 1726.369
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1726.369
+          - 0.0
+        - - 1726.369
+          - 1726.369
+        - - 0.0
+          - 1726.369
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_dmas\[2\].i_dma_axi_xbar
+          area_mm2: 2.98035
+          power_w: 0.23399097224483428
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0004
+        - link_0005
+  gen_dmas\[2\].i_reqrsp_demux:
+    type: die
+    design_area:
+    - 348.58
+    - 348.58
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 348.58
+          - 0.0
+        - - 348.58
+          - 348.58
+        - - 0.0
+          - 348.58
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_dmas\[2\].i_reqrsp_demux
+          area_mm2: 0.12150799999999999
+          power_w: 0.009539743672899264
+          technology: 45nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  gen_dmas\[3\].i_axi_dma_backend:
+    type: die
+    design_area:
+    - 1250.764
+    - 1250.764
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1250.764
+          - 0.0
+        - - 1250.764
+          - 1250.764
+        - - 0.0
+          - 1250.764
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_dmas\[3\].i_axi_dma_backend
+          area_mm2: 1.56441
+          power_w: 0.12282376797676153
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0006
+        - link_0124
+  gen_dmas\[3\].i_axi_to_reqrsp:
+    type: die
+    design_area:
+    - 396.088
+    - 396.088
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 396.088
+          - 0.0
+        - - 396.088
+          - 396.088
+        - - 0.0
+          - 396.088
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_dmas\[3\].i_axi_to_reqrsp
+          area_mm2: 0.15688599999999997
+          power_w: 0.012317314299194079
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0007
+  gen_dmas\[3\].i_dma_axi_xbar:
+    type: die
+    design_area:
+    - 1724.943
+    - 1724.943
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1724.943
+          - 0.0
+        - - 1724.943
+          - 1724.943
+        - - 0.0
+          - 1724.943
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_dmas\[3\].i_dma_axi_xbar
+          area_mm2: 2.9754300000000002
+          power_w: 0.23360469694715297
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0006
+        - link_0007
+  gen_dmas\[3\].i_reqrsp_demux:
+    type: die
+    design_area:
+    - 407.152
+    - 407.152
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 407.152
+          - 0.0
+        - - 407.152
+          - 407.152
+        - - 0.0
+          - 407.152
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_dmas\[3\].i_reqrsp_demux
+          area_mm2: 0.165773
+          power_w: 0.013015043683440843
+          technology: 45nm
+          is_memory: false
+        used_io_types: []
+        incident_interconnects: []
+  gen_remote_interco\[1\].i_remote_interco:
+    type: die
+    design_area:
+    - 2420.349
+    - 2420.349
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2420.349
+          - 0.0
+        - - 2420.349
+          - 2420.349
+        - - 0.0
+          - 2420.349
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_remote_interco\[1\].i_remote_interco
+          area_mm2: 5.85809
+          power_w: 0.45992590621831037
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0008
+        - link_0009
+        - link_0010
+        - link_0011
+        - link_0012
+        - link_0013
+        - link_0014
+        - link_0015
+        - link_0016
+        - link_0017
+        - link_0018
+        - link_0019
+        - link_0020
+        - link_0021
+        - link_0022
+        - link_0023
+        - link_0056
+        - link_0060
+        - link_0064
+        - link_0068
+        - link_0072
+        - link_0076
+        - link_0080
+        - link_0084
+        - link_0088
+        - link_0092
+        - link_0096
+        - link_0100
+        - link_0104
+        - link_0108
+        - link_0112
+        - link_0116
+  gen_remote_interco\[2\].i_remote_interco:
+    type: die
+    design_area:
+    - 2427.241
+    - 2427.241
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2427.241
+          - 0.0
+        - - 2427.241
+          - 2427.241
+        - - 0.0
+          - 2427.241
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_remote_interco\[2\].i_remote_interco
+          area_mm2: 5.891500000000001
+          power_w: 0.46254896672553264
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0024
+        - link_0025
+        - link_0026
+        - link_0027
+        - link_0028
+        - link_0029
+        - link_0030
+        - link_0031
+        - link_0032
+        - link_0033
+        - link_0034
+        - link_0035
+        - link_0036
+        - link_0037
+        - link_0038
+        - link_0039
+        - link_0057
+        - link_0061
+        - link_0065
+        - link_0069
+        - link_0073
+        - link_0077
+        - link_0081
+        - link_0085
+        - link_0089
+        - link_0093
+        - link_0097
+        - link_0101
+        - link_0105
+        - link_0109
+        - link_0113
+        - link_0117
+  gen_remote_interco\[3\].i_remote_interco:
+    type: die
+    design_area:
+    - 2424.661
+    - 2424.661
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2424.661
+          - 0.0
+        - - 2424.661
+          - 2424.661
+        - - 0.0
+          - 2424.661
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_remote_interco\[3\].i_remote_interco
+          area_mm2: 5.87898
+          power_w: 0.4615660060086688
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0040
+        - link_0041
+        - link_0042
+        - link_0043
+        - link_0044
+        - link_0045
+        - link_0046
+        - link_0047
+        - link_0048
+        - link_0049
+        - link_0050
+        - link_0051
+        - link_0052
+        - link_0053
+        - link_0054
+        - link_0055
+        - link_0058
+        - link_0062
+        - link_0066
+        - link_0070
+        - link_0074
+        - link_0078
+        - link_0082
+        - link_0086
+        - link_0090
+        - link_0094
+        - link_0098
+        - link_0102
+        - link_0106
+        - link_0110
+        - link_0114
+        - link_0118
+  gen_tiles\[0\].i_tile:
+    type: die
+    design_area:
+    - 5257.09
+    - 5257.09
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 5257.09
+          - 0.0
+        - - 5257.09
+          - 5257.09
+        - - 0.0
+          - 5257.09
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_tiles\[0\].i_tile
+          area_mm2: 27.637
+          power_w: 2.1698151223616304
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0008
+        - link_0024
+        - link_0040
+        - link_0056
+        - link_0057
+        - link_0058
+        - link_0059
+        - link_0127
+  gen_tiles\[10\].i_tile:
+    type: die
+    design_area:
+    - 5249.79
+    - 5249.79
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 5249.79
+          - 0.0
+        - - 5249.79
+          - 5249.79
+        - - 0.0
+          - 5249.79
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_tiles\[10\].i_tile
+          area_mm2: 27.560299999999998
+          power_w: 2.1637933103022484
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0009
+        - link_0025
+        - link_0041
+        - link_0060
+        - link_0061
+        - link_0062
+        - link_0063
+        - link_0128
+  gen_tiles\[11\].i_tile:
+    type: die
+    design_area:
+    - 5294.582
+    - 5294.582
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 5294.582
+          - 0.0
+        - - 5294.582
+          - 5294.582
+        - - 0.0
+          - 5294.582
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_tiles\[11\].i_tile
+          area_mm2: 28.032600000000002
+          power_w: 2.2008741686548703
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0010
+        - link_0026
+        - link_0042
+        - link_0064
+        - link_0065
+        - link_0066
+        - link_0067
+        - link_0129
+  gen_tiles\[12\].i_tile:
+    type: die
+    design_area:
+    - 5280.909
+    - 5280.909
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 5280.909
+          - 0.0
+        - - 5280.909
+          - 5280.909
+        - - 0.0
+          - 5280.909
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_tiles\[12\].i_tile
+          area_mm2: 27.888
+          power_w: 2.1895214434425285
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0011
+        - link_0027
+        - link_0043
+        - link_0068
+        - link_0069
+        - link_0070
+        - link_0071
+        - link_0130
+  gen_tiles\[13\].i_tile:
+    type: die
+    design_area:
+    - 5298.453
+    - 5298.453
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 5298.453
+          - 0.0
+        - - 5298.453
+          - 5298.453
+        - - 0.0
+          - 5298.453
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_tiles\[13\].i_tile
+          area_mm2: 28.0736
+          power_w: 2.2040931294688813
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0012
+        - link_0028
+        - link_0044
+        - link_0072
+        - link_0073
+        - link_0074
+        - link_0075
+        - link_0131
+  gen_tiles\[14\].i_tile:
+    type: die
+    design_area:
+    - 5271.205
+    - 5271.205
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 5271.205
+          - 0.0
+        - - 5271.205
+          - 5271.205
+        - - 0.0
+          - 5271.205
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_tiles\[14\].i_tile
+          area_mm2: 27.7856
+          power_w: 2.181481892531437
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0013
+        - link_0029
+        - link_0045
+        - link_0076
+        - link_0077
+        - link_0078
+        - link_0079
+        - link_0132
+  gen_tiles\[15\].i_tile:
+    type: die
+    design_area:
+    - 5245.503
+    - 5245.503
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 5245.503
+          - 0.0
+        - - 5245.503
+          - 5245.503
+        - - 0.0
+          - 5245.503
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_tiles\[15\].i_tile
+          area_mm2: 27.515299999999996
+          power_w: 2.1602603045307727
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0014
+        - link_0030
+        - link_0046
+        - link_0080
+        - link_0081
+        - link_0082
+        - link_0083
+        - link_0133
+  gen_tiles\[1\].i_tile:
+    type: die
+    design_area:
+    - 5261.055
+    - 5261.055
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 5261.055
+          - 0.0
+        - - 5261.055
+          - 5261.055
+        - - 0.0
+          - 5261.055
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_tiles\[1\].i_tile
+          area_mm2: 27.6787
+          power_w: 2.1730890410431978
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0015
+        - link_0031
+        - link_0047
+        - link_0084
+        - link_0085
+        - link_0086
+        - link_0087
+        - link_0134
+  gen_tiles\[2\].i_tile:
+    type: die
+    design_area:
+    - 5263.231
+    - 5263.231
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 5263.231
+          - 0.0
+        - - 5263.231
+          - 5263.231
+        - - 0.0
+          - 5263.231
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_tiles\[2\].i_tile
+          area_mm2: 27.7016
+          power_w: 2.174886948424682
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0016
+        - link_0032
+        - link_0048
+        - link_0088
+        - link_0089
+        - link_0090
+        - link_0091
+        - link_0135
+  gen_tiles\[3\].i_tile:
+    type: die
+    design_area:
+    - 5233.909
+    - 5233.909
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 5233.909
+          - 0.0
+        - - 5233.909
+          - 5233.909
+        - - 0.0
+          - 5233.909
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_tiles\[3\].i_tile
+          area_mm2: 27.393800000000002
+          power_w: 2.150721188947789
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0017
+        - link_0033
+        - link_0049
+        - link_0092
+        - link_0093
+        - link_0094
+        - link_0095
+        - link_0136
+  gen_tiles\[4\].i_tile:
+    type: die
+    design_area:
+    - 5251.371
+    - 5251.371
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 5251.371
+          - 0.0
+        - - 5251.371
+          - 5251.371
+        - - 0.0
+          - 5251.371
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_tiles\[4\].i_tile
+          area_mm2: 27.5769
+          power_w: 2.1650965968757263
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0018
+        - link_0034
+        - link_0050
+        - link_0096
+        - link_0097
+        - link_0098
+        - link_0099
+        - link_0137
+  gen_tiles\[5\].i_tile:
+    type: die
+    design_area:
+    - 5221.494
+    - 5221.494
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 5221.494
+          - 0.0
+        - - 5221.494
+          - 5221.494
+        - - 0.0
+          - 5221.494
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_tiles\[5\].i_tile
+          area_mm2: 27.264
+          power_w: 2.140530430078065
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0019
+        - link_0035
+        - link_0051
+        - link_0100
+        - link_0101
+        - link_0102
+        - link_0103
+        - link_0138
+  gen_tiles\[6\].i_tile:
+    type: die
+    design_area:
+    - 5272.324
+    - 5272.324
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 5272.324
+          - 0.0
+        - - 5272.324
+          - 5272.324
+        - - 0.0
+          - 5272.324
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_tiles\[6\].i_tile
+          area_mm2: 27.7974
+          power_w: 2.1824083251559574
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0020
+        - link_0036
+        - link_0052
+        - link_0104
+        - link_0105
+        - link_0106
+        - link_0107
+        - link_0139
+  gen_tiles\[7\].i_tile:
+    type: die
+    design_area:
+    - 5279.991
+    - 5279.991
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 5279.991
+          - 0.0
+        - - 5279.991
+          - 5279.991
+        - - 0.0
+          - 5279.991
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_tiles\[7\].i_tile
+          area_mm2: 27.8783
+          power_w: 2.1887598844206764
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0021
+        - link_0037
+        - link_0053
+        - link_0108
+        - link_0109
+        - link_0110
+        - link_0111
+        - link_0140
+  gen_tiles\[8\].i_tile:
+    type: die
+    design_area:
+    - 5268.036
+    - 5268.036
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 5268.036
+          - 0.0
+        - - 5268.036
+          - 5268.036
+        - - 0.0
+          - 5268.036
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_tiles\[8\].i_tile
+          area_mm2: 27.7522
+          power_w: 2.178859617136608
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0022
+        - link_0038
+        - link_0054
+        - link_0112
+        - link_0113
+        - link_0114
+        - link_0115
+        - link_0141
+  gen_tiles\[9\].i_tile:
+    type: die
+    design_area:
+    - 5282.329
+    - 5282.329
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 5282.329
+          - 0.0
+        - - 5282.329
+          - 5282.329
+        - - 0.0
+          - 5282.329
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: gen_tiles\[9\].i_tile
+          area_mm2: 27.903
+          power_w: 2.19069911203302
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0023
+        - link_0039
+        - link_0055
+        - link_0116
+        - link_0117
+        - link_0118
+        - link_0119
+        - link_0142
+  i_axi_interco:
+    type: die
+    design_area:
+    - 2913.146
+    - 2913.146
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 2913.146
+          - 0.0
+        - - 2913.146
+          - 2913.146
+        - - 0.0
+          - 2913.146
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: i_axi_interco
+          area_mm2: 8.48642
+          power_w: 0.6662793519814808
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0120
+  i_dma_req_register:
+    type: die
+    design_area:
+    - 441.111
+    - 441.111
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 441.111
+          - 0.0
+        - - 441.111
+          - 441.111
+        - - 0.0
+          - 441.111
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: i_dma_req_register
+          area_mm2: 0.194579
+          power_w: 0.015276638444621475
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0121
+        - link_0122
+        - link_0123
+        - link_0124
+        - link_0125
+        - link_0126
+  i_idma_distributed_midend:
+    type: die
+    design_area:
+    - 383.221
+    - 383.221
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 383.221
+          - 0.0
+        - - 383.221
+          - 383.221
+        - - 0.0
+          - 383.221
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: i_idma_distributed_midend
+          area_mm2: 0.146858
+          power_w: 0.011530003590830566
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0125
+        - link_0126
+  i_local_interco:
+    type: die
+    design_area:
+    - 1800.047
+    - 1800.047
+    seal_ring_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    scribe_line_remaining_width:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    thickness: 100.0
+    shrink: 1.0
+    tsv: false
+    regions:
+      core_reg:
+        side: front
+        coords:
+        - - 0.0
+          - 0.0
+        - - 1800.047
+          - 0.0
+        - - 1800.047
+          - 1800.047
+        - - 0.0
+          - 1800.047
+    external:
+      chipletpart_vendor_data:
+        source_schema: ChipletPart
+        block_record:
+          name: i_local_interco
+          area_mm2: 3.24017
+          power_w: 0.2543897624569412
+          technology: 45nm
+          is_memory: false
+        used_io_types:
+        - 2Gbs_100vCDM_2mm
+        incident_interconnects:
+        - link_0059
+        - link_0063
+        - link_0067
+        - link_0071
+        - link_0075
+        - link_0079
+        - link_0083
+        - link_0087
+        - link_0091
+        - link_0095
+        - link_0099
+        - link_0103
+        - link_0107
+        - link_0111
+        - link_0115
+        - link_0119
+        - link_0127
+        - link_0128
+        - link_0129
+        - link_0130
+        - link_0131
+        - link_0132
+        - link_0133
+        - link_0134
+        - link_0135
+        - link_0136
+        - link_0137
+        - link_0138
+        - link_0139
+        - link_0140
+        - link_0141
+        - link_0142

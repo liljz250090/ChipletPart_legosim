@@ -1,0 +1,3546 @@
+Header:
+  version: '2.0'
+  unit: micron
+  precision: 1000
+  include:
+  - 48_2_14_4_1600_1600.3dbv
+Design:
+  name: 48_2_14_4_1600_1600Top
+  external:
+    chipletpart_vendor_data:
+      source_schema: ChipletPart
+      self_contained: true
+      dataset:
+        blocks:
+        - name: Master_Crossbar_0
+          area_mm2: 66.648
+          power_w: 48.0
+          technology: 45nm
+          is_memory: false
+        - name: Router_0
+          area_mm2: 69.3488
+          power_w: 32.0
+          technology: 45nm
+          is_memory: false
+        - name: Shared_Memory_0_0
+          area_mm2: 163.6592
+          power_w: 24.0
+          technology: 45nm
+          is_memory: true
+        - name: Shared_Memory_0_1
+          area_mm2: 163.6592
+          power_w: 24.0
+          technology: 45nm
+          is_memory: true
+        - name: Shared_Memory_0_2
+          area_mm2: 163.6592
+          power_w: 24.0
+          technology: 45nm
+          is_memory: true
+        - name: Shared_Memory_0_3
+          area_mm2: 163.6592
+          power_w: 24.0
+          technology: 45nm
+          is_memory: true
+        - name: Core_0_0
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_0_0
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_0_0
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_0_1
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_0_1
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_0_1
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_0_2
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_0_2
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_0_2
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_0_3
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_0_3
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_0_3
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_0_4
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_0_4
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_0_4
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_0_5
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_0_5
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_0_5
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_0_6
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_0_6
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_0_6
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_0_7
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_0_7
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_0_7
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_0_8
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_0_8
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_0_8
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_0_9
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_0_9
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_0_9
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_0_10
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_0_10
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_0_10
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_0_11
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_0_11
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_0_11
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_0_12
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_0_12
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_0_12
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_0_13
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_0_13
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_0_13
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Master_Crossbar_1
+          area_mm2: 66.648
+          power_w: 48.0
+          technology: 45nm
+          is_memory: false
+        - name: Router_1
+          area_mm2: 69.3488
+          power_w: 32.0
+          technology: 45nm
+          is_memory: false
+        - name: Shared_Memory_1_0
+          area_mm2: 163.6592
+          power_w: 24.0
+          technology: 45nm
+          is_memory: true
+        - name: Shared_Memory_1_1
+          area_mm2: 163.6592
+          power_w: 24.0
+          technology: 45nm
+          is_memory: true
+        - name: Shared_Memory_1_2
+          area_mm2: 163.6592
+          power_w: 24.0
+          technology: 45nm
+          is_memory: true
+        - name: Shared_Memory_1_3
+          area_mm2: 163.6592
+          power_w: 24.0
+          technology: 45nm
+          is_memory: true
+        - name: Core_1_0
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_1_0
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_1_0
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_1_1
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_1_1
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_1_1
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_1_2
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_1_2
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_1_2
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_1_3
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_1_3
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_1_3
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_1_4
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_1_4
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_1_4
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_1_5
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_1_5
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_1_5
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_1_6
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_1_6
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_1_6
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_1_7
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_1_7
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_1_7
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_1_8
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_1_8
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_1_8
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_1_9
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_1_9
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_1_9
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_1_10
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_1_10
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_1_10
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_1_11
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_1_11
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_1_11
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_1_12
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_1_12
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_1_12
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        - name: Core_1_13
+          area_mm2: 18.728
+          power_w: 1.256
+          technology: 45nm
+          is_memory: false
+        - name: Bus_Mux_1_13
+          area_mm2: 5.2576
+          power_w: 0.296
+          technology: 45nm
+          is_memory: false
+        - name: Private_Memory_1_13
+          area_mm2: 32.5744
+          power_w: 0.32
+          technology: 45nm
+          is_memory: true
+        interconnects:
+        - name: link_0000
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Router_0
+          bb_count: null
+          bandwidth_gbps: 5421.382674700915
+          average_bandwidth_utilization: 0.5
+        - name: link_0001
+          type: 2Gbs_100vCDM_2mm
+          source: Router_0
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 5366.0624433264165
+          average_bandwidth_utilization: 0.5
+        - name: link_0002
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Shared_Memory_0_0
+          bb_count: null
+          bandwidth_gbps: 3651.135270716943
+          average_bandwidth_utilization: 0.5
+        - name: link_0003
+          type: 2Gbs_100vCDM_2mm
+          source: Shared_Memory_0_0
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0004
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Shared_Memory_0_1
+          bb_count: null
+          bandwidth_gbps: 3651.135270716943
+          average_bandwidth_utilization: 0.5
+        - name: link_0005
+          type: 2Gbs_100vCDM_2mm
+          source: Shared_Memory_0_1
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0006
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Shared_Memory_0_2
+          bb_count: null
+          bandwidth_gbps: 3651.135270716943
+          average_bandwidth_utilization: 0.5
+        - name: link_0007
+          type: 2Gbs_100vCDM_2mm
+          source: Shared_Memory_0_2
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0008
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Shared_Memory_0_3
+          bb_count: null
+          bandwidth_gbps: 3651.135270716943
+          average_bandwidth_utilization: 0.5
+        - name: link_0009
+          type: 2Gbs_100vCDM_2mm
+          source: Shared_Memory_0_3
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0010
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Core_0_0
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0011
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_0
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0012
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_0
+          sink: Bus_Mux_0_0
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0013
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_0
+          sink: Core_0_0
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0014
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_0
+          sink: Private_Memory_0_0
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0015
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_0_0
+          sink: Bus_Mux_0_0
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0016
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Core_0_1
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0017
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_1
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0018
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_1
+          sink: Bus_Mux_0_1
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0019
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_1
+          sink: Core_0_1
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0020
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_1
+          sink: Private_Memory_0_1
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0021
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_0_1
+          sink: Bus_Mux_0_1
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0022
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Core_0_2
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0023
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_2
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0024
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_2
+          sink: Bus_Mux_0_2
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0025
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_2
+          sink: Core_0_2
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0026
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_2
+          sink: Private_Memory_0_2
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0027
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_0_2
+          sink: Bus_Mux_0_2
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0028
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Core_0_3
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0029
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_3
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0030
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_3
+          sink: Bus_Mux_0_3
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0031
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_3
+          sink: Core_0_3
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0032
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_3
+          sink: Private_Memory_0_3
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0033
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_0_3
+          sink: Bus_Mux_0_3
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0034
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Core_0_4
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0035
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_4
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0036
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_4
+          sink: Bus_Mux_0_4
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0037
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_4
+          sink: Core_0_4
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0038
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_4
+          sink: Private_Memory_0_4
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0039
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_0_4
+          sink: Bus_Mux_0_4
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0040
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Core_0_5
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0041
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_5
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0042
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_5
+          sink: Bus_Mux_0_5
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0043
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_5
+          sink: Core_0_5
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0044
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_5
+          sink: Private_Memory_0_5
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0045
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_0_5
+          sink: Bus_Mux_0_5
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0046
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Core_0_6
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0047
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_6
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0048
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_6
+          sink: Bus_Mux_0_6
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0049
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_6
+          sink: Core_0_6
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0050
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_6
+          sink: Private_Memory_0_6
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0051
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_0_6
+          sink: Bus_Mux_0_6
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0052
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Core_0_7
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0053
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_7
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0054
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_7
+          sink: Bus_Mux_0_7
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0055
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_7
+          sink: Core_0_7
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0056
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_7
+          sink: Private_Memory_0_7
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0057
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_0_7
+          sink: Bus_Mux_0_7
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0058
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Core_0_8
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0059
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_8
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0060
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_8
+          sink: Bus_Mux_0_8
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0061
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_8
+          sink: Core_0_8
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0062
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_8
+          sink: Private_Memory_0_8
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0063
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_0_8
+          sink: Bus_Mux_0_8
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0064
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Core_0_9
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0065
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_9
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0066
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_9
+          sink: Bus_Mux_0_9
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0067
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_9
+          sink: Core_0_9
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0068
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_9
+          sink: Private_Memory_0_9
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0069
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_0_9
+          sink: Bus_Mux_0_9
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0070
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Core_0_10
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0071
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_10
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0072
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_10
+          sink: Bus_Mux_0_10
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0073
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_10
+          sink: Core_0_10
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0074
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_10
+          sink: Private_Memory_0_10
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0075
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_0_10
+          sink: Bus_Mux_0_10
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0076
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Core_0_11
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0077
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_11
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0078
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_11
+          sink: Bus_Mux_0_11
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0079
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_11
+          sink: Core_0_11
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0080
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_11
+          sink: Private_Memory_0_11
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0081
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_0_11
+          sink: Bus_Mux_0_11
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0082
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Core_0_12
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0083
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_12
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0084
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_12
+          sink: Bus_Mux_0_12
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0085
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_12
+          sink: Core_0_12
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0086
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_12
+          sink: Private_Memory_0_12
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0087
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_0_12
+          sink: Bus_Mux_0_12
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0088
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_0
+          sink: Core_0_13
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0089
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_13
+          sink: Master_Crossbar_0
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0090
+          type: 2Gbs_100vCDM_2mm
+          source: Core_0_13
+          sink: Bus_Mux_0_13
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0091
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_13
+          sink: Core_0_13
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0092
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_0_13
+          sink: Private_Memory_0_13
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0093
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_0_13
+          sink: Bus_Mux_0_13
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0094
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Router_1
+          bb_count: null
+          bandwidth_gbps: 5421.382674700915
+          average_bandwidth_utilization: 0.5
+        - name: link_0095
+          type: 2Gbs_100vCDM_2mm
+          source: Router_1
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 5366.0624433264165
+          average_bandwidth_utilization: 0.5
+        - name: link_0096
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Shared_Memory_1_0
+          bb_count: null
+          bandwidth_gbps: 3651.135270716943
+          average_bandwidth_utilization: 0.5
+        - name: link_0097
+          type: 2Gbs_100vCDM_2mm
+          source: Shared_Memory_1_0
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0098
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Shared_Memory_1_1
+          bb_count: null
+          bandwidth_gbps: 3651.135270716943
+          average_bandwidth_utilization: 0.5
+        - name: link_0099
+          type: 2Gbs_100vCDM_2mm
+          source: Shared_Memory_1_1
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0100
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Shared_Memory_1_2
+          bb_count: null
+          bandwidth_gbps: 3651.135270716943
+          average_bandwidth_utilization: 0.5
+        - name: link_0101
+          type: 2Gbs_100vCDM_2mm
+          source: Shared_Memory_1_2
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0102
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Shared_Memory_1_3
+          bb_count: null
+          bandwidth_gbps: 3651.135270716943
+          average_bandwidth_utilization: 0.5
+        - name: link_0103
+          type: 2Gbs_100vCDM_2mm
+          source: Shared_Memory_1_3
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0104
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Core_1_0
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0105
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_0
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0106
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_0
+          sink: Bus_Mux_1_0
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0107
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_0
+          sink: Core_1_0
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0108
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_0
+          sink: Private_Memory_1_0
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0109
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_1_0
+          sink: Bus_Mux_1_0
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0110
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Core_1_1
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0111
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_1
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0112
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_1
+          sink: Bus_Mux_1_1
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0113
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_1
+          sink: Core_1_1
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0114
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_1
+          sink: Private_Memory_1_1
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0115
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_1_1
+          sink: Bus_Mux_1_1
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0116
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Core_1_2
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0117
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_2
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0118
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_2
+          sink: Bus_Mux_1_2
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0119
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_2
+          sink: Core_1_2
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0120
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_2
+          sink: Private_Memory_1_2
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0121
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_1_2
+          sink: Bus_Mux_1_2
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0122
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Core_1_3
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0123
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_3
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0124
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_3
+          sink: Bus_Mux_1_3
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0125
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_3
+          sink: Core_1_3
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0126
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_3
+          sink: Private_Memory_1_3
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0127
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_1_3
+          sink: Bus_Mux_1_3
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0128
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Core_1_4
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0129
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_4
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0130
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_4
+          sink: Bus_Mux_1_4
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0131
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_4
+          sink: Core_1_4
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0132
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_4
+          sink: Private_Memory_1_4
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0133
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_1_4
+          sink: Bus_Mux_1_4
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0134
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Core_1_5
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0135
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_5
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0136
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_5
+          sink: Bus_Mux_1_5
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0137
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_5
+          sink: Core_1_5
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0138
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_5
+          sink: Private_Memory_1_5
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0139
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_1_5
+          sink: Bus_Mux_1_5
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0140
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Core_1_6
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0141
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_6
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0142
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_6
+          sink: Bus_Mux_1_6
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0143
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_6
+          sink: Core_1_6
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0144
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_6
+          sink: Private_Memory_1_6
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0145
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_1_6
+          sink: Bus_Mux_1_6
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0146
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Core_1_7
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0147
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_7
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0148
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_7
+          sink: Bus_Mux_1_7
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0149
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_7
+          sink: Core_1_7
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0150
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_7
+          sink: Private_Memory_1_7
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0151
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_1_7
+          sink: Bus_Mux_1_7
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0152
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Core_1_8
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0153
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_8
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0154
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_8
+          sink: Bus_Mux_1_8
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0155
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_8
+          sink: Core_1_8
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0156
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_8
+          sink: Private_Memory_1_8
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0157
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_1_8
+          sink: Bus_Mux_1_8
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0158
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Core_1_9
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0159
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_9
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0160
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_9
+          sink: Bus_Mux_1_9
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0161
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_9
+          sink: Core_1_9
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0162
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_9
+          sink: Private_Memory_1_9
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0163
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_1_9
+          sink: Bus_Mux_1_9
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0164
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Core_1_10
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0165
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_10
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0166
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_10
+          sink: Bus_Mux_1_10
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0167
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_10
+          sink: Core_1_10
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0168
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_10
+          sink: Private_Memory_1_10
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0169
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_1_10
+          sink: Bus_Mux_1_10
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0170
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Core_1_11
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0171
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_11
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0172
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_11
+          sink: Bus_Mux_1_11
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0173
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_11
+          sink: Core_1_11
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0174
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_11
+          sink: Private_Memory_1_11
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0175
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_1_11
+          sink: Bus_Mux_1_11
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0176
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Core_1_12
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0177
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_12
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0178
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_12
+          sink: Bus_Mux_1_12
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0179
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_12
+          sink: Core_1_12
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0180
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_12
+          sink: Private_Memory_1_12
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0181
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_1_12
+          sink: Bus_Mux_1_12
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0182
+          type: 2Gbs_100vCDM_2mm
+          source: Master_Crossbar_1
+          sink: Core_1_13
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0183
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_13
+          sink: Master_Crossbar_1
+          bb_count: null
+          bandwidth_gbps: 3595.815039342444
+          average_bandwidth_utilization: 0.5
+        - name: link_0184
+          type: 2Gbs_100vCDM_2mm
+          source: Core_1_13
+          sink: Bus_Mux_1_13
+          bb_count: null
+          bandwidth_gbps: 7744.832392429879
+          average_bandwidth_utilization: 0.5
+        - name: link_0185
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_13
+          sink: Core_1_13
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0186
+          type: 2Gbs_100vCDM_2mm
+          source: Bus_Mux_1_13
+          sink: Private_Memory_1_13
+          bb_count: null
+          bandwidth_gbps: 1770.2474039839724
+          average_bandwidth_utilization: 0.5
+        - name: link_0187
+          type: 2Gbs_100vCDM_2mm
+          source: Private_Memory_1_13
+          sink: Bus_Mux_1_13
+          bb_count: null
+          bandwidth_gbps: 3042.6127255974525
+          average_bandwidth_utilization: 0.5
+        - name: link_0188
+          type: 2Gbs_100vCDM_2mm
+          source: Router_0
+          sink: Router_1
+          bb_count: null
+          bandwidth_gbps: 5587.343368824413
+          average_bandwidth_utilization: 0.5
+        - name: link_0189
+          type: 2Gbs_100vCDM_2mm
+          source: Router_1
+          sink: Router_0
+          bb_count: null
+          bandwidth_gbps: 5587.343368824413
+          average_bandwidth_utilization: 0.5
+        io_library:
+        - type: UCIe_standard
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 10.0
+        - type: UCIe_standard_1
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 1.0
+        - type: UCIe_standard_2
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: UCIe_standard_5
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 5.0
+        - type: UCIe_standard_10
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 10.0
+        - type: UCIe_standard_20
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 20.0
+        - type: UCIe_advanced
+          tx_area: 0.4055184
+          rx_area: 0.4055184
+          shoreline: 0.3888
+          bandwidth: 4096
+          wire_count: 140
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 10.0
+        - type: 2Gbs_100vCDM_2mm
+          tx_area: 0.0002
+          rx_area: 0.0002
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: 2Gbs_100vCDM_5mm
+          tx_area: 0.0002
+          rx_area: 0.0002
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 5.0
+        - type: 2Gbs_100vCDM_10mm
+          tx_area: 0.0002
+          rx_area: 0.0002
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 10.0
+        - type: 2Gbs_100vCDM_20mm
+          tx_area: 0.0002
+          rx_area: 0.0002
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 20.0
+        - type: 2Gbs_0vCDM_2mm
+          tx_area: 4.763e-05
+          rx_area: 4.763e-05
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: 2Gbs_10vCDM_2mm
+          tx_area: 6.265e-05
+          rx_area: 6.265e-05
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: 2Gbs_125vCDM_2mm
+          tx_area: 9.27e-05
+          rx_area: 9.27e-05
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: 2Gbs_250vCDM_2mm
+          tx_area: 0.00013025
+          rx_area: 0.00013025
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: 2Gbs_500vCDM_2mm
+          tx_area: 0.00019775
+          rx_area: 0.00019785
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: PCIe
+          tx_area: 2.0
+          rx_area: 2.0
+          shoreline: 1.0
+          bandwidth: 2048
+          wire_count: 140
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 10.0
+        - type: GPIO
+          tx_area: 0.001
+          rx_area: 0.001
+          shoreline: 0.02
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: GPIO_external_small
+          tx_area: 0.001
+          rx_area: 0.001
+          shoreline: 0.04
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: GPIO_external
+          tx_area: 0.00314
+          rx_area: 0.00314
+          shoreline: 0.04
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: IO_100v
+          tx_area: 0.0002
+          rx_area: 0.0002
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: IO_50v
+          tx_area: 0.00013
+          rx_area: 0.00013
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: IO_30v
+          tx_area: 0.000116
+          rx_area: 0.000116
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: IO_10v
+          tx_area: 9.2e-05
+          rx_area: 9.2e-05
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: IO_3v
+          tx_area: 8.0e-05
+          rx_area: 8.0e-05
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: temp_io
+          tx_area: 0.0
+          rx_area: 0.0
+          shoreline: 1.0
+          bandwidth: 1
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.0
+          reach: 10.0
+        layer_library:
+        - name: organic_substrate
+          active: false
+          cost_per_mm2: 0.0001
+          gates_per_mm2: 0.0
+          defect_density: 0.0
+          critical_area_ratio: 0.0
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.0
+          nre_mask_cost: 0
+          stitching_yield: 1.0
+        - name: 5nm_active
+          active: true
+          cost_per_mm2: 0.5
+          gates_per_mm2: 1000000000
+          defect_density: 0.005
+          critical_area_ratio: 0.8
+          clustering_factor: 2
+          transistor_density: 117.3
+          litho_percent: 0.2
+          nre_mask_cost: 10000
+          stitching_yield: 0.9
+        - name: 5nm_advanced_metal
+          active: false
+          cost_per_mm2: 0.3
+          defect_density: 0.0003
+          critical_area_ratio: 0.5
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.4
+          nre_mask_cost: 5000
+          stitching_yield: 0.95
+        - name: 5nm_intermediate_metal
+          active: false
+          cost_per_mm2: 0.1
+          defect_density: 0.005
+          critical_area_ratio: 0.3
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.3
+          nre_mask_cost: 1000
+          stitching_yield: 0.99
+        - name: 5nm_global_metal
+          active: false
+          cost_per_mm2: 0.01
+          defect_density: 0.005
+          critical_area_ratio: 0.1
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.2
+          nre_mask_cost: 500
+          stitching_yield: 0.999
+        - name: combined_40nm
+          active: true
+          cost_per_mm2: 0.033497
+          defect_density: 0.005
+          critical_area_ratio: 0.5
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.15
+          nre_mask_cost: 100000
+          stitching_yield: 0.5
+        - name: combined_45nm
+          active: true
+          cost_per_mm2: 0.032171
+          defect_density: 0.005
+          critical_area_ratio: 0.6
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.15
+          nre_mask_cost: 100000
+          stitching_yield: 0.5
+        - name: combined_interposer_silicon
+          active: false
+          cost_per_mm2: 0.021905
+          defect_density: 1.0e-05
+          critical_area_ratio: 0.3
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.1
+          nre_mask_cost: 5000
+          stitching_yield: 0.99
+        - name: combined_interposer_glass
+          active: false
+          cost_per_mm2: 0.0021905
+          defect_density: 1.0e-05
+          critical_area_ratio: 0.3
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.1
+          nre_mask_cost: 5000
+          stitching_yield: 0.99
+        - name: combined_interposer_organic
+          active: false
+          cost_per_mm2: 5.382e-07
+          defect_density: 1.0e-06
+          critical_area_ratio: 0.2
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.0
+          nre_mask_cost: 500
+          stitching_yield: 1.0
+        - name: combined_12nm
+          active: true
+          cost_per_mm2: 0.05636207
+          defect_density: 0.005
+          critical_area_ratio: 0.6
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.25
+          nre_mask_cost: 500000
+          stitching_yield: 0.5
+        - name: combined_hbm2_12nm
+          active: true
+          cost_per_mm2: 0.1654538
+          defect_density: 0.005
+          critical_area_ratio: 0.6
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.25
+          nre_mask_cost: 500000
+          stitching_yield: 0.5
+        - name: combined_10nm
+          active: true
+          cost_per_mm2: 0.084769
+          defect_density: 0.005
+          critical_area_ratio: 0.62
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.25
+          nre_mask_cost: 500000
+          stitching_yield: 0.5
+        - name: combined_7nm
+          active: true
+          cost_per_mm2: 0.132219
+          defect_density: 0.005
+          critical_area_ratio: 0.64
+          clustering_factor: 2
+          transistor_density: 91.2
+          litho_percent: 0.27
+          nre_mask_cost: 1000000
+          stitching_yield: 0.5
+        - name: combined_hbm_7nm
+          active: true
+          cost_per_mm2: 1.10136
+          defect_density: 0.005
+          critical_area_ratio: 0.6
+          clustering_factor: 2
+          transistor_density: 729.6
+          litho_percent: 0.27
+          nre_mask_cost: 1000000
+          stitching_yield: 0.5
+        - name: combined_5nm
+          active: true
+          cost_per_mm2: 0.25024
+          defect_density: 0.005
+          critical_area_ratio: 0.67
+          clustering_factor: 2
+          transistor_density: 117.3
+          litho_percent: 0.3
+          nre_mask_cost: 3000000
+          stitching_yield: 0.5
+        - name: combined_3nm
+          active: true
+          cost_per_mm2: 0.29461
+          defect_density: 0.005
+          critical_area_ratio: 0.7
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.35
+          nre_mask_cost: 5000000
+          stitching_yield: 0.5
+        - name: combined_3nm_0.001
+          active: true
+          cost_per_mm2: 0.29461
+          defect_density: 0.001
+          critical_area_ratio: 0.7
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.35
+          nre_mask_cost: 5000000
+          stitching_yield: 0.5
+        - name: combined_3nm_0.005
+          active: true
+          cost_per_mm2: 0.29461
+          defect_density: 0.005
+          critical_area_ratio: 0.7
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.35
+          nre_mask_cost: 5000000
+          stitching_yield: 0.5
+        - name: combined_3nm_0.01
+          active: true
+          cost_per_mm2: 0.29461
+          defect_density: 0.01
+          critical_area_ratio: 0.7
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.35
+          nre_mask_cost: 5000000
+          stitching_yield: 0.5
+        wafer_process_library:
+        - name: process_1
+          wafer_diameter: 300
+          edge_exclusion: 0.1
+          wafer_process_yield: 1.0
+          dicing_distance: 0.13
+          reticle_x: 26
+          reticle_y: 33
+          wafer_fill_grid: true
+          nre_front_end_cost_per_mm2_memory: 0.0
+          nre_back_end_cost_per_mm2_memory: 0.0
+          nre_front_end_cost_per_mm2_logic: 0.0
+          nre_back_end_cost_per_mm2_logic: 500000
+          nre_front_end_cost_per_mm2_analog: 0.0
+          nre_back_end_cost_per_mm2_analog: 0.0
+        - name: maskless_interposer_process
+          wafer_diameter: 600
+          edge_exclusion: 0.1
+          wafer_process_yield: 1.0
+          dicing_distance: 0.13
+          reticle_x: 200
+          reticle_y: 200
+          wafer_fill_grid: true
+          nre_front_end_cost_per_mm2_memory: 0.0
+          nre_back_end_cost_per_mm2_memory: 0.0
+          nre_front_end_cost_per_mm2_logic: 0.0
+          nre_back_end_cost_per_mm2_logic: 0.0
+          nre_front_end_cost_per_mm2_analog: 0.0
+          nre_back_end_cost_per_mm2_analog: 0.0
+        assembly_process_library:
+        - name: organic_25_simultaneous_bonding
+          materials_cost_per_mm2: 0.1
+          bb_cost_per_second: null
+          picknplace_machine_cost: 800000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 800000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 10
+          die_separation: 1.0
+          edge_exclusion: 2.0
+          max_pad_current_density: 100.0
+          bonding_pitch: 0.025
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: organic_55_simultaneous_bonding
+          materials_cost_per_mm2: 0.1
+          bb_cost_per_second: null
+          picknplace_machine_cost: 1000000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 300000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 10
+          die_separation: 1.0
+          edge_exclusion: 2.0
+          max_pad_current_density: 100.0
+          bonding_pitch: 0.055
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: organic_simultaneous_bonding
+          materials_cost_per_mm2: 0.1
+          bb_cost_per_second: null
+          picknplace_machine_cost: 600000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 200000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 64
+          die_separation: 1.0
+          edge_exclusion: 2.0
+          max_pad_current_density: 100.0
+          bonding_pitch: 0.11
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: silicon_45_individual_bonding
+          materials_cost_per_mm2: 0.1
+          bb_cost_per_second: null
+          picknplace_machine_cost: 500000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 500000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 1
+          die_separation: 0.1
+          edge_exclusion: 0.1
+          max_pad_current_density: 10000.0
+          bonding_pitch: 0.045
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: silicon_individual_bonding
+          materials_cost_per_mm2: 0.0
+          bb_cost_per_second: null
+          picknplace_machine_cost: 1800000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 1800000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 1
+          die_separation: 0.1
+          edge_exclusion: 0.1
+          max_pad_current_density: 10000.0
+          bonding_pitch: 0.01
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: silicon_simultaneous_bonding
+          materials_cost_per_mm2: 0.0
+          bb_cost_per_second: null
+          picknplace_machine_cost: 1800000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 1800000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 64
+          die_separation: 0.1
+          edge_exclusion: 0.1
+          max_pad_current_density: 10000.0
+          bonding_pitch: 0.01
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: glass_individual_bonding
+          materials_cost_per_mm2: 0.0
+          bb_cost_per_second: null
+          picknplace_machine_cost: 1800000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 1800000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 1
+          die_separation: 0.1
+          edge_exclusion: 0.1
+          max_pad_current_density: 10000.0
+          bonding_pitch: 0.01
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: w2w_hybrid_bonding
+          materials_cost_per_mm2: 0.1
+          bb_cost_per_second: null
+          picknplace_machine_cost: 1000000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1000
+          bonding_machine_cost: 1000000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 1000
+          die_separation: 0.1
+          edge_exclusion: 0.1
+          max_pad_current_density: 10000.0
+          bonding_pitch: 0.001
+          alignment_yield: 0.99999
+          bonding_yield: 0.99999999
+          dielectric_bond_defect_density: 0.0001
+        - name: dummy_assembly_process
+          materials_cost_per_mm2: 0.0
+          bb_cost_per_second: null
+          picknplace_machine_cost: 0
+          picknplace_machine_lifetime: 1
+          picknplace_machine_uptime: 1.0
+          picknplace_technician_yearly_cost: 0
+          picknplace_time: 1
+          picknplace_group: 1
+          bonding_machine_cost: 0
+          bonding_machine_lifetime: 1
+          bonding_machine_uptime: 1.0
+          bonding_technician_yearly_cost: 0
+          bonding_time: 1
+          bonding_group: 1
+          die_separation: 0.0
+          edge_exclusion: 0.0
+          max_pad_current_density: 1.0
+          bonding_pitch: 1.0
+          alignment_yield: 1.0
+          bonding_yield: 1.0
+          dielectric_bond_defect_density: 0.0
+        test_process_library:
+        - name: test_process_0
+          time_per_test_cycle: 1.0e-09
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: null
+          bb_self_scan_chain_length: null
+          self_defect_coverage: 0.9
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0.9
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: notest
+          time_per_test_cycle: 0.1
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: false
+          bb_self_pattern_count: null
+          bb_self_scan_chain_length: null
+          self_defect_coverage: 0
+          self_test_reuse: 1
+          self_num_scan_chains: 0
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: false
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 0
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: KGD_free_test
+          time_per_test_cycle: 0.1
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 0
+          bb_self_scan_chain_length: 0
+          self_defect_coverage: 1.0
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 1.0
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: KGD_interposer_free_test
+          time_per_test_cycle: 0.1
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 0
+          bb_self_scan_chain_length: 0
+          self_defect_coverage: 1.0
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 1.0
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_1.0
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 1000
+          bb_self_scan_chain_length: 100000
+          self_defect_coverage: 1.0
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 8
+          bb_assembly_scan_chain_length: 100
+          assembly_defect_coverage: 1.0
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.999
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 0
+          bb_self_scan_chain_length: 0
+          self_defect_coverage: 0.999
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0.999
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.99
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 0
+          bb_self_scan_chain_length: 0
+          self_defect_coverage: 0.99
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0.99
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.95
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 200
+          bb_self_scan_chain_length: 100000
+          self_defect_coverage: 0.95
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 4
+          bb_assembly_scan_chain_length: 100
+          assembly_defect_coverage: 0.95
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.9
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 100
+          bb_self_scan_chain_length: 100000
+          self_defect_coverage: 0.9
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 2
+          bb_assembly_scan_chain_length: 100
+          assembly_defect_coverage: 0.9
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.5
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 10
+          bb_self_scan_chain_length: 100000
+          self_defect_coverage: 0.5
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 1
+          bb_assembly_scan_chain_length: 100
+          assembly_defect_coverage: 0.5
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.1
+          time_per_test_cycle: 0.1
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 0
+          bb_self_scan_chain_length: 0
+          self_defect_coverage: 0.1
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0.1
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: self_test_only_KGD_free_test
+          time_per_test_cycle: 0.1
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: null
+          bb_self_scan_chain_length: null
+          self_defect_coverage: 1.0
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: false
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0.0
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 0
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        statistics:
+          block_count: 96
+          interconnect_count: 190
+          io_type_count: 26
+          layer_count: 20
+          wafer_process_count: 2
+          assembly_process_count: 9
+          test_process_count: 12
+      modeling_assumptions:
+        chiplet_type_mapping: All original ChipletPart blocks are represented as synthetic
+          3dblox dies.
+        chiplet_shape_mapping: Each block is converted into a square die with side
+          sqrt(area_mm2) * 1000 microns.
+        region_mapping: Each die uses one synthetic front-side region named core_reg.
+        stack_mapping: All dies are placed on a 2D shelf grid at z = 0 with orient
+          = R0.
+        connection_mapping: No native 3dblox Connection section is emitted because
+          the source testcase does not provide region-to-region physical connectivity.
+        collateral_mapping: No standard external collateral keys are populated because
+          the source testcase does not include LEF/liberty/tech/deck collateral.
+ChipletInst:
+  Master_Crossbar_0:
+    reference: Master_Crossbar_0
+  Router_0:
+    reference: Router_0
+  Shared_Memory_0_0:
+    reference: Shared_Memory_0_0
+  Shared_Memory_0_1:
+    reference: Shared_Memory_0_1
+  Shared_Memory_0_2:
+    reference: Shared_Memory_0_2
+  Shared_Memory_0_3:
+    reference: Shared_Memory_0_3
+  Core_0_0:
+    reference: Core_0_0
+  Bus_Mux_0_0:
+    reference: Bus_Mux_0_0
+  Private_Memory_0_0:
+    reference: Private_Memory_0_0
+  Core_0_1:
+    reference: Core_0_1
+  Bus_Mux_0_1:
+    reference: Bus_Mux_0_1
+  Private_Memory_0_1:
+    reference: Private_Memory_0_1
+  Core_0_2:
+    reference: Core_0_2
+  Bus_Mux_0_2:
+    reference: Bus_Mux_0_2
+  Private_Memory_0_2:
+    reference: Private_Memory_0_2
+  Core_0_3:
+    reference: Core_0_3
+  Bus_Mux_0_3:
+    reference: Bus_Mux_0_3
+  Private_Memory_0_3:
+    reference: Private_Memory_0_3
+  Core_0_4:
+    reference: Core_0_4
+  Bus_Mux_0_4:
+    reference: Bus_Mux_0_4
+  Private_Memory_0_4:
+    reference: Private_Memory_0_4
+  Core_0_5:
+    reference: Core_0_5
+  Bus_Mux_0_5:
+    reference: Bus_Mux_0_5
+  Private_Memory_0_5:
+    reference: Private_Memory_0_5
+  Core_0_6:
+    reference: Core_0_6
+  Bus_Mux_0_6:
+    reference: Bus_Mux_0_6
+  Private_Memory_0_6:
+    reference: Private_Memory_0_6
+  Core_0_7:
+    reference: Core_0_7
+  Bus_Mux_0_7:
+    reference: Bus_Mux_0_7
+  Private_Memory_0_7:
+    reference: Private_Memory_0_7
+  Core_0_8:
+    reference: Core_0_8
+  Bus_Mux_0_8:
+    reference: Bus_Mux_0_8
+  Private_Memory_0_8:
+    reference: Private_Memory_0_8
+  Core_0_9:
+    reference: Core_0_9
+  Bus_Mux_0_9:
+    reference: Bus_Mux_0_9
+  Private_Memory_0_9:
+    reference: Private_Memory_0_9
+  Core_0_10:
+    reference: Core_0_10
+  Bus_Mux_0_10:
+    reference: Bus_Mux_0_10
+  Private_Memory_0_10:
+    reference: Private_Memory_0_10
+  Core_0_11:
+    reference: Core_0_11
+  Bus_Mux_0_11:
+    reference: Bus_Mux_0_11
+  Private_Memory_0_11:
+    reference: Private_Memory_0_11
+  Core_0_12:
+    reference: Core_0_12
+  Bus_Mux_0_12:
+    reference: Bus_Mux_0_12
+  Private_Memory_0_12:
+    reference: Private_Memory_0_12
+  Core_0_13:
+    reference: Core_0_13
+  Bus_Mux_0_13:
+    reference: Bus_Mux_0_13
+  Private_Memory_0_13:
+    reference: Private_Memory_0_13
+  Master_Crossbar_1:
+    reference: Master_Crossbar_1
+  Router_1:
+    reference: Router_1
+  Shared_Memory_1_0:
+    reference: Shared_Memory_1_0
+  Shared_Memory_1_1:
+    reference: Shared_Memory_1_1
+  Shared_Memory_1_2:
+    reference: Shared_Memory_1_2
+  Shared_Memory_1_3:
+    reference: Shared_Memory_1_3
+  Core_1_0:
+    reference: Core_1_0
+  Bus_Mux_1_0:
+    reference: Bus_Mux_1_0
+  Private_Memory_1_0:
+    reference: Private_Memory_1_0
+  Core_1_1:
+    reference: Core_1_1
+  Bus_Mux_1_1:
+    reference: Bus_Mux_1_1
+  Private_Memory_1_1:
+    reference: Private_Memory_1_1
+  Core_1_2:
+    reference: Core_1_2
+  Bus_Mux_1_2:
+    reference: Bus_Mux_1_2
+  Private_Memory_1_2:
+    reference: Private_Memory_1_2
+  Core_1_3:
+    reference: Core_1_3
+  Bus_Mux_1_3:
+    reference: Bus_Mux_1_3
+  Private_Memory_1_3:
+    reference: Private_Memory_1_3
+  Core_1_4:
+    reference: Core_1_4
+  Bus_Mux_1_4:
+    reference: Bus_Mux_1_4
+  Private_Memory_1_4:
+    reference: Private_Memory_1_4
+  Core_1_5:
+    reference: Core_1_5
+  Bus_Mux_1_5:
+    reference: Bus_Mux_1_5
+  Private_Memory_1_5:
+    reference: Private_Memory_1_5
+  Core_1_6:
+    reference: Core_1_6
+  Bus_Mux_1_6:
+    reference: Bus_Mux_1_6
+  Private_Memory_1_6:
+    reference: Private_Memory_1_6
+  Core_1_7:
+    reference: Core_1_7
+  Bus_Mux_1_7:
+    reference: Bus_Mux_1_7
+  Private_Memory_1_7:
+    reference: Private_Memory_1_7
+  Core_1_8:
+    reference: Core_1_8
+  Bus_Mux_1_8:
+    reference: Bus_Mux_1_8
+  Private_Memory_1_8:
+    reference: Private_Memory_1_8
+  Core_1_9:
+    reference: Core_1_9
+  Bus_Mux_1_9:
+    reference: Bus_Mux_1_9
+  Private_Memory_1_9:
+    reference: Private_Memory_1_9
+  Core_1_10:
+    reference: Core_1_10
+  Bus_Mux_1_10:
+    reference: Bus_Mux_1_10
+  Private_Memory_1_10:
+    reference: Private_Memory_1_10
+  Core_1_11:
+    reference: Core_1_11
+  Bus_Mux_1_11:
+    reference: Bus_Mux_1_11
+  Private_Memory_1_11:
+    reference: Private_Memory_1_11
+  Core_1_12:
+    reference: Core_1_12
+  Bus_Mux_1_12:
+    reference: Bus_Mux_1_12
+  Private_Memory_1_12:
+    reference: Private_Memory_1_12
+  Core_1_13:
+    reference: Core_1_13
+  Bus_Mux_1_13:
+    reference: Bus_Mux_1_13
+  Private_Memory_1_13:
+    reference: Private_Memory_1_13
+Stack:
+  Master_Crossbar_0:
+    loc:
+    - 0.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  Router_0:
+    loc:
+    - 13500.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  Shared_Memory_0_0:
+    loc:
+    - 27000.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  Shared_Memory_0_1:
+    loc:
+    - 40500.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  Shared_Memory_0_2:
+    loc:
+    - 54000.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  Shared_Memory_0_3:
+    loc:
+    - 67500.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  Core_0_0:
+    loc:
+    - 81000.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_0_0:
+    loc:
+    - 94500.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  Private_Memory_0_0:
+    loc:
+    - 108000.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  Core_0_1:
+    loc:
+    - 121500.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_0_1:
+    loc:
+    - 0.0
+    - 13500.0
+    z: 0.0
+    orient: R0
+  Private_Memory_0_1:
+    loc:
+    - 13500.0
+    - 13500.0
+    z: 0.0
+    orient: R0
+  Core_0_2:
+    loc:
+    - 27000.0
+    - 13500.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_0_2:
+    loc:
+    - 40500.0
+    - 13500.0
+    z: 0.0
+    orient: R0
+  Private_Memory_0_2:
+    loc:
+    - 54000.0
+    - 13500.0
+    z: 0.0
+    orient: R0
+  Core_0_3:
+    loc:
+    - 67500.0
+    - 13500.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_0_3:
+    loc:
+    - 81000.0
+    - 13500.0
+    z: 0.0
+    orient: R0
+  Private_Memory_0_3:
+    loc:
+    - 94500.0
+    - 13500.0
+    z: 0.0
+    orient: R0
+  Core_0_4:
+    loc:
+    - 108000.0
+    - 13500.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_0_4:
+    loc:
+    - 121500.0
+    - 13500.0
+    z: 0.0
+    orient: R0
+  Private_Memory_0_4:
+    loc:
+    - 0.0
+    - 27000.0
+    z: 0.0
+    orient: R0
+  Core_0_5:
+    loc:
+    - 13500.0
+    - 27000.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_0_5:
+    loc:
+    - 27000.0
+    - 27000.0
+    z: 0.0
+    orient: R0
+  Private_Memory_0_5:
+    loc:
+    - 40500.0
+    - 27000.0
+    z: 0.0
+    orient: R0
+  Core_0_6:
+    loc:
+    - 54000.0
+    - 27000.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_0_6:
+    loc:
+    - 67500.0
+    - 27000.0
+    z: 0.0
+    orient: R0
+  Private_Memory_0_6:
+    loc:
+    - 81000.0
+    - 27000.0
+    z: 0.0
+    orient: R0
+  Core_0_7:
+    loc:
+    - 94500.0
+    - 27000.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_0_7:
+    loc:
+    - 108000.0
+    - 27000.0
+    z: 0.0
+    orient: R0
+  Private_Memory_0_7:
+    loc:
+    - 121500.0
+    - 27000.0
+    z: 0.0
+    orient: R0
+  Core_0_8:
+    loc:
+    - 0.0
+    - 40500.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_0_8:
+    loc:
+    - 13500.0
+    - 40500.0
+    z: 0.0
+    orient: R0
+  Private_Memory_0_8:
+    loc:
+    - 27000.0
+    - 40500.0
+    z: 0.0
+    orient: R0
+  Core_0_9:
+    loc:
+    - 40500.0
+    - 40500.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_0_9:
+    loc:
+    - 54000.0
+    - 40500.0
+    z: 0.0
+    orient: R0
+  Private_Memory_0_9:
+    loc:
+    - 67500.0
+    - 40500.0
+    z: 0.0
+    orient: R0
+  Core_0_10:
+    loc:
+    - 81000.0
+    - 40500.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_0_10:
+    loc:
+    - 94500.0
+    - 40500.0
+    z: 0.0
+    orient: R0
+  Private_Memory_0_10:
+    loc:
+    - 108000.0
+    - 40500.0
+    z: 0.0
+    orient: R0
+  Core_0_11:
+    loc:
+    - 121500.0
+    - 40500.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_0_11:
+    loc:
+    - 0.0
+    - 54000.0
+    z: 0.0
+    orient: R0
+  Private_Memory_0_11:
+    loc:
+    - 13500.0
+    - 54000.0
+    z: 0.0
+    orient: R0
+  Core_0_12:
+    loc:
+    - 27000.0
+    - 54000.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_0_12:
+    loc:
+    - 40500.0
+    - 54000.0
+    z: 0.0
+    orient: R0
+  Private_Memory_0_12:
+    loc:
+    - 54000.0
+    - 54000.0
+    z: 0.0
+    orient: R0
+  Core_0_13:
+    loc:
+    - 67500.0
+    - 54000.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_0_13:
+    loc:
+    - 81000.0
+    - 54000.0
+    z: 0.0
+    orient: R0
+  Private_Memory_0_13:
+    loc:
+    - 94500.0
+    - 54000.0
+    z: 0.0
+    orient: R0
+  Master_Crossbar_1:
+    loc:
+    - 108000.0
+    - 54000.0
+    z: 0.0
+    orient: R0
+  Router_1:
+    loc:
+    - 121500.0
+    - 54000.0
+    z: 0.0
+    orient: R0
+  Shared_Memory_1_0:
+    loc:
+    - 0.0
+    - 67500.0
+    z: 0.0
+    orient: R0
+  Shared_Memory_1_1:
+    loc:
+    - 13500.0
+    - 67500.0
+    z: 0.0
+    orient: R0
+  Shared_Memory_1_2:
+    loc:
+    - 27000.0
+    - 67500.0
+    z: 0.0
+    orient: R0
+  Shared_Memory_1_3:
+    loc:
+    - 40500.0
+    - 67500.0
+    z: 0.0
+    orient: R0
+  Core_1_0:
+    loc:
+    - 54000.0
+    - 67500.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_1_0:
+    loc:
+    - 67500.0
+    - 67500.0
+    z: 0.0
+    orient: R0
+  Private_Memory_1_0:
+    loc:
+    - 81000.0
+    - 67500.0
+    z: 0.0
+    orient: R0
+  Core_1_1:
+    loc:
+    - 94500.0
+    - 67500.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_1_1:
+    loc:
+    - 108000.0
+    - 67500.0
+    z: 0.0
+    orient: R0
+  Private_Memory_1_1:
+    loc:
+    - 121500.0
+    - 67500.0
+    z: 0.0
+    orient: R0
+  Core_1_2:
+    loc:
+    - 0.0
+    - 81000.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_1_2:
+    loc:
+    - 13500.0
+    - 81000.0
+    z: 0.0
+    orient: R0
+  Private_Memory_1_2:
+    loc:
+    - 27000.0
+    - 81000.0
+    z: 0.0
+    orient: R0
+  Core_1_3:
+    loc:
+    - 40500.0
+    - 81000.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_1_3:
+    loc:
+    - 54000.0
+    - 81000.0
+    z: 0.0
+    orient: R0
+  Private_Memory_1_3:
+    loc:
+    - 67500.0
+    - 81000.0
+    z: 0.0
+    orient: R0
+  Core_1_4:
+    loc:
+    - 81000.0
+    - 81000.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_1_4:
+    loc:
+    - 94500.0
+    - 81000.0
+    z: 0.0
+    orient: R0
+  Private_Memory_1_4:
+    loc:
+    - 108000.0
+    - 81000.0
+    z: 0.0
+    orient: R0
+  Core_1_5:
+    loc:
+    - 121500.0
+    - 81000.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_1_5:
+    loc:
+    - 0.0
+    - 94500.0
+    z: 0.0
+    orient: R0
+  Private_Memory_1_5:
+    loc:
+    - 13500.0
+    - 94500.0
+    z: 0.0
+    orient: R0
+  Core_1_6:
+    loc:
+    - 27000.0
+    - 94500.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_1_6:
+    loc:
+    - 40500.0
+    - 94500.0
+    z: 0.0
+    orient: R0
+  Private_Memory_1_6:
+    loc:
+    - 54000.0
+    - 94500.0
+    z: 0.0
+    orient: R0
+  Core_1_7:
+    loc:
+    - 67500.0
+    - 94500.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_1_7:
+    loc:
+    - 81000.0
+    - 94500.0
+    z: 0.0
+    orient: R0
+  Private_Memory_1_7:
+    loc:
+    - 94500.0
+    - 94500.0
+    z: 0.0
+    orient: R0
+  Core_1_8:
+    loc:
+    - 108000.0
+    - 94500.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_1_8:
+    loc:
+    - 121500.0
+    - 94500.0
+    z: 0.0
+    orient: R0
+  Private_Memory_1_8:
+    loc:
+    - 0.0
+    - 108000.0
+    z: 0.0
+    orient: R0
+  Core_1_9:
+    loc:
+    - 13500.0
+    - 108000.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_1_9:
+    loc:
+    - 27000.0
+    - 108000.0
+    z: 0.0
+    orient: R0
+  Private_Memory_1_9:
+    loc:
+    - 40500.0
+    - 108000.0
+    z: 0.0
+    orient: R0
+  Core_1_10:
+    loc:
+    - 54000.0
+    - 108000.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_1_10:
+    loc:
+    - 67500.0
+    - 108000.0
+    z: 0.0
+    orient: R0
+  Private_Memory_1_10:
+    loc:
+    - 81000.0
+    - 108000.0
+    z: 0.0
+    orient: R0
+  Core_1_11:
+    loc:
+    - 94500.0
+    - 108000.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_1_11:
+    loc:
+    - 108000.0
+    - 108000.0
+    z: 0.0
+    orient: R0
+  Private_Memory_1_11:
+    loc:
+    - 121500.0
+    - 108000.0
+    z: 0.0
+    orient: R0
+  Core_1_12:
+    loc:
+    - 0.0
+    - 121500.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_1_12:
+    loc:
+    - 13500.0
+    - 121500.0
+    z: 0.0
+    orient: R0
+  Private_Memory_1_12:
+    loc:
+    - 27000.0
+    - 121500.0
+    z: 0.0
+    orient: R0
+  Core_1_13:
+    loc:
+    - 40500.0
+    - 121500.0
+    z: 0.0
+    orient: R0
+  Bus_Mux_1_13:
+    loc:
+    - 54000.0
+    - 121500.0
+    z: 0.0
+    orient: R0
+  Private_Memory_1_13:
+    loc:
+    - 67500.0
+    - 121500.0
+    z: 0.0
+    orient: R0

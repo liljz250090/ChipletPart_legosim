@@ -1,0 +1,2489 @@
+Header:
+  version: '2.0'
+  unit: micron
+  precision: 1000
+  include:
+  - mempool_group.3dbv
+Design:
+  name: MEMPOOL_GROUPTop
+  external:
+    chipletpart_vendor_data:
+      source_schema: ChipletPart
+      self_contained: true
+      dataset:
+        blocks:
+        - name: gen_axi_group_cuts\[0\].i_axi_cut
+          area_mm2: 1.02545
+          power_w: 0.08050935040799415
+          technology: 45nm
+          is_memory: false
+        - name: gen_dmas\[0\].i_axi_dma_backend
+          area_mm2: 1.56936
+          power_w: 0.12321239861162386
+          technology: 45nm
+          is_memory: false
+        - name: gen_dmas\[0\].i_axi_to_reqrsp
+          area_mm2: 0.150875
+          power_w: 0.011845383239364295
+          technology: 45nm
+          is_memory: false
+        - name: gen_dmas\[0\].i_dma_axi_xbar
+          area_mm2: 2.97905
+          power_w: 0.23388890763365836
+          technology: 45nm
+          is_memory: false
+        - name: gen_dmas\[0\].i_reqrsp_demux
+          area_mm2: 0.146221
+          power_w: 0.011479991931354343
+          technology: 45nm
+          is_memory: false
+        - name: gen_dmas\[1\].i_axi_dma_backend
+          area_mm2: 1.5720999999999998
+          power_w: 0.12342751940748703
+          technology: 45nm
+          is_memory: false
+        - name: gen_dmas\[1\].i_axi_to_reqrsp
+          area_mm2: 0.15271
+          power_w: 0.011989451363601135
+          technology: 45nm
+          is_memory: false
+        - name: gen_dmas\[1\].i_dma_axi_xbar
+          area_mm2: 2.9971
+          power_w: 0.23530603550421694
+          technology: 45nm
+          is_memory: false
+        - name: gen_dmas\[1\].i_reqrsp_demux
+          area_mm2: 0.150848
+          power_w: 0.011843263435901408
+          technology: 45nm
+          is_memory: false
+        - name: gen_dmas\[2\].i_axi_dma_backend
+          area_mm2: 1.5637499999999998
+          power_w: 0.12277195055877987
+          technology: 45nm
+          is_memory: false
+        - name: gen_dmas\[2\].i_axi_to_reqrsp
+          area_mm2: 0.15318900000000002
+          power_w: 0.012027058247257512
+          technology: 45nm
+          is_memory: false
+        - name: gen_dmas\[2\].i_dma_axi_xbar
+          area_mm2: 2.98035
+          power_w: 0.23399097224483428
+          technology: 45nm
+          is_memory: false
+        - name: gen_dmas\[2\].i_reqrsp_demux
+          area_mm2: 0.12150799999999999
+          power_w: 0.009539743672899264
+          technology: 45nm
+          is_memory: false
+        - name: gen_dmas\[3\].i_axi_dma_backend
+          area_mm2: 1.56441
+          power_w: 0.12282376797676153
+          technology: 45nm
+          is_memory: false
+        - name: gen_dmas\[3\].i_axi_to_reqrsp
+          area_mm2: 0.15688599999999997
+          power_w: 0.012317314299194079
+          technology: 45nm
+          is_memory: false
+        - name: gen_dmas\[3\].i_dma_axi_xbar
+          area_mm2: 2.9754300000000002
+          power_w: 0.23360469694715297
+          technology: 45nm
+          is_memory: false
+        - name: gen_dmas\[3\].i_reqrsp_demux
+          area_mm2: 0.165773
+          power_w: 0.013015043683440843
+          technology: 45nm
+          is_memory: false
+        - name: gen_remote_interco\[1\].i_remote_interco
+          area_mm2: 5.85809
+          power_w: 0.45992590621831037
+          technology: 45nm
+          is_memory: false
+        - name: gen_remote_interco\[2\].i_remote_interco
+          area_mm2: 5.891500000000001
+          power_w: 0.46254896672553264
+          technology: 45nm
+          is_memory: false
+        - name: gen_remote_interco\[3\].i_remote_interco
+          area_mm2: 5.87898
+          power_w: 0.4615660060086688
+          technology: 45nm
+          is_memory: false
+        - name: gen_tiles\[0\].i_tile
+          area_mm2: 27.637
+          power_w: 2.1698151223616304
+          technology: 45nm
+          is_memory: false
+        - name: gen_tiles\[10\].i_tile
+          area_mm2: 27.560299999999998
+          power_w: 2.1637933103022484
+          technology: 45nm
+          is_memory: false
+        - name: gen_tiles\[11\].i_tile
+          area_mm2: 28.032600000000002
+          power_w: 2.2008741686548703
+          technology: 45nm
+          is_memory: false
+        - name: gen_tiles\[12\].i_tile
+          area_mm2: 27.888
+          power_w: 2.1895214434425285
+          technology: 45nm
+          is_memory: false
+        - name: gen_tiles\[13\].i_tile
+          area_mm2: 28.0736
+          power_w: 2.2040931294688813
+          technology: 45nm
+          is_memory: false
+        - name: gen_tiles\[14\].i_tile
+          area_mm2: 27.7856
+          power_w: 2.181481892531437
+          technology: 45nm
+          is_memory: false
+        - name: gen_tiles\[15\].i_tile
+          area_mm2: 27.515299999999996
+          power_w: 2.1602603045307727
+          technology: 45nm
+          is_memory: false
+        - name: gen_tiles\[1\].i_tile
+          area_mm2: 27.6787
+          power_w: 2.1730890410431978
+          technology: 45nm
+          is_memory: false
+        - name: gen_tiles\[2\].i_tile
+          area_mm2: 27.7016
+          power_w: 2.174886948424682
+          technology: 45nm
+          is_memory: false
+        - name: gen_tiles\[3\].i_tile
+          area_mm2: 27.393800000000002
+          power_w: 2.150721188947789
+          technology: 45nm
+          is_memory: false
+        - name: gen_tiles\[4\].i_tile
+          area_mm2: 27.5769
+          power_w: 2.1650965968757263
+          technology: 45nm
+          is_memory: false
+        - name: gen_tiles\[5\].i_tile
+          area_mm2: 27.264
+          power_w: 2.140530430078065
+          technology: 45nm
+          is_memory: false
+        - name: gen_tiles\[6\].i_tile
+          area_mm2: 27.7974
+          power_w: 2.1824083251559574
+          technology: 45nm
+          is_memory: false
+        - name: gen_tiles\[7\].i_tile
+          area_mm2: 27.8783
+          power_w: 2.1887598844206764
+          technology: 45nm
+          is_memory: false
+        - name: gen_tiles\[8\].i_tile
+          area_mm2: 27.7522
+          power_w: 2.178859617136608
+          technology: 45nm
+          is_memory: false
+        - name: gen_tiles\[9\].i_tile
+          area_mm2: 27.903
+          power_w: 2.19069911203302
+          technology: 45nm
+          is_memory: false
+        - name: i_axi_interco
+          area_mm2: 8.48642
+          power_w: 0.6662793519814808
+          technology: 45nm
+          is_memory: false
+        - name: i_dma_req_register
+          area_mm2: 0.194579
+          power_w: 0.015276638444621475
+          technology: 45nm
+          is_memory: false
+        - name: i_idma_distributed_midend
+          area_mm2: 0.146858
+          power_w: 0.011530003590830566
+          technology: 45nm
+          is_memory: false
+        - name: i_local_interco
+          area_mm2: 3.24017
+          power_w: 0.2543897624569412
+          technology: 45nm
+          is_memory: false
+        interconnects:
+        - name: link_0000
+          type: 2Gbs_100vCDM_2mm
+          source: gen_dmas\[0\].i_axi_dma_backend
+          sink: gen_dmas\[0\].i_dma_axi_xbar
+          bb_count: null
+          bandwidth_gbps: 231.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0001
+          type: 2Gbs_100vCDM_2mm
+          source: gen_dmas\[0\].i_axi_to_reqrsp
+          sink: gen_dmas\[0\].i_dma_axi_xbar
+          bb_count: null
+          bandwidth_gbps: 10.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0002
+          type: 2Gbs_100vCDM_2mm
+          source: gen_dmas\[1\].i_axi_dma_backend
+          sink: gen_dmas\[1\].i_dma_axi_xbar
+          bb_count: null
+          bandwidth_gbps: 231.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0003
+          type: 2Gbs_100vCDM_2mm
+          source: gen_dmas\[1\].i_axi_to_reqrsp
+          sink: gen_dmas\[1\].i_dma_axi_xbar
+          bb_count: null
+          bandwidth_gbps: 10.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0004
+          type: 2Gbs_100vCDM_2mm
+          source: gen_dmas\[2\].i_axi_dma_backend
+          sink: gen_dmas\[2\].i_dma_axi_xbar
+          bb_count: null
+          bandwidth_gbps: 231.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0005
+          type: 2Gbs_100vCDM_2mm
+          source: gen_dmas\[2\].i_axi_to_reqrsp
+          sink: gen_dmas\[2\].i_dma_axi_xbar
+          bb_count: null
+          bandwidth_gbps: 10.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0006
+          type: 2Gbs_100vCDM_2mm
+          source: gen_dmas\[3\].i_axi_dma_backend
+          sink: gen_dmas\[3\].i_dma_axi_xbar
+          bb_count: null
+          bandwidth_gbps: 231.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0007
+          type: 2Gbs_100vCDM_2mm
+          source: gen_dmas\[3\].i_axi_to_reqrsp
+          sink: gen_dmas\[3\].i_dma_axi_xbar
+          bb_count: null
+          bandwidth_gbps: 10.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0008
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[1\].i_remote_interco
+          sink: gen_tiles\[0\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0009
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[1\].i_remote_interco
+          sink: gen_tiles\[10\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0010
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[1\].i_remote_interco
+          sink: gen_tiles\[11\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0011
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[1\].i_remote_interco
+          sink: gen_tiles\[12\].i_tile
+          bb_count: null
+          bandwidth_gbps: 8.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0012
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[1\].i_remote_interco
+          sink: gen_tiles\[13\].i_tile
+          bb_count: null
+          bandwidth_gbps: 8.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0013
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[1\].i_remote_interco
+          sink: gen_tiles\[14\].i_tile
+          bb_count: null
+          bandwidth_gbps: 8.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0014
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[1\].i_remote_interco
+          sink: gen_tiles\[15\].i_tile
+          bb_count: null
+          bandwidth_gbps: 8.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0015
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[1\].i_remote_interco
+          sink: gen_tiles\[1\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0016
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[1\].i_remote_interco
+          sink: gen_tiles\[2\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0017
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[1\].i_remote_interco
+          sink: gen_tiles\[3\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0018
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[1\].i_remote_interco
+          sink: gen_tiles\[4\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0019
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[1\].i_remote_interco
+          sink: gen_tiles\[5\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0020
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[1\].i_remote_interco
+          sink: gen_tiles\[6\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0021
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[1\].i_remote_interco
+          sink: gen_tiles\[7\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0022
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[1\].i_remote_interco
+          sink: gen_tiles\[8\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0023
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[1\].i_remote_interco
+          sink: gen_tiles\[9\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0024
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[2\].i_remote_interco
+          sink: gen_tiles\[0\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0025
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[2\].i_remote_interco
+          sink: gen_tiles\[10\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0026
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[2\].i_remote_interco
+          sink: gen_tiles\[11\].i_tile
+          bb_count: null
+          bandwidth_gbps: 8.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0027
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[2\].i_remote_interco
+          sink: gen_tiles\[12\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0028
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[2\].i_remote_interco
+          sink: gen_tiles\[13\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0029
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[2\].i_remote_interco
+          sink: gen_tiles\[14\].i_tile
+          bb_count: null
+          bandwidth_gbps: 8.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0030
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[2\].i_remote_interco
+          sink: gen_tiles\[15\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0031
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[2\].i_remote_interco
+          sink: gen_tiles\[1\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0032
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[2\].i_remote_interco
+          sink: gen_tiles\[2\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0033
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[2\].i_remote_interco
+          sink: gen_tiles\[3\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0034
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[2\].i_remote_interco
+          sink: gen_tiles\[4\].i_tile
+          bb_count: null
+          bandwidth_gbps: 8.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0035
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[2\].i_remote_interco
+          sink: gen_tiles\[5\].i_tile
+          bb_count: null
+          bandwidth_gbps: 8.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0036
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[2\].i_remote_interco
+          sink: gen_tiles\[6\].i_tile
+          bb_count: null
+          bandwidth_gbps: 8.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0037
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[2\].i_remote_interco
+          sink: gen_tiles\[7\].i_tile
+          bb_count: null
+          bandwidth_gbps: 8.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0038
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[2\].i_remote_interco
+          sink: gen_tiles\[8\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0039
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[2\].i_remote_interco
+          sink: gen_tiles\[9\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0040
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[3\].i_remote_interco
+          sink: gen_tiles\[0\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0041
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[3\].i_remote_interco
+          sink: gen_tiles\[10\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0042
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[3\].i_remote_interco
+          sink: gen_tiles\[11\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0043
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[3\].i_remote_interco
+          sink: gen_tiles\[12\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0044
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[3\].i_remote_interco
+          sink: gen_tiles\[13\].i_tile
+          bb_count: null
+          bandwidth_gbps: 8.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0045
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[3\].i_remote_interco
+          sink: gen_tiles\[14\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0046
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[3\].i_remote_interco
+          sink: gen_tiles\[15\].i_tile
+          bb_count: null
+          bandwidth_gbps: 8.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0047
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[3\].i_remote_interco
+          sink: gen_tiles\[1\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0048
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[3\].i_remote_interco
+          sink: gen_tiles\[2\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0049
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[3\].i_remote_interco
+          sink: gen_tiles\[3\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0050
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[3\].i_remote_interco
+          sink: gen_tiles\[4\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0051
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[3\].i_remote_interco
+          sink: gen_tiles\[5\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0052
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[3\].i_remote_interco
+          sink: gen_tiles\[6\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0053
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[3\].i_remote_interco
+          sink: gen_tiles\[7\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0054
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[3\].i_remote_interco
+          sink: gen_tiles\[8\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0055
+          type: 2Gbs_100vCDM_2mm
+          source: gen_remote_interco\[3\].i_remote_interco
+          sink: gen_tiles\[9\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0056
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[0\].i_tile
+          sink: gen_remote_interco\[1\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0057
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[0\].i_tile
+          sink: gen_remote_interco\[2\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 22.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0058
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[0\].i_tile
+          sink: gen_remote_interco\[3\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0059
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[0\].i_tile
+          sink: i_local_interco
+          bb_count: null
+          bandwidth_gbps: 145.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0060
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[10\].i_tile
+          sink: gen_remote_interco\[1\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0061
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[10\].i_tile
+          sink: gen_remote_interco\[2\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0062
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[10\].i_tile
+          sink: gen_remote_interco\[3\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 94.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0063
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[10\].i_tile
+          sink: i_local_interco
+          bb_count: null
+          bandwidth_gbps: 159.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0064
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[11\].i_tile
+          sink: gen_remote_interco\[1\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0065
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[11\].i_tile
+          sink: gen_remote_interco\[2\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 147.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0066
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[11\].i_tile
+          sink: gen_remote_interco\[3\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 86.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0067
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[11\].i_tile
+          sink: i_local_interco
+          bb_count: null
+          bandwidth_gbps: 159.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0068
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[12\].i_tile
+          sink: gen_remote_interco\[1\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 157.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0069
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[12\].i_tile
+          sink: gen_remote_interco\[2\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0070
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[12\].i_tile
+          sink: gen_remote_interco\[3\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 165.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0071
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[12\].i_tile
+          sink: i_local_interco
+          bb_count: null
+          bandwidth_gbps: 136.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0072
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[13\].i_tile
+          sink: gen_remote_interco\[1\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 157.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0073
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[13\].i_tile
+          sink: gen_remote_interco\[2\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0074
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[13\].i_tile
+          sink: gen_remote_interco\[3\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 157.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0075
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[13\].i_tile
+          sink: i_local_interco
+          bb_count: null
+          bandwidth_gbps: 136.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0076
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[14\].i_tile
+          sink: gen_remote_interco\[1\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 134.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0077
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[14\].i_tile
+          sink: gen_remote_interco\[2\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 157.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0078
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[14\].i_tile
+          sink: gen_remote_interco\[3\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 92.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0079
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[14\].i_tile
+          sink: i_local_interco
+          bb_count: null
+          bandwidth_gbps: 54.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0080
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[15\].i_tile
+          sink: gen_remote_interco\[1\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 90.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0081
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[15\].i_tile
+          sink: gen_remote_interco\[2\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0082
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[15\].i_tile
+          sink: gen_remote_interco\[3\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 157.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0083
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[15\].i_tile
+          sink: i_local_interco
+          bb_count: null
+          bandwidth_gbps: 52.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0084
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[1\].i_tile
+          sink: gen_remote_interco\[1\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0085
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[1\].i_tile
+          sink: gen_remote_interco\[2\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0086
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[1\].i_tile
+          sink: gen_remote_interco\[3\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 66.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0087
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[1\].i_tile
+          sink: i_local_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0088
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[2\].i_tile
+          sink: gen_remote_interco\[1\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0089
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[2\].i_tile
+          sink: gen_remote_interco\[2\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 90.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0090
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[2\].i_tile
+          sink: gen_remote_interco\[3\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0091
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[2\].i_tile
+          sink: i_local_interco
+          bb_count: null
+          bandwidth_gbps: 159.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0092
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[3\].i_tile
+          sink: gen_remote_interco\[1\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0093
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[3\].i_tile
+          sink: gen_remote_interco\[2\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0094
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[3\].i_tile
+          sink: gen_remote_interco\[3\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0095
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[3\].i_tile
+          sink: i_local_interco
+          bb_count: null
+          bandwidth_gbps: 159.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0096
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[4\].i_tile
+          sink: gen_remote_interco\[1\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0097
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[4\].i_tile
+          sink: gen_remote_interco\[2\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 151.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0098
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[4\].i_tile
+          sink: gen_remote_interco\[3\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 24.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0099
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[4\].i_tile
+          sink: i_local_interco
+          bb_count: null
+          bandwidth_gbps: 145.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0100
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[5\].i_tile
+          sink: gen_remote_interco\[1\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0101
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[5\].i_tile
+          sink: gen_remote_interco\[2\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 151.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0102
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[5\].i_tile
+          sink: gen_remote_interco\[3\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0103
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[5\].i_tile
+          sink: i_local_interco
+          bb_count: null
+          bandwidth_gbps: 136.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0104
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[6\].i_tile
+          sink: gen_remote_interco\[1\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0105
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[6\].i_tile
+          sink: gen_remote_interco\[2\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 151.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0106
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[6\].i_tile
+          sink: gen_remote_interco\[3\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0107
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[6\].i_tile
+          sink: i_local_interco
+          bb_count: null
+          bandwidth_gbps: 163.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0108
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[7\].i_tile
+          sink: gen_remote_interco\[1\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0109
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[7\].i_tile
+          sink: gen_remote_interco\[2\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 155.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0110
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[7\].i_tile
+          sink: gen_remote_interco\[3\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0111
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[7\].i_tile
+          sink: i_local_interco
+          bb_count: null
+          bandwidth_gbps: 159.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0112
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[8\].i_tile
+          sink: gen_remote_interco\[1\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0113
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[8\].i_tile
+          sink: gen_remote_interco\[2\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0114
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[8\].i_tile
+          sink: gen_remote_interco\[3\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 64.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0115
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[8\].i_tile
+          sink: i_local_interco
+          bb_count: null
+          bandwidth_gbps: 110.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0116
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[9\].i_tile
+          sink: gen_remote_interco\[1\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 20.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0117
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[9\].i_tile
+          sink: gen_remote_interco\[2\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 92.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0118
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[9\].i_tile
+          sink: gen_remote_interco\[3\].i_remote_interco
+          bb_count: null
+          bandwidth_gbps: 86.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0119
+          type: 2Gbs_100vCDM_2mm
+          source: gen_tiles\[9\].i_tile
+          sink: i_local_interco
+          bb_count: null
+          bandwidth_gbps: 159.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0120
+          type: 2Gbs_100vCDM_2mm
+          source: i_axi_interco
+          sink: gen_axi_group_cuts\[0\].i_axi_cut
+          bb_count: null
+          bandwidth_gbps: 767.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0121
+          type: 2Gbs_100vCDM_2mm
+          source: i_dma_req_register
+          sink: gen_dmas\[0\].i_axi_dma_backend
+          bb_count: null
+          bandwidth_gbps: 34.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0122
+          type: 2Gbs_100vCDM_2mm
+          source: i_dma_req_register
+          sink: gen_dmas\[1\].i_axi_dma_backend
+          bb_count: null
+          bandwidth_gbps: 34.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0123
+          type: 2Gbs_100vCDM_2mm
+          source: i_dma_req_register
+          sink: gen_dmas\[2\].i_axi_dma_backend
+          bb_count: null
+          bandwidth_gbps: 34.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0124
+          type: 2Gbs_100vCDM_2mm
+          source: i_dma_req_register
+          sink: gen_dmas\[3\].i_axi_dma_backend
+          bb_count: null
+          bandwidth_gbps: 34.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0125
+          type: 2Gbs_100vCDM_2mm
+          source: i_dma_req_register
+          sink: i_idma_distributed_midend
+          bb_count: null
+          bandwidth_gbps: 14.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0126
+          type: 2Gbs_100vCDM_2mm
+          source: i_idma_distributed_midend
+          sink: i_dma_req_register
+          bb_count: null
+          bandwidth_gbps: 2.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0127
+          type: 2Gbs_100vCDM_2mm
+          source: i_local_interco
+          sink: gen_tiles\[0\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0128
+          type: 2Gbs_100vCDM_2mm
+          source: i_local_interco
+          sink: gen_tiles\[10\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0129
+          type: 2Gbs_100vCDM_2mm
+          source: i_local_interco
+          sink: gen_tiles\[11\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0130
+          type: 2Gbs_100vCDM_2mm
+          source: i_local_interco
+          sink: gen_tiles\[12\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0131
+          type: 2Gbs_100vCDM_2mm
+          source: i_local_interco
+          sink: gen_tiles\[13\].i_tile
+          bb_count: null
+          bandwidth_gbps: 8.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0132
+          type: 2Gbs_100vCDM_2mm
+          source: i_local_interco
+          sink: gen_tiles\[14\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0133
+          type: 2Gbs_100vCDM_2mm
+          source: i_local_interco
+          sink: gen_tiles\[15\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0134
+          type: 2Gbs_100vCDM_2mm
+          source: i_local_interco
+          sink: gen_tiles\[1\].i_tile
+          bb_count: null
+          bandwidth_gbps: 4.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0135
+          type: 2Gbs_100vCDM_2mm
+          source: i_local_interco
+          sink: gen_tiles\[2\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0136
+          type: 2Gbs_100vCDM_2mm
+          source: i_local_interco
+          sink: gen_tiles\[3\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0137
+          type: 2Gbs_100vCDM_2mm
+          source: i_local_interco
+          sink: gen_tiles\[4\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0138
+          type: 2Gbs_100vCDM_2mm
+          source: i_local_interco
+          sink: gen_tiles\[5\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0139
+          type: 2Gbs_100vCDM_2mm
+          source: i_local_interco
+          sink: gen_tiles\[6\].i_tile
+          bb_count: null
+          bandwidth_gbps: 8.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0140
+          type: 2Gbs_100vCDM_2mm
+          source: i_local_interco
+          sink: gen_tiles\[7\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0141
+          type: 2Gbs_100vCDM_2mm
+          source: i_local_interco
+          sink: gen_tiles\[8\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        - name: link_0142
+          type: 2Gbs_100vCDM_2mm
+          source: i_local_interco
+          sink: gen_tiles\[9\].i_tile
+          bb_count: null
+          bandwidth_gbps: 6.0
+          average_bandwidth_utilization: 0.5
+        io_library:
+        - type: UCIe_standard
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 10.0
+        - type: UCIe_standard_1
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 1.0
+        - type: UCIe_standard_2
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: UCIe_standard_5
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 5.0
+        - type: UCIe_standard_10
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 10.0
+        - type: UCIe_standard_20
+          tx_area: 0.75438
+          rx_area: 0.75438
+          shoreline: 0.5715
+          bandwidth: 1024
+          wire_count: 44
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 20.0
+        - type: UCIe_advanced
+          tx_area: 0.4055184
+          rx_area: 0.4055184
+          shoreline: 0.3888
+          bandwidth: 4096
+          wire_count: 140
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 10.0
+        - type: 2Gbs_100vCDM_2mm
+          tx_area: 0.0002
+          rx_area: 0.0002
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: 2Gbs_100vCDM_5mm
+          tx_area: 0.0002
+          rx_area: 0.0002
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 5.0
+        - type: 2Gbs_100vCDM_10mm
+          tx_area: 0.0002
+          rx_area: 0.0002
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 10.0
+        - type: 2Gbs_100vCDM_20mm
+          tx_area: 0.0002
+          rx_area: 0.0002
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 20.0
+        - type: 2Gbs_0vCDM_2mm
+          tx_area: 4.763e-05
+          rx_area: 4.763e-05
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: 2Gbs_10vCDM_2mm
+          tx_area: 6.265e-05
+          rx_area: 6.265e-05
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: 2Gbs_125vCDM_2mm
+          tx_area: 9.27e-05
+          rx_area: 9.27e-05
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: 2Gbs_250vCDM_2mm
+          tx_area: 0.00013025
+          rx_area: 0.00013025
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: 2Gbs_500vCDM_2mm
+          tx_area: 0.00019775
+          rx_area: 0.00019785
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.001
+          reach: 2.0
+        - type: PCIe
+          tx_area: 2.0
+          rx_area: 2.0
+          shoreline: 1.0
+          bandwidth: 2048
+          wire_count: 140
+          bidirectional: true
+          energy_per_bit: 1.0e-12
+          reach: 10.0
+        - type: GPIO
+          tx_area: 0.001
+          rx_area: 0.001
+          shoreline: 0.02
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: GPIO_external_small
+          tx_area: 0.001
+          rx_area: 0.001
+          shoreline: 0.04
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: GPIO_external
+          tx_area: 0.00314
+          rx_area: 0.00314
+          shoreline: 0.04
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: IO_100v
+          tx_area: 0.0002
+          rx_area: 0.0002
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: IO_50v
+          tx_area: 0.00013
+          rx_area: 0.00013
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: IO_30v
+          tx_area: 0.000116
+          rx_area: 0.000116
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: IO_10v
+          tx_area: 9.2e-05
+          rx_area: 9.2e-05
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: IO_3v
+          tx_area: 8.0e-05
+          rx_area: 8.0e-05
+          shoreline: 0.01
+          bandwidth: 2
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 1.0e-12
+          reach: 2.0
+        - type: temp_io
+          tx_area: 0.0
+          rx_area: 0.0
+          shoreline: 1.0
+          bandwidth: 1
+          wire_count: 1
+          bidirectional: false
+          energy_per_bit: 0.0
+          reach: 10.0
+        layer_library:
+        - name: organic_substrate
+          active: false
+          cost_per_mm2: 0.0001
+          gates_per_mm2: 0.0
+          defect_density: 0.0
+          critical_area_ratio: 0.0
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.0
+          nre_mask_cost: 0
+          stitching_yield: 1.0
+        - name: 5nm_active
+          active: true
+          cost_per_mm2: 0.5
+          gates_per_mm2: 1000000000
+          defect_density: 0.005
+          critical_area_ratio: 0.8
+          clustering_factor: 2
+          transistor_density: 117.3
+          litho_percent: 0.2
+          nre_mask_cost: 10000
+          stitching_yield: 0.9
+        - name: 5nm_advanced_metal
+          active: false
+          cost_per_mm2: 0.3
+          defect_density: 0.0003
+          critical_area_ratio: 0.5
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.4
+          nre_mask_cost: 5000
+          stitching_yield: 0.95
+        - name: 5nm_intermediate_metal
+          active: false
+          cost_per_mm2: 0.1
+          defect_density: 0.005
+          critical_area_ratio: 0.3
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.3
+          nre_mask_cost: 1000
+          stitching_yield: 0.99
+        - name: 5nm_global_metal
+          active: false
+          cost_per_mm2: 0.01
+          defect_density: 0.005
+          critical_area_ratio: 0.1
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.2
+          nre_mask_cost: 500
+          stitching_yield: 0.999
+        - name: combined_40nm
+          active: true
+          cost_per_mm2: 0.033497
+          defect_density: 0.005
+          critical_area_ratio: 0.5
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.15
+          nre_mask_cost: 100000
+          stitching_yield: 0.5
+        - name: combined_45nm
+          active: true
+          cost_per_mm2: 0.032171
+          defect_density: 0.005
+          critical_area_ratio: 0.6
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.15
+          nre_mask_cost: 100000
+          stitching_yield: 0.5
+        - name: combined_interposer_silicon
+          active: false
+          cost_per_mm2: 0.021905
+          defect_density: 1.0e-05
+          critical_area_ratio: 0.3
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.1
+          nre_mask_cost: 5000
+          stitching_yield: 0.99
+        - name: combined_interposer_glass
+          active: false
+          cost_per_mm2: 0.0021905
+          defect_density: 1.0e-05
+          critical_area_ratio: 0.3
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.1
+          nre_mask_cost: 5000
+          stitching_yield: 0.99
+        - name: combined_interposer_organic
+          active: false
+          cost_per_mm2: 5.382e-07
+          defect_density: 1.0e-06
+          critical_area_ratio: 0.2
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.0
+          nre_mask_cost: 500
+          stitching_yield: 1.0
+        - name: combined_12nm
+          active: true
+          cost_per_mm2: 0.05636207
+          defect_density: 0.005
+          critical_area_ratio: 0.6
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.25
+          nre_mask_cost: 500000
+          stitching_yield: 0.5
+        - name: combined_hbm2_12nm
+          active: true
+          cost_per_mm2: 0.1654538
+          defect_density: 0.005
+          critical_area_ratio: 0.6
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.25
+          nre_mask_cost: 500000
+          stitching_yield: 0.5
+        - name: combined_10nm
+          active: true
+          cost_per_mm2: 0.084769
+          defect_density: 0.005
+          critical_area_ratio: 0.62
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.25
+          nre_mask_cost: 500000
+          stitching_yield: 0.5
+        - name: combined_7nm
+          active: true
+          cost_per_mm2: 0.132219
+          defect_density: 0.005
+          critical_area_ratio: 0.64
+          clustering_factor: 2
+          transistor_density: 91.2
+          litho_percent: 0.27
+          nre_mask_cost: 1000000
+          stitching_yield: 0.5
+        - name: combined_hbm_7nm
+          active: true
+          cost_per_mm2: 1.10136
+          defect_density: 0.005
+          critical_area_ratio: 0.6
+          clustering_factor: 2
+          transistor_density: 729.6
+          litho_percent: 0.27
+          nre_mask_cost: 1000000
+          stitching_yield: 0.5
+        - name: combined_5nm
+          active: true
+          cost_per_mm2: 0.25024
+          defect_density: 0.005
+          critical_area_ratio: 0.67
+          clustering_factor: 2
+          transistor_density: 117.3
+          litho_percent: 0.3
+          nre_mask_cost: 3000000
+          stitching_yield: 0.5
+        - name: combined_3nm
+          active: true
+          cost_per_mm2: 0.29461
+          defect_density: 0.005
+          critical_area_ratio: 0.7
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.35
+          nre_mask_cost: 5000000
+          stitching_yield: 0.5
+        - name: combined_3nm_0.001
+          active: true
+          cost_per_mm2: 0.29461
+          defect_density: 0.001
+          critical_area_ratio: 0.7
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.35
+          nre_mask_cost: 5000000
+          stitching_yield: 0.5
+        - name: combined_3nm_0.005
+          active: true
+          cost_per_mm2: 0.29461
+          defect_density: 0.005
+          critical_area_ratio: 0.7
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.35
+          nre_mask_cost: 5000000
+          stitching_yield: 0.5
+        - name: combined_3nm_0.01
+          active: true
+          cost_per_mm2: 0.29461
+          defect_density: 0.01
+          critical_area_ratio: 0.7
+          clustering_factor: 2
+          transistor_density: 0
+          litho_percent: 0.35
+          nre_mask_cost: 5000000
+          stitching_yield: 0.5
+        wafer_process_library:
+        - name: process_1
+          wafer_diameter: 300
+          edge_exclusion: 0.1
+          wafer_process_yield: 1.0
+          dicing_distance: 0.13
+          reticle_x: 26
+          reticle_y: 33
+          wafer_fill_grid: true
+          nre_front_end_cost_per_mm2_memory: 0.0
+          nre_back_end_cost_per_mm2_memory: 0.0
+          nre_front_end_cost_per_mm2_logic: 0.0
+          nre_back_end_cost_per_mm2_logic: 500000
+          nre_front_end_cost_per_mm2_analog: 0.0
+          nre_back_end_cost_per_mm2_analog: 0.0
+        - name: maskless_interposer_process
+          wafer_diameter: 600
+          edge_exclusion: 0.1
+          wafer_process_yield: 1.0
+          dicing_distance: 0.13
+          reticle_x: 200
+          reticle_y: 200
+          wafer_fill_grid: true
+          nre_front_end_cost_per_mm2_memory: 0.0
+          nre_back_end_cost_per_mm2_memory: 0.0
+          nre_front_end_cost_per_mm2_logic: 0.0
+          nre_back_end_cost_per_mm2_logic: 0.0
+          nre_front_end_cost_per_mm2_analog: 0.0
+          nre_back_end_cost_per_mm2_analog: 0.0
+        assembly_process_library:
+        - name: organic_25_simultaneous_bonding
+          materials_cost_per_mm2: 0.1
+          bb_cost_per_second: null
+          picknplace_machine_cost: 800000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 800000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 10
+          die_separation: 1.0
+          edge_exclusion: 2.0
+          max_pad_current_density: 100.0
+          bonding_pitch: 0.025
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: organic_55_simultaneous_bonding
+          materials_cost_per_mm2: 0.1
+          bb_cost_per_second: null
+          picknplace_machine_cost: 1000000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 300000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 10
+          die_separation: 1.0
+          edge_exclusion: 2.0
+          max_pad_current_density: 100.0
+          bonding_pitch: 0.055
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: organic_simultaneous_bonding
+          materials_cost_per_mm2: 0.1
+          bb_cost_per_second: null
+          picknplace_machine_cost: 600000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 200000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 64
+          die_separation: 1.0
+          edge_exclusion: 2.0
+          max_pad_current_density: 100.0
+          bonding_pitch: 0.11
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: silicon_45_individual_bonding
+          materials_cost_per_mm2: 0.1
+          bb_cost_per_second: null
+          picknplace_machine_cost: 500000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 500000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 1
+          die_separation: 0.1
+          edge_exclusion: 0.1
+          max_pad_current_density: 10000.0
+          bonding_pitch: 0.045
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: silicon_individual_bonding
+          materials_cost_per_mm2: 0.0
+          bb_cost_per_second: null
+          picknplace_machine_cost: 1800000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 1800000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 1
+          die_separation: 0.1
+          edge_exclusion: 0.1
+          max_pad_current_density: 10000.0
+          bonding_pitch: 0.01
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: silicon_simultaneous_bonding
+          materials_cost_per_mm2: 0.0
+          bb_cost_per_second: null
+          picknplace_machine_cost: 1800000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 1800000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 64
+          die_separation: 0.1
+          edge_exclusion: 0.1
+          max_pad_current_density: 10000.0
+          bonding_pitch: 0.01
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: glass_individual_bonding
+          materials_cost_per_mm2: 0.0
+          bb_cost_per_second: null
+          picknplace_machine_cost: 1800000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1
+          bonding_machine_cost: 1800000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 1
+          die_separation: 0.1
+          edge_exclusion: 0.1
+          max_pad_current_density: 10000.0
+          bonding_pitch: 0.01
+          alignment_yield: 0.999
+          bonding_yield: 0.999999
+          dielectric_bond_defect_density: 0.0
+        - name: w2w_hybrid_bonding
+          materials_cost_per_mm2: 0.1
+          bb_cost_per_second: null
+          picknplace_machine_cost: 1000000
+          picknplace_machine_lifetime: 5
+          picknplace_machine_uptime: 0.9
+          picknplace_technician_yearly_cost: 100000
+          picknplace_time: 10
+          picknplace_group: 1000
+          bonding_machine_cost: 1000000
+          bonding_machine_lifetime: 5
+          bonding_machine_uptime: 0.9
+          bonding_technician_yearly_cost: 100000
+          bonding_time: 20
+          bonding_group: 1000
+          die_separation: 0.1
+          edge_exclusion: 0.1
+          max_pad_current_density: 10000.0
+          bonding_pitch: 0.001
+          alignment_yield: 0.99999
+          bonding_yield: 0.99999999
+          dielectric_bond_defect_density: 0.0001
+        - name: dummy_assembly_process
+          materials_cost_per_mm2: 0.0
+          bb_cost_per_second: null
+          picknplace_machine_cost: 0
+          picknplace_machine_lifetime: 1
+          picknplace_machine_uptime: 1.0
+          picknplace_technician_yearly_cost: 0
+          picknplace_time: 1
+          picknplace_group: 1
+          bonding_machine_cost: 0
+          bonding_machine_lifetime: 1
+          bonding_machine_uptime: 1.0
+          bonding_technician_yearly_cost: 0
+          bonding_time: 1
+          bonding_group: 1
+          die_separation: 0.0
+          edge_exclusion: 0.0
+          max_pad_current_density: 1.0
+          bonding_pitch: 1.0
+          alignment_yield: 1.0
+          bonding_yield: 1.0
+          dielectric_bond_defect_density: 0.0
+        test_process_library:
+        - name: test_process_0
+          time_per_test_cycle: 1.0e-09
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: null
+          bb_self_scan_chain_length: null
+          self_defect_coverage: 0.9
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0.9
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: notest
+          time_per_test_cycle: 0.1
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: false
+          bb_self_pattern_count: null
+          bb_self_scan_chain_length: null
+          self_defect_coverage: 0
+          self_test_reuse: 1
+          self_num_scan_chains: 0
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: false
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 0
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: KGD_free_test
+          time_per_test_cycle: 0.1
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 0
+          bb_self_scan_chain_length: 0
+          self_defect_coverage: 1.0
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 1.0
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: KGD_interposer_free_test
+          time_per_test_cycle: 0.1
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 0
+          bb_self_scan_chain_length: 0
+          self_defect_coverage: 1.0
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 1.0
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_1.0
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 1000
+          bb_self_scan_chain_length: 100000
+          self_defect_coverage: 1.0
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 8
+          bb_assembly_scan_chain_length: 100
+          assembly_defect_coverage: 1.0
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.999
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 0
+          bb_self_scan_chain_length: 0
+          self_defect_coverage: 0.999
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0.999
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.99
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 0
+          bb_self_scan_chain_length: 0
+          self_defect_coverage: 0.99
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0.99
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.95
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 200
+          bb_self_scan_chain_length: 100000
+          self_defect_coverage: 0.95
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 4
+          bb_assembly_scan_chain_length: 100
+          assembly_defect_coverage: 0.95
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.9
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 100
+          bb_self_scan_chain_length: 100000
+          self_defect_coverage: 0.9
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 2
+          bb_assembly_scan_chain_length: 100
+          assembly_defect_coverage: 0.9
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.5
+          time_per_test_cycle: 1.0e-07
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 10
+          bb_self_scan_chain_length: 100000
+          self_defect_coverage: 0.5
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 1
+          bb_assembly_scan_chain_length: 100
+          assembly_defect_coverage: 0.5
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: free_test_0.1
+          time_per_test_cycle: 0.1
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: 0
+          bb_self_scan_chain_length: 0
+          self_defect_coverage: 0.1
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: true
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0.1
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 1
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        - name: self_test_only_KGD_free_test
+          time_per_test_cycle: 0.1
+          samples_per_input: 1
+          cost_per_second: 0.006
+          test_self: true
+          bb_self_pattern_count: null
+          bb_self_scan_chain_length: null
+          self_defect_coverage: 1.0
+          self_test_reuse: 1
+          self_num_scan_chains: 1
+          self_num_io_per_scan_chain: 2
+          self_num_test_io_offset: 1
+          self_test_failure_dist: normal
+          test_assembly: false
+          bb_assembly_pattern_count: 0
+          bb_assembly_scan_chain_length: 0
+          assembly_defect_coverage: 0.0
+          assembly_test_reuse: 1
+          assembly_num_scan_chains: 0
+          assembly_num_io_per_scan_chain: 2
+          assembly_num_test_io_offset: 1
+          assembly_test_failure_dist: normal
+        statistics:
+          block_count: 40
+          interconnect_count: 143
+          io_type_count: 26
+          layer_count: 20
+          wafer_process_count: 2
+          assembly_process_count: 9
+          test_process_count: 12
+      modeling_assumptions:
+        chiplet_type_mapping: All original ChipletPart blocks are represented as synthetic
+          3dblox dies.
+        chiplet_shape_mapping: Each block is converted into a square die with side
+          sqrt(area_mm2) * 1000 microns.
+        region_mapping: Each die uses one synthetic front-side region named core_reg.
+        stack_mapping: All dies are placed on a 2D shelf grid at z = 0 with orient
+          = R0.
+        connection_mapping: No native 3dblox Connection section is emitted because
+          the source testcase does not provide region-to-region physical connectivity.
+        collateral_mapping: No standard external collateral keys are populated because
+          the source testcase does not include LEF/liberty/tech/deck collateral.
+ChipletInst:
+  gen_axi_group_cuts\[0\].i_axi_cut:
+    reference: gen_axi_group_cuts\[0\].i_axi_cut
+  gen_dmas\[0\].i_axi_dma_backend:
+    reference: gen_dmas\[0\].i_axi_dma_backend
+  gen_dmas\[0\].i_axi_to_reqrsp:
+    reference: gen_dmas\[0\].i_axi_to_reqrsp
+  gen_dmas\[0\].i_dma_axi_xbar:
+    reference: gen_dmas\[0\].i_dma_axi_xbar
+  gen_dmas\[0\].i_reqrsp_demux:
+    reference: gen_dmas\[0\].i_reqrsp_demux
+  gen_dmas\[1\].i_axi_dma_backend:
+    reference: gen_dmas\[1\].i_axi_dma_backend
+  gen_dmas\[1\].i_axi_to_reqrsp:
+    reference: gen_dmas\[1\].i_axi_to_reqrsp
+  gen_dmas\[1\].i_dma_axi_xbar:
+    reference: gen_dmas\[1\].i_dma_axi_xbar
+  gen_dmas\[1\].i_reqrsp_demux:
+    reference: gen_dmas\[1\].i_reqrsp_demux
+  gen_dmas\[2\].i_axi_dma_backend:
+    reference: gen_dmas\[2\].i_axi_dma_backend
+  gen_dmas\[2\].i_axi_to_reqrsp:
+    reference: gen_dmas\[2\].i_axi_to_reqrsp
+  gen_dmas\[2\].i_dma_axi_xbar:
+    reference: gen_dmas\[2\].i_dma_axi_xbar
+  gen_dmas\[2\].i_reqrsp_demux:
+    reference: gen_dmas\[2\].i_reqrsp_demux
+  gen_dmas\[3\].i_axi_dma_backend:
+    reference: gen_dmas\[3\].i_axi_dma_backend
+  gen_dmas\[3\].i_axi_to_reqrsp:
+    reference: gen_dmas\[3\].i_axi_to_reqrsp
+  gen_dmas\[3\].i_dma_axi_xbar:
+    reference: gen_dmas\[3\].i_dma_axi_xbar
+  gen_dmas\[3\].i_reqrsp_demux:
+    reference: gen_dmas\[3\].i_reqrsp_demux
+  gen_remote_interco\[1\].i_remote_interco:
+    reference: gen_remote_interco\[1\].i_remote_interco
+  gen_remote_interco\[2\].i_remote_interco:
+    reference: gen_remote_interco\[2\].i_remote_interco
+  gen_remote_interco\[3\].i_remote_interco:
+    reference: gen_remote_interco\[3\].i_remote_interco
+  gen_tiles\[0\].i_tile:
+    reference: gen_tiles\[0\].i_tile
+  gen_tiles\[10\].i_tile:
+    reference: gen_tiles\[10\].i_tile
+  gen_tiles\[11\].i_tile:
+    reference: gen_tiles\[11\].i_tile
+  gen_tiles\[12\].i_tile:
+    reference: gen_tiles\[12\].i_tile
+  gen_tiles\[13\].i_tile:
+    reference: gen_tiles\[13\].i_tile
+  gen_tiles\[14\].i_tile:
+    reference: gen_tiles\[14\].i_tile
+  gen_tiles\[15\].i_tile:
+    reference: gen_tiles\[15\].i_tile
+  gen_tiles\[1\].i_tile:
+    reference: gen_tiles\[1\].i_tile
+  gen_tiles\[2\].i_tile:
+    reference: gen_tiles\[2\].i_tile
+  gen_tiles\[3\].i_tile:
+    reference: gen_tiles\[3\].i_tile
+  gen_tiles\[4\].i_tile:
+    reference: gen_tiles\[4\].i_tile
+  gen_tiles\[5\].i_tile:
+    reference: gen_tiles\[5\].i_tile
+  gen_tiles\[6\].i_tile:
+    reference: gen_tiles\[6\].i_tile
+  gen_tiles\[7\].i_tile:
+    reference: gen_tiles\[7\].i_tile
+  gen_tiles\[8\].i_tile:
+    reference: gen_tiles\[8\].i_tile
+  gen_tiles\[9\].i_tile:
+    reference: gen_tiles\[9\].i_tile
+  i_axi_interco:
+    reference: i_axi_interco
+  i_dma_req_register:
+    reference: i_dma_req_register
+  i_idma_distributed_midend:
+    reference: i_idma_distributed_midend
+  i_local_interco:
+    reference: i_local_interco
+Stack:
+  gen_axi_group_cuts\[0\].i_axi_cut:
+    loc:
+    - 0.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  gen_dmas\[0\].i_axi_dma_backend:
+    loc:
+    - 6000.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  gen_dmas\[0\].i_axi_to_reqrsp:
+    loc:
+    - 12000.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  gen_dmas\[0\].i_dma_axi_xbar:
+    loc:
+    - 18000.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  gen_dmas\[0\].i_reqrsp_demux:
+    loc:
+    - 24000.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  gen_dmas\[1\].i_axi_dma_backend:
+    loc:
+    - 30000.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  gen_dmas\[1\].i_axi_to_reqrsp:
+    loc:
+    - 36000.0
+    - 0.0
+    z: 0.0
+    orient: R0
+  gen_dmas\[1\].i_dma_axi_xbar:
+    loc:
+    - 0.0
+    - 6000.0
+    z: 0.0
+    orient: R0
+  gen_dmas\[1\].i_reqrsp_demux:
+    loc:
+    - 6000.0
+    - 6000.0
+    z: 0.0
+    orient: R0
+  gen_dmas\[2\].i_axi_dma_backend:
+    loc:
+    - 12000.0
+    - 6000.0
+    z: 0.0
+    orient: R0
+  gen_dmas\[2\].i_axi_to_reqrsp:
+    loc:
+    - 18000.0
+    - 6000.0
+    z: 0.0
+    orient: R0
+  gen_dmas\[2\].i_dma_axi_xbar:
+    loc:
+    - 24000.0
+    - 6000.0
+    z: 0.0
+    orient: R0
+  gen_dmas\[2\].i_reqrsp_demux:
+    loc:
+    - 30000.0
+    - 6000.0
+    z: 0.0
+    orient: R0
+  gen_dmas\[3\].i_axi_dma_backend:
+    loc:
+    - 36000.0
+    - 6000.0
+    z: 0.0
+    orient: R0
+  gen_dmas\[3\].i_axi_to_reqrsp:
+    loc:
+    - 0.0
+    - 12000.0
+    z: 0.0
+    orient: R0
+  gen_dmas\[3\].i_dma_axi_xbar:
+    loc:
+    - 6000.0
+    - 12000.0
+    z: 0.0
+    orient: R0
+  gen_dmas\[3\].i_reqrsp_demux:
+    loc:
+    - 12000.0
+    - 12000.0
+    z: 0.0
+    orient: R0
+  gen_remote_interco\[1\].i_remote_interco:
+    loc:
+    - 18000.0
+    - 12000.0
+    z: 0.0
+    orient: R0
+  gen_remote_interco\[2\].i_remote_interco:
+    loc:
+    - 24000.0
+    - 12000.0
+    z: 0.0
+    orient: R0
+  gen_remote_interco\[3\].i_remote_interco:
+    loc:
+    - 30000.0
+    - 12000.0
+    z: 0.0
+    orient: R0
+  gen_tiles\[0\].i_tile:
+    loc:
+    - 36000.0
+    - 12000.0
+    z: 0.0
+    orient: R0
+  gen_tiles\[10\].i_tile:
+    loc:
+    - 0.0
+    - 18000.0
+    z: 0.0
+    orient: R0
+  gen_tiles\[11\].i_tile:
+    loc:
+    - 6000.0
+    - 18000.0
+    z: 0.0
+    orient: R0
+  gen_tiles\[12\].i_tile:
+    loc:
+    - 12000.0
+    - 18000.0
+    z: 0.0
+    orient: R0
+  gen_tiles\[13\].i_tile:
+    loc:
+    - 18000.0
+    - 18000.0
+    z: 0.0
+    orient: R0
+  gen_tiles\[14\].i_tile:
+    loc:
+    - 24000.0
+    - 18000.0
+    z: 0.0
+    orient: R0
+  gen_tiles\[15\].i_tile:
+    loc:
+    - 30000.0
+    - 18000.0
+    z: 0.0
+    orient: R0
+  gen_tiles\[1\].i_tile:
+    loc:
+    - 36000.0
+    - 18000.0
+    z: 0.0
+    orient: R0
+  gen_tiles\[2\].i_tile:
+    loc:
+    - 0.0
+    - 24000.0
+    z: 0.0
+    orient: R0
+  gen_tiles\[3\].i_tile:
+    loc:
+    - 6000.0
+    - 24000.0
+    z: 0.0
+    orient: R0
+  gen_tiles\[4\].i_tile:
+    loc:
+    - 12000.0
+    - 24000.0
+    z: 0.0
+    orient: R0
+  gen_tiles\[5\].i_tile:
+    loc:
+    - 18000.0
+    - 24000.0
+    z: 0.0
+    orient: R0
+  gen_tiles\[6\].i_tile:
+    loc:
+    - 24000.0
+    - 24000.0
+    z: 0.0
+    orient: R0
+  gen_tiles\[7\].i_tile:
+    loc:
+    - 30000.0
+    - 24000.0
+    z: 0.0
+    orient: R0
+  gen_tiles\[8\].i_tile:
+    loc:
+    - 36000.0
+    - 24000.0
+    z: 0.0
+    orient: R0
+  gen_tiles\[9\].i_tile:
+    loc:
+    - 0.0
+    - 30000.0
+    z: 0.0
+    orient: R0
+  i_axi_interco:
+    loc:
+    - 6000.0
+    - 30000.0
+    z: 0.0
+    orient: R0
+  i_dma_req_register:
+    loc:
+    - 12000.0
+    - 30000.0
+    z: 0.0
+    orient: R0
+  i_idma_distributed_midend:
+    loc:
+    - 18000.0
+    - 30000.0
+    z: 0.0
+    orient: R0
+  i_local_interco:
+    loc:
+    - 24000.0
+    - 30000.0
+    z: 0.0
+    orient: R0

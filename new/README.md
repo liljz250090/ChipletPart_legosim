@@ -1,21 +1,26 @@
-# GA100 3dblox Conversion
+# 3dblox Conversion Outputs
 
-This directory contains a self-contained 3dblox-style representation of the original `test_data/ga100` testcase, adjusted to more closely follow 3DBlox v2.0r1 conventions.
+This directory collects self-contained 3dblox-style conversions of ChipletPart testcases.
 
-## Files
-- `ga100.3dbv`: one `ChipletDef` per original ChipletPart block, modeled as a synthetic `die`, with block-level properties preserved under `external.chipletpart_vendor_data`
-- `ga100.3dbx`: one `ChipletInst` per original ChipletPart block, with placement data emitted in a separate `Stack` section and the full testcase dataset preserved under `Design.external.chipletpart_vendor_data.dataset`
+## Per-testcase directories
+- `ga100_3dblox/`
+- `epyc7282_3dblox/`
+- `mempool_group_3dblox/`
+- `48_1_14_4_1600_1600_3dblox/`
+- `48_2_14_4_1600_1600_3dblox/`
+- `48_4_14_4_1600_1600_3dblox/`
+- `48_8_14_4_1600_1600_3dblox/`
 
-## What Is Preserved
-- Every original block record is preserved as structured data.
-- Every original interconnect record is preserved as structured data.
-- The IO library, layer library, wafer-process library, assembly-process library, and test-process library are all preserved as structured data.
-- The converted testcase no longer depends on separate sidecar source definitions.
-- Vendor-specific ChipletPart metadata is namespaced inside `external.chipletpart_vendor_data` so it does not collide with standard 3dblox collateral keys.
-- Standard collateral keys such as `liberty_file`, `LEF_file`, and `APR_tech_file` are intentionally left unset because the source testcase does not provide those artifacts.
+Each `*_3dblox/` directory contains:
+- `<case>.3dbv`
+- `<case>.3dbx`
+- `README.md`
 
-## Current Modeling Assumptions
-- Each original block is modeled as a square chiplet with side `sqrt(area_mm2) * 1000` microns.
-- Each synthetic chiplet is emitted as `type: die`.
-- The generated `3dbv` uses one synthetic front-side region named `core_reg` per chiplet because the original testcase does not provide bump maps or native 3D region connectivity.
-- The generated `3dbx` keeps a simple 2D shelf-grid placement in the `Stack` section and does not add a `Connection` section because the source testcase is logical/cost-model oriented rather than native 3dblox physical assembly data.
+## Legacy / companion files
+- `ga100.3dbv`, `ga100.3dbx`: earlier top-level GA100 conversion copies
+- `ga100_odb.3dbv`, `ga100_odb.3dbx`, `ga100.odb`, `ga100_min_tech.lef`, `export_ga100_odb.tcl`: ODB-oriented GA100 artifacts created for OpenROAD/OpenDB experiments
+- `ga100.partitioned.odb`: writeback example generated during ODB partition annotation testing
+
+## Notes
+- All testcase conversions are self-contained and preserve the original ChipletPart block, interconnect, IO, layer, wafer-process, assembly-process, and test-process data inside `external.chipletpart_vendor_data`.
+- The generated 3dblox models use synthetic `die` chiplets with a single front-side region `core_reg` and a simple 2D shelf-grid `Stack`.
