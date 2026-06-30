@@ -34,7 +34,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "ChipletPart.h"
-#include "ChipletPartOpenDBWriter.h"
 #include "ChipletPart3DBloxReader.h"
 #include "Hypergraph.h"
 #include "OpenMPSupport.h"
@@ -54,6 +53,7 @@
 #include <numeric> // For std::accumulate
 
 #if defined(CHIPLETPART_ENABLE_OPENDB_BACKEND)
+#include "ChipletPartOpenDBWriter.h"
 #include "odb/db.h"
 #endif
 
@@ -117,8 +117,10 @@ void displayUsage(const char* programName) {
   std::cout << "Usage: " << programName << " [options] <arguments>" << std::endl;
   std::cout << "Standard mode: " << programName << " <io_file> <layer_file> <wafer_process_file> <assembly_process_file> <test_file> <netlist_file> <blocks_file> <reach> <separation> <tech_node> [--seed <value>] [--threads <value>]" << std::endl;
   std::cout << "3dblox mode: " << programName << " --3dblox <design.3dbx> [--3dbv <library.3dbv>] <reach> <separation> <tech_node> [--seed <value>] [--threads <value>]" << std::endl;
+#if defined(CHIPLETPART_ENABLE_OPENDB_BACKEND)
   std::cout << "ODB mode: " << programName << " --odb <design.odb> <io_file> <layer_file> <wafer_process_file> <assembly_process_file> <test_file> <netlist_file> <blocks_file> <reach> <separation> <tech_node> [--seed <value>] [--threads <value>]" << std::endl;
   std::cout << "ODB readback mode: " << programName << " --odb <design.odb> --read-cpart <result.cpart.N> --map-file <output.map> [--odb-out <design.odb>]" << std::endl;
+#endif
   std::cout << "Evaluation mode: " << programName << " <partition_file> <io_file> <layer_file> <wafer_process_file> <assembly_process_file> <test_file> <netlist_file> <blocks_file> <reach> <separation> <tech_node> [--seed <value>] [--threads <value>]" << std::endl;
   std::cout << "Canonical GA: " << programName << " <io_file> <layer_file> <wafer_process_file> <assembly_process_file> <test_file> <netlist_file> <blocks_file> <reach> <separation> --canonical-ga --tech-nodes <list> [--seed <value>] [--threads <value>] [--generations <value>] [--population <value>]" << std::endl;
   std::cout << "Tech Enumeration: " << programName << " <io_file> <layer_file> <wafer_process_file> <assembly_process_file> <test_file> <netlist_file> <blocks_file> <reach> <separation> --tech-enum --tech-nodes <list> [--max-partitions <value>] [--detailed-output] [--seed <value>] [--threads <value>]" << std::endl;
@@ -127,10 +129,12 @@ void displayUsage(const char* programName) {
   std::cout << "  --threads <value>     : Override OpenMP thread count for reproducible comparisons" << std::endl;
   std::cout << "  --3dblox <file>       : Read a self-contained 3dblox design (.3dbx) as the frontend input" << std::endl;
   std::cout << "  --3dbv <file>         : Optional companion 3dbv file for 3dblox mode" << std::endl;
+#if defined(CHIPLETPART_ENABLE_OPENDB_BACKEND)
   std::cout << "  --odb <file>          : Read an OpenDB database (.odb) as the frontend input" << std::endl;
   std::cout << "  --read-cpart <file>   : Read a ChipletPart .cpart result and write it back into the ODB" << std::endl;
   std::cout << "  --map-file <file>     : Read the accompanying output.map to resolve vertex names during ODB writeback" << std::endl;
   std::cout << "  --odb-out <file>      : Optional ODB output path for readback mode; defaults to overwriting --odb" << std::endl;
+#endif
   std::cout << "  --canonical-ga        : Use canonical genetic algorithm for technology assignment" << std::endl;
   std::cout << "  --tech-enum           : Enumerate all canonical technology assignments up to max partitions" << std::endl;
   std::cout << "  --tech-nodes <list>   : Comma-separated list of technology nodes (e.g., '7nm,14nm,28nm')" << std::endl;
@@ -141,8 +145,10 @@ void displayUsage(const char* programName) {
   std::cout << "Examples:" << std::endl;
   std::cout << "  " << programName << " io.xml layer.xml wafer.xml assembly.xml test.xml netlist.xml blocks.txt 0.5 0.25 7nm" << std::endl;
   std::cout << "  " << programName << " --3dblox ga100.3dbx --3dbv ga100.3dbv 0.5 0.25 7nm" << std::endl;
+#if defined(CHIPLETPART_ENABLE_OPENDB_BACKEND)
   std::cout << "  " << programName << " --odb ga100.odb io.xml layer.xml wafer.xml assembly.xml test.xml netlist.xml blocks.txt 0.5 0.25 7nm" << std::endl;
   std::cout << "  " << programName << " --odb ga100.odb --read-cpart block_level_netlist.xml.cpart.5 --map-file output.map" << std::endl;
+#endif
   std::cout << "  " << programName << " io.xml layer.xml wafer.xml assembly.xml test.xml netlist.xml blocks.txt 0.5 0.25 --canonical-ga --tech-nodes 7nm,14nm,28nm --seed 123" << std::endl;
   std::cout << "  " << programName << " io.xml layer.xml wafer.xml assembly.xml test.xml netlist.xml blocks.txt 0.5 0.25 --tech-enum --tech-nodes 7nm,14nm,28nm --max-partitions 3" << std::endl;
 }
@@ -538,6 +544,14 @@ int main(int argc, char *argv[]) {
     const bool hasMapFile = getArgValue(argc, argv, "--map-file", mapFile);
     std::string odbOutFile;
     const bool hasODBOut = getArgValue(argc, argv, "--odb-out", odbOutFile);
+
+#if !defined(CHIPLETPART_ENABLE_OPENDB_BACKEND)
+    if (hasODBInput || hasReadCpart || hasMapFile || hasODBOut) {
+      throw std::runtime_error(
+          "This standalone ChipletPart build supports only legacy XML files "
+          "and 3dblox input; OpenDB/ODB options are not available.");
+    }
+#endif
 
     if (has3DBloxInput && hasODBInput) {
       throw std::runtime_error("Cannot use --3dblox and --odb together");

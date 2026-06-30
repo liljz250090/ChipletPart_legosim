@@ -28,8 +28,7 @@ show_help() {
     echo "  --generations <num>   Specify number of generations for genetic algorithm (default: 50)"
     echo "  --population <num>    Specify population size for genetic algorithm (default: 50)"
     echo "  --evaluate-partition  Specify path to partition file for evaluation"
-    echo "  --3dblox             Use new/<testcase>.3dbx and new/<testcase>.3dbv as frontend input"
-    echo "  --odb                Use new/<testcase>.odb as frontend input and write back a partitioned ODB"
+    echo "  --3dblox             Use 3dblox_test_cases/<testcase>_3dblox/<testcase>.3dbx/.3dbv as frontend input"
     echo "  --help                Display this help message"
     echo
     echo "Examples:"
@@ -38,7 +37,6 @@ show_help() {
     echo "  $0 design3 --canonical-ga --tech-nodes 7nm,14nm,28nm --generations 30"
     echo "  $0 design4 --tech-enum --tech-nodes 7nm,14nm,28nm --max-partitions 3"
     echo "  $0 ga100 --seed 1 --3dblox"
-    echo "  $0 ga100 --seed 1 --odb"
 }
 
 # Check if no arguments were provided
@@ -73,7 +71,6 @@ DETAILED_OUTPUT=false
 TECH_NODES=""
 EVALUATE_PARTITION=""
 USE_3DBLOX=false
-USE_ODB=false
 
 # Parse command line arguments
 while [ "$#" -gt 0 ]; do
@@ -143,8 +140,9 @@ while [ "$#" -gt 0 ]; do
             shift
             ;;
         --odb)
-            USE_ODB=true
-            shift
+            echo -e "${RED}Error: this standalone ChipletPart build does not include OpenDB/ODB support.${NC}"
+            echo -e "${YELLOW}Use the legacy XML input path or --3dblox instead.${NC}"
+            exit 1
             ;;
         *)
             echo -e "${RED}Error: Unknown option: $1${NC}"
@@ -160,11 +158,6 @@ if ([ "$USE_GENETIC" = true ] && [ "$USE_CANONICAL_GA" = true ]) || \
    ([ "$USE_CANONICAL_GA" = true ] && [ "$USE_TECH_ENUM" = true ]); then
     echo -e "${RED}Error: Cannot use multiple algorithm options together.${NC}"
     echo -e "${YELLOW}Please specify only one algorithm approach (--genetic, --canonical-ga, or --tech-enum).${NC}"
-    exit 1
-fi
-
-if [ "$USE_3DBLOX" = true ] && [ "$USE_ODB" = true ]; then
-    echo -e "${RED}Error: Cannot use --3dblox and --odb together.${NC}"
     exit 1
 fi
 
@@ -190,32 +183,18 @@ ASSEMBLY="${TEST_DATA_DIR}/assembly_process_definitions.xml"
 TEST="${TEST_DATA_DIR}/test_definitions.xml"
 NETLIST="${TEST_DATA_DIR}/block_level_netlist.xml"
 BLOCKS="${TEST_DATA_DIR}/block_definitions.txt"
-DBX="${BASE_DIR}/new/${TEST_CASE_NAME}.3dbx"
-DBV="${BASE_DIR}/new/${TEST_CASE_NAME}.3dbv"
-ODB_INPUT="${BASE_DIR}/new/${TEST_CASE_NAME}.odb"
-ODB_OUTPUT="${BASE_DIR}/new/${TEST_CASE_NAME}.partitioned.odb"
+THREEDBLOX_DIR="${BASE_DIR}/3dblox_test_cases/${TEST_CASE_NAME}_3dblox"
+DBX="${THREEDBLOX_DIR}/${TEST_CASE_NAME}.3dbx"
+DBV="${THREEDBLOX_DIR}/${TEST_CASE_NAME}.3dbv"
 
 if [ "$USE_3DBLOX" = true ]; then
-    for file in "$DBX" "$DBV"; do
-        if [ ! -f "$file" ]; then
-            echo -e "${RED}Error: File not found: $file${NC}"
-            echo "Please ensure the converted 3dblox files exist in ${BASE_DIR}/new."
-            exit 1
-        fi
-    done
-elif [ "$USE_ODB" = true ]; then
-    if [ ! -f "$ODB_INPUT" ]; then
-        echo -e "${RED}Error: File not found: $ODB_INPUT${NC}"
-        echo "Please ensure the exported ODB exists in ${BASE_DIR}/new."
-        exit 1
-    fi
-    for file in "$IO" "$LAYER" "$WAFER" "$ASSEMBLY" "$TEST" "$NETLIST" "$BLOCKS"; do
-        if [ ! -f "$file" ]; then
-            echo -e "${RED}Error: File not found: $file${NC}"
-            echo "Please ensure the testcase collateral exists in ${TEST_DATA_DIR}."
-            exit 1
-        fi
-    done
+	    for file in "$DBX" "$DBV"; do
+	        if [ ! -f "$file" ]; then
+	            echo -e "${RED}Error: File not found: $file${NC}"
+	            echo "Please ensure the converted 3dblox files exist in ${THREEDBLOX_DIR}."
+	            exit 1
+	        fi
+	    done
 else
     # Check that all required files exist
     for file in "$IO" "$LAYER" "$WAFER" "$ASSEMBLY" "$TEST" "$NETLIST" "$BLOCKS"; do
@@ -229,8 +208,8 @@ fi
 
 # Check if we're evaluating an existing partition
 if [ -n "$EVALUATE_PARTITION" ]; then
-    if [ "$USE_3DBLOX" = true ] || [ "$USE_ODB" = true ]; then
-        echo -e "${RED}Error: --evaluate-partition is not wired to the --3dblox/--odb script path yet.${NC}"
+    if [ "$USE_3DBLOX" = true ]; then
+        echo -e "${RED}Error: --evaluate-partition is not wired to the --3dblox script path yet.${NC}"
         exit 1
     fi
     if [ ! -f "$EVALUATE_PARTITION" ]; then
@@ -304,24 +283,6 @@ if [ "$USE_TECH_ENUM" = true ]; then
             $DETAIL_FLAG \
             --seed "$DEFAULT_SEED" \
             "${THREAD_ARGS[@]}"
-    elif [ "$USE_ODB" = true ]; then
-        "$EXECUTABLE" \
-            --odb "$ODB_INPUT" \
-            "$IO" \
-            "$LAYER" \
-            "$WAFER" \
-            "$ASSEMBLY" \
-            "$TEST" \
-            "$NETLIST" \
-            "$BLOCKS" \
-            "$DEFAULT_REACH" \
-            "$DEFAULT_SEPARATION" \
-            --tech-enum \
-            --tech-nodes "$TECH_NODES" \
-            --max-partitions "$DEFAULT_MAX_PARTITIONS" \
-            $DETAIL_FLAG \
-            --seed "$DEFAULT_SEED" \
-            "${THREAD_ARGS[@]}"
     else
         "$EXECUTABLE" \
             "$IO" \
@@ -364,24 +325,6 @@ elif [ "$USE_CANONICAL_GA" = true ]; then
         "$EXECUTABLE" \
             --3dblox "$DBX" \
             --3dbv "$DBV" \
-            "$DEFAULT_REACH" \
-            "$DEFAULT_SEPARATION" \
-            --canonical-ga \
-            --tech-nodes "$TECH_NODES" \
-            --generations "$DEFAULT_GENERATIONS" \
-            --population "$DEFAULT_POPULATION" \
-            --seed "$DEFAULT_SEED" \
-            "${THREAD_ARGS[@]}"
-    elif [ "$USE_ODB" = true ]; then
-        "$EXECUTABLE" \
-            --odb "$ODB_INPUT" \
-            "$IO" \
-            "$LAYER" \
-            "$WAFER" \
-            "$ASSEMBLY" \
-            "$TEST" \
-            "$NETLIST" \
-            "$BLOCKS" \
             "$DEFAULT_REACH" \
             "$DEFAULT_SEPARATION" \
             --canonical-ga \
@@ -433,24 +376,6 @@ elif [ "$USE_GENETIC" = true ]; then
             --population "$DEFAULT_POPULATION" \
             --seed "$DEFAULT_SEED" \
             "${THREAD_ARGS[@]}"
-    elif [ "$USE_ODB" = true ]; then
-        "$EXECUTABLE" \
-            --odb "$ODB_INPUT" \
-            "$IO" \
-            "$LAYER" \
-            "$WAFER" \
-            "$ASSEMBLY" \
-            "$TEST" \
-            "$NETLIST" \
-            "$BLOCKS" \
-            "$DEFAULT_REACH" \
-            "$DEFAULT_SEPARATION" \
-            --genetic-tech-part \
-            --tech-nodes "$TECH_NODES" \
-            --generations "$DEFAULT_GENERATIONS" \
-            --population "$DEFAULT_POPULATION" \
-            --seed "$DEFAULT_SEED" \
-            "${THREAD_ARGS[@]}"
     else
         "$EXECUTABLE" \
             "$IO" \
@@ -478,21 +403,6 @@ else
         "$EXECUTABLE" \
             --3dblox "$DBX" \
             --3dbv "$DBV" \
-            "$DEFAULT_REACH" \
-            "$DEFAULT_SEPARATION" \
-            "$DEFAULT_TECH" \
-            --seed "$DEFAULT_SEED" \
-            "${THREAD_ARGS[@]}"
-    elif [ "$USE_ODB" = true ]; then
-        "$EXECUTABLE" \
-            --odb "$ODB_INPUT" \
-            "$IO" \
-            "$LAYER" \
-            "$WAFER" \
-            "$ASSEMBLY" \
-            "$TEST" \
-            "$NETLIST" \
-            "$BLOCKS" \
             "$DEFAULT_REACH" \
             "$DEFAULT_SEPARATION" \
             "$DEFAULT_TECH" \

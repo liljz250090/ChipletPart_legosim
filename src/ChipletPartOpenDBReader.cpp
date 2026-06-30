@@ -17,6 +17,8 @@ namespace chiplet {
 
 namespace {
 
+#if defined(CHIPLETPART_ENABLE_OPENDB_BACKEND)
+
 float asFloat(const YAML::Node& node, float fallback = 0.0f)
 {
   if (!node || node.IsNull()) {
@@ -280,6 +282,8 @@ IRDesign readDesignFromChip(odb::dbChip* chip)
 
   return design;
 }
+
+#endif
 
 }  // namespace
 

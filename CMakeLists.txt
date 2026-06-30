@@ -60,9 +60,9 @@ endif()
 # METIS and GKlib (local installation)
 # ---------------------------------------------------------------------------
 # Set the METIS root directory based on your local installation.
-set(METIS_ROOT "/home/liljz25/ChipletPart-new/METIS")
+set(METIS_ROOT "${PROJECT_SOURCE_DIR}/METIS")
 # Define GKlib root directory.
-set(GKLIB_ROOT "/home/liljz25/ChipletPart-new/GKlib")
+set(GKLIB_ROOT "${PROJECT_SOURCE_DIR}/GKlib")
 
 
 # Include GKlib headers so that types like idx_t and real_t are defined.
@@ -86,6 +86,13 @@ if(EXISTS "${METIS_ROOT}/include/metis.h")
 
     # If METIS has its own CMakeLists.txt, add it as a subdirectory.
     if(EXISTS "${METIS_ROOT}/CMakeLists.txt")
+        file(MAKE_DIRECTORY "${METIS_ROOT}/build/xinclude")
+        file(WRITE "${METIS_ROOT}/build/xinclude/metis.h"
+            "#define IDXTYPEWIDTH 64\n#define REALTYPEWIDTH 64\n")
+        file(READ "${METIS_ROOT}/include/metis.h" METIS_PUBLIC_HEADER)
+        file(APPEND "${METIS_ROOT}/build/xinclude/metis.h" "${METIS_PUBLIC_HEADER}")
+        file(COPY "${METIS_ROOT}/include/CMakeLists.txt"
+             DESTINATION "${METIS_ROOT}/build/xinclude")
         add_subdirectory(${METIS_ROOT} ${METIS_ROOT}/build EXCLUDE_FROM_ALL)
         set(HAVE_METIS TRUE)
     else()
@@ -157,7 +164,7 @@ include_directories(${PROJECT_SOURCE_DIR}/cost_model/include)
 # ---------------------------------------------------------------------------
 option(BUILD_COST_MODEL "Build the cost model component" ON)
 option(BUILD_MAIN_APP "Build the main ChipletPart application" ON)
-option(ENABLE_OPENDB_BACKEND "Build the OpenDB reader backend for ChipletPart" ON)
+option(ENABLE_OPENDB_BACKEND "Build the OpenDB reader backend for ChipletPart" OFF)
 
 if(ENABLE_OPENDB_BACKEND)
     list(APPEND CMAKE_PREFIX_PATH /home/liljz25/OpenROAD-flow-scripts/dependencies)
@@ -179,14 +186,23 @@ if(BUILD_COST_MODEL)
 endif()
 
 if(BUILD_MAIN_APP)
+    set(CHIPLETPART_OPENDB_SOURCES)
+    set(CHIPLETPART_OPENDB_HEADERS)
+    if(ENABLE_OPENDB_BACKEND)
+        list(APPEND CHIPLETPART_OPENDB_SOURCES
+            src/ChipletPartOpenDBReader.cpp
+            src/ChipletPartOpenDBWriter.cpp)
+        list(APPEND CHIPLETPART_OPENDB_HEADERS
+            src/ChipletPartOpenDBReader.h
+            src/ChipletPartOpenDBWriter.h)
+    endif()
+
     add_executable(chipletPart 
         src/Main.cpp 
         src/Hypergraph.cpp 
         src/Utilities.cpp 
         src/ChipletPart.cpp
         src/ChipletPart3DBloxReader.cpp
-        src/ChipletPartOpenDBReader.cpp
-        src/ChipletPartOpenDBWriter.cpp
         src/FMRefiner.cpp 
         src/PriorityQueue.cpp 
         src/GeneticTechPartitioner.cpp
@@ -197,8 +213,6 @@ if(BUILD_MAIN_APP)
         src/ChipletPart.h
         src/ChipletPartIR.h
         src/ChipletPart3DBloxReader.h
-        src/ChipletPartOpenDBReader.h
-        src/ChipletPartOpenDBWriter.h
         src/FMRefiner.h
         src/PriorityQueue.h
         src/Utilities.h
@@ -209,7 +223,9 @@ if(BUILD_MAIN_APP)
         src/CanonicalGA.h
         src/KLRefiner.cpp
         src/KLRefiner.h
-        src/omp_utils.h)
+        src/omp_utils.h
+        ${CHIPLETPART_OPENDB_SOURCES}
+        ${CHIPLETPART_OPENDB_HEADERS})
         
     target_link_libraries(chipletPart PRIVATE cost_model pugixml yaml-cpp ${Boost_LIBRARIES} Eigen3::Eigen)
     if(ENABLE_OPENDB_BACKEND)

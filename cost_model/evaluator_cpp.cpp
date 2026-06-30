@@ -6,6 +6,7 @@
 #include <map>
 #include <cmath>
 #include <algorithm>
+#include <cstdlib>
 
 // Scale Areas Function based on the Area Scaling Factors from the "Scaling Equations for the Accurate Prediction of CMOS Device Performance from 180nm to 7nm" paper.
 float area_scaling_factor(std::string initial_tech_node, std::string actual_tech_node, bool is_memory) {
@@ -384,7 +385,9 @@ float getCostFromScratch(const std::vector<int>& partitionIds,
     // Calculate the cost and power
     float cost = chip->ComputeCost();
     float power = chip->GetPower();  // Use GetPower() instead of ComputePower()
-    std::cout << "Cost: " << cost << ", Power: " << power << std::endl;
+    if (std::getenv("CHIPLET_PART_VERBOSE_COST") != nullptr) {
+        std::cout << "Cost: " << cost << ", Power: " << power << std::endl;
+    }
     
     // Calculate the weighted sum
     float total_cost = cost_coefficient * cost + power_coefficient * power;

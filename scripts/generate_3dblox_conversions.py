@@ -264,17 +264,18 @@ def convert_case(case_dir: Path, output_root: Path):
 
 
 def main():
+    project_root = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description="Convert ChipletPart testcases into self-contained 3dblox directories.")
     parser.add_argument(
         "--test-data-root",
         type=Path,
-        default=Path("/home/liljz25/ChipletPart-new/test_data"),
+        default=project_root / "test_data",
         help="Root directory containing testcase folders.",
     )
     parser.add_argument(
         "--output-root",
         type=Path,
-        default=Path("/home/liljz25/ChipletPart-new/new"),
+        default=project_root / "3dblox_test_cases",
         help="Root directory to receive *_3dblox outputs.",
     )
     parser.add_argument(

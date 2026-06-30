@@ -34,8 +34,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include "ChipletPart.h"
+#if defined(CHIPLETPART_ENABLE_OPENDB_BACKEND)
 #include "ChipletPartOpenDBReader.h"
 #include "ChipletPartOpenDBWriter.h"
+#endif
 #include "ChipletPart3DBloxReader.h"
 #include "Hypergraph.h"
 #include "FMRefiner.h" // Add include for ChipletRefiner
@@ -3198,10 +3200,16 @@ ChipletPart::ChipletPart() {
 
 void ChipletPart::SetOpenDBInput(void* db_block_handle)
 {
+#if defined(CHIPLETPART_ENABLE_OPENDB_BACKEND)
   input_source_ = InputSource::kOpenDB;
   opendb_block_handle_ = db_block_handle;
   threedblox_dbx_file_.clear();
   threedblox_dbv_file_.clear();
+#else
+  (void) db_block_handle;
+  throw std::runtime_error(
+      "This standalone ChipletPart build does not include the OpenDB backend.");
+#endif
 }
 
 void ChipletPart::Set3DBloxInput(const std::string& dbx_file,
@@ -3438,8 +3446,13 @@ void ChipletPart::WritePartitionArtifacts(const std::string& chiplet_netlist_fil
 
 void ChipletPart::ReadChipletGraphFromOpenDB()
 {
+#if defined(CHIPLETPART_ENABLE_OPENDB_BACKEND)
   ChipletPartOpenDBReader reader;
   LoadFromIRDesign(reader.ReadDesign(opendb_block_handle_));
+#else
+  throw std::runtime_error(
+      "This standalone ChipletPart build does not include the OpenDB backend.");
+#endif
 }
 
 void ChipletPart::ReadChipletGraphFrom3DBlox()
@@ -3792,6 +3805,7 @@ void ChipletPart::CanonicalGeneticTechPart(
 
 void ChipletPart::WriteSolutionToOpenDBIfNeeded()
 {
+#if defined(CHIPLETPART_ENABLE_OPENDB_BACKEND)
   if (input_source_ != InputSource::kOpenDB || opendb_block_handle_ == nullptr
       || solution_.empty()) {
     return;
@@ -3817,6 +3831,7 @@ void ChipletPart::WriteSolutionToOpenDBIfNeeded()
   } catch (const std::exception& e) {
     Console::Warning(std::string("OpenDB writeback skipped: ") + e.what());
   }
+#endif
 }
 
 // Evaluate a technology partition assignment for genetic algorithm
