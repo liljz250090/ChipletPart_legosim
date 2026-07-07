@@ -49,7 +49,9 @@
 #include "CanonicalGA.h" // Add include for CanonicalGA
 #include "Console.h" // Include Console.h for formatting
 #include <chrono>
+#include <cmath>
 #include <codecvt>
+#include <cctype>
 #include <filesystem>
 #include <future> // For parallel fitness evaluation
 #include <iomanip>
@@ -86,6 +88,120 @@ std::vector<std::string> GetOrderedVertexNames(
     }
   }
   return ordered_names;
+}
+
+void PrintInputFileRows(ChipletPart::InputSource input_source,
+                        const std::string& threedblox_dbx_file,
+                        const std::string& threedblox_dbv_file,
+                        const std::string& chiplet_io_file,
+                        const std::string& chiplet_layer_file,
+                        const std::string& chiplet_wafer_process_file,
+                        const std::string& chiplet_assembly_process_file,
+                        const std::string& chiplet_test_file,
+                        const std::string& chiplet_netlist_file,
+                        const std::string& chiplet_blocks_file,
+                        const std::vector<int>& widths)
+{
+  if (input_source == ChipletPart::InputSource::k3DBlox) {
+    Console::TableRow({"Frontend input", "3dblox"}, widths);
+    Console::TableRow({"3DBlox DBX file", threedblox_dbx_file}, widths);
+    Console::TableRow({"3DBlox DBV file",
+                       threedblox_dbv_file.empty() ? "(none)"
+                                                   : threedblox_dbv_file},
+                      widths);
+    return;
+  }
+
+  Console::TableRow({"IO file", chiplet_io_file}, widths);
+  Console::TableRow({"Layer file", chiplet_layer_file}, widths);
+  Console::TableRow({"Wafer process file", chiplet_wafer_process_file}, widths);
+  Console::TableRow({"Assembly process file", chiplet_assembly_process_file},
+                    widths);
+  Console::TableRow({"Test file", chiplet_test_file}, widths);
+  Console::TableRow({"Netlist file", chiplet_netlist_file}, widths);
+  Console::TableRow({"Blocks file", chiplet_blocks_file}, widths);
+}
+
+struct LegoSimEdgeStats {
+  double bandwidth_gbps = 0.0;
+  double utilized_bandwidth_gbps = 0.0;
+  int link_delay = 1;
+  bool bridge_only = false;
+};
+
+class DisjointSet {
+ public:
+  explicit DisjointSet(int count) : parent_(count), rank_(count, 0) {
+    std::iota(parent_.begin(), parent_.end(), 0);
+  }
+
+  int Find(int value) {
+    if (parent_[value] != value) {
+      parent_[value] = Find(parent_[value]);
+    }
+    return parent_[value];
+  }
+
+  bool Union(int lhs, int rhs) {
+    int root_lhs = Find(lhs);
+    int root_rhs = Find(rhs);
+    if (root_lhs == root_rhs) {
+      return false;
+    }
+    if (rank_[root_lhs] < rank_[root_rhs]) {
+      std::swap(root_lhs, root_rhs);
+    }
+    parent_[root_rhs] = root_lhs;
+    if (rank_[root_lhs] == rank_[root_rhs]) {
+      rank_[root_lhs]++;
+    }
+    return true;
+  }
+
+ private:
+  std::vector<int> parent_;
+  std::vector<int> rank_;
+};
+
+std::string SanitizeGraphName(std::string name)
+{
+  if (name.empty()) {
+    return "chipletpart_topology";
+  }
+  for (char& c : name) {
+    if (!std::isalnum(static_cast<unsigned char>(c)) && c != '_') {
+      c = '_';
+    }
+  }
+  if (std::isdigit(static_cast<unsigned char>(name.front()))) {
+    name = "g_" + name;
+  }
+  return name;
+}
+
+int BytesToPopnetPacketSize(double bytes)
+{
+  constexpr double kPayloadBytesPerFlit = 64.0;
+  const double clamped_bytes = std::max(1.0, bytes);
+  return static_cast<int>(std::ceil(clamped_bytes / kPayloadBytesPerFlit)) + 1;
+}
+
+long long PopnetPacketSizeToBytes(int packet_size)
+{
+  constexpr long long kPayloadBytesPerFlit = 64;
+  return std::max(1LL, static_cast<long long>(std::max(1, packet_size) - 1)
+                           * kPayloadBytesPerFlit);
+}
+
+bool ContainsCaseInsensitive(const std::string& text, const std::string& needle)
+{
+  const auto lower = [](std::string value) {
+    std::transform(value.begin(), value.end(), value.begin(), [](unsigned char c) {
+      return static_cast<char>(std::tolower(c));
+    });
+    return value;
+  };
+  return lower(text).find(lower(needle)) != std::string::npos;
 }
 
 }  // namespace
@@ -1239,13 +1355,17 @@ void ChipletPart::GeneticTechPart(
   std::vector<int> widths = {30, 50};
   Console::TableHeader(columns, widths);
   
-  Console::TableRow({"IO file", chiplet_io_file}, widths);
-  Console::TableRow({"Layer file", chiplet_layer_file}, widths);
-  Console::TableRow({"Wafer process file", chiplet_wafer_process_file}, widths);
-  Console::TableRow({"Assembly process file", chiplet_assembly_process_file}, widths);
-  Console::TableRow({"Test file", chiplet_test_file}, widths);
-  Console::TableRow({"Netlist file", chiplet_netlist_file}, widths);
-  Console::TableRow({"Blocks file", chiplet_blocks_file}, widths);
+  PrintInputFileRows(input_source_,
+                     threedblox_dbx_file_,
+                     threedblox_dbv_file_,
+                     chiplet_io_file,
+                     chiplet_layer_file,
+                     chiplet_wafer_process_file,
+                     chiplet_assembly_process_file,
+                     chiplet_test_file,
+                     chiplet_netlist_file,
+                     chiplet_blocks_file,
+                     widths);
   Console::TableRow({"Reach", std::to_string(reach)}, widths);
   Console::TableRow({"Separation", std::to_string(separation)}, widths);
   Console::TableRow({"Population Size", std::to_string(population_size)}, widths);
@@ -1679,13 +1799,17 @@ void ChipletPart::Partition(
   std::vector<int> widths = {30, 50};
   Console::TableHeader(columns, widths);
   
-  Console::TableRow({"IO file", chiplet_io_file}, widths);
-  Console::TableRow({"Layer file", chiplet_layer_file}, widths);
-  Console::TableRow({"Wafer process file", chiplet_wafer_process_file}, widths);
-  Console::TableRow({"Assembly process file", chiplet_assembly_process_file}, widths);
-  Console::TableRow({"Test file", chiplet_test_file}, widths);
-  Console::TableRow({"Netlist file", chiplet_netlist_file}, widths);
-  Console::TableRow({"Blocks file", chiplet_blocks_file}, widths);
+  PrintInputFileRows(input_source_,
+                     threedblox_dbx_file_,
+                     threedblox_dbv_file_,
+                     chiplet_io_file,
+                     chiplet_layer_file,
+                     chiplet_wafer_process_file,
+                     chiplet_assembly_process_file,
+                     chiplet_test_file,
+                     chiplet_netlist_file,
+                     chiplet_blocks_file,
+                     widths);
   Console::TableRow({"Reach", std::to_string(reach)}, widths);
   Console::TableRow({"Separation", std::to_string(separation)}, widths);
   Console::TableRow({"Technology", tech}, widths);
@@ -3442,6 +3566,613 @@ void ChipletPart::WritePartitionArtifacts(const std::string& chiplet_netlist_fil
     }
     Console::Success("Best partition saved to " + partition_file);
   }
+}
+
+void ChipletPart::ExportLegoSimArtifacts(const std::string& output_dir,
+                                         double traffic_window_ns) const
+{
+  if (solution_.empty()) {
+    throw std::runtime_error(
+        "Cannot export LegoSim artifacts before a partition solution is available");
+  }
+  if (solution_.size() != static_cast<size_t>(num_vertices_)) {
+    throw std::runtime_error(
+        "Cannot export LegoSim artifacts: partition size does not match vertex count");
+  }
+  if (traffic_window_ns <= 0.0) {
+    throw std::runtime_error("LegoSim traffic window must be positive");
+  }
+
+  int num_chiplets = 0;
+  for (int part_id : solution_) {
+    if (part_id < 0) {
+      throw std::runtime_error("Cannot export LegoSim artifacts with negative partition ids");
+    }
+    num_chiplets = std::max(num_chiplets, part_id + 1);
+  }
+  if (num_chiplets == 0) {
+    throw std::runtime_error("Cannot export LegoSim artifacts with zero chiplets");
+  }
+
+  using EdgeKey = std::pair<int, int>;
+  std::map<EdgeKey, LegoSimEdgeStats> edge_stats;
+
+  for (const auto& net : current_design_.nets) {
+    std::vector<int> touched_parts;
+    touched_parts.reserve(net.pins.size());
+    for (const auto& pin : net.pins) {
+      const auto vertex_it = vertex_name_to_index_.find(pin);
+      if (vertex_it == vertex_name_to_index_.end()) {
+        continue;
+      }
+      const int vertex_id = vertex_it->second;
+      if (vertex_id < 0 || vertex_id >= static_cast<int>(solution_.size())) {
+        continue;
+      }
+      touched_parts.push_back(solution_[vertex_id]);
+    }
+
+    std::sort(touched_parts.begin(), touched_parts.end());
+    touched_parts.erase(std::unique(touched_parts.begin(), touched_parts.end()),
+                        touched_parts.end());
+    if (touched_parts.size() < 2) {
+      continue;
+    }
+
+    const int pair_count =
+        static_cast<int>(touched_parts.size() * (touched_parts.size() - 1) / 2);
+    const double pair_bandwidth =
+        static_cast<double>(net.weight) / std::max(1, pair_count);
+    const double utilization =
+        std::max(0.0f, net.average_bandwidth_utilization);
+
+    for (size_t i = 0; i < touched_parts.size(); ++i) {
+      for (size_t j = i + 1; j < touched_parts.size(); ++j) {
+        const EdgeKey key{touched_parts[i], touched_parts[j]};
+        auto& stats = edge_stats[key];
+        stats.bandwidth_gbps += pair_bandwidth;
+        stats.utilized_bandwidth_gbps += pair_bandwidth * utilization;
+      }
+    }
+  }
+
+  double max_bandwidth = 0.0;
+  for (const auto& [unused_key, stats] : edge_stats) {
+    max_bandwidth = std::max(max_bandwidth, stats.bandwidth_gbps);
+  }
+
+  int max_link_delay = 1;
+  for (auto& [unused_key, stats] : edge_stats) {
+    if (stats.bandwidth_gbps > 0.0 && max_bandwidth > 0.0) {
+      stats.link_delay = std::max(
+          1, static_cast<int>(std::ceil(max_bandwidth / stats.bandwidth_gbps)));
+    } else {
+      stats.link_delay = 1;
+    }
+    max_link_delay = std::max(max_link_delay, stats.link_delay);
+  }
+
+  // Popnet's graph-topology route-table builder expects a connected graph.
+  // Add high-delay bridge edges only when the communication graph is disconnected.
+  DisjointSet components(num_chiplets);
+  for (const auto& [key, unused_stats] : edge_stats) {
+    components.Union(key.first, key.second);
+  }
+  const int bridge_delay = std::max(1000, max_link_delay * 10);
+  for (int chiplet = 1; chiplet < num_chiplets; ++chiplet) {
+    if (components.Union(0, chiplet)) {
+      EdgeKey bridge_key{0, chiplet};
+      if (bridge_key.first > bridge_key.second) {
+        std::swap(bridge_key.first, bridge_key.second);
+      }
+      auto& stats = edge_stats[bridge_key];
+      if (stats.bandwidth_gbps <= 0.0) {
+        stats.link_delay = bridge_delay;
+        stats.bridge_only = true;
+      }
+    }
+  }
+
+  const auto ordered_names =
+      GetOrderedVertexNames(vertex_index_to_name_, num_vertices_);
+
+  std::vector<int> chiplet_gateways(num_chiplets, -1);
+  std::vector<int> gateway_scores(num_chiplets, 100);
+  for (int vertex = 0; vertex < num_vertices_; ++vertex) {
+    const int chiplet = solution_[vertex];
+    int score = 10;
+    if (ContainsCaseInsensitive(ordered_names[vertex], "router")) {
+      score = 0;
+    } else if (ContainsCaseInsensitive(ordered_names[vertex], "crossbar")) {
+      score = 1;
+    }
+    if (chiplet_gateways[chiplet] < 0 || score < gateway_scores[chiplet]) {
+      chiplet_gateways[chiplet] = vertex;
+      gateway_scores[chiplet] = score;
+    }
+  }
+  for (int chiplet = 0; chiplet < num_chiplets; ++chiplet) {
+    if (chiplet_gateways[chiplet] < 0) {
+      throw std::runtime_error("Cannot export LegoSim artifacts: chiplet "
+                               + std::to_string(chiplet) + " has no gateway block");
+    }
+  }
+
+  std::map<EdgeKey, LegoSimEdgeStats> block_edge_stats;
+  for (const auto& net : current_design_.nets) {
+    std::vector<int> touched_blocks;
+    touched_blocks.reserve(net.pins.size());
+    for (const auto& pin : net.pins) {
+      const auto vertex_it = vertex_name_to_index_.find(pin);
+      if (vertex_it == vertex_name_to_index_.end()) {
+        continue;
+      }
+      const int vertex_id = vertex_it->second;
+      if (vertex_id < 0 || vertex_id >= num_vertices_) {
+        continue;
+      }
+      touched_blocks.push_back(vertex_id);
+    }
+
+    std::sort(touched_blocks.begin(), touched_blocks.end());
+    touched_blocks.erase(std::unique(touched_blocks.begin(), touched_blocks.end()),
+                         touched_blocks.end());
+    if (touched_blocks.size() < 2) {
+      continue;
+    }
+
+    const int pair_count =
+        static_cast<int>(touched_blocks.size() * (touched_blocks.size() - 1) / 2);
+    const double pair_bandwidth =
+        static_cast<double>(net.weight) / std::max(1, pair_count);
+    const double utilization =
+        std::max(0.0f, net.average_bandwidth_utilization);
+
+    for (size_t i = 0; i < touched_blocks.size(); ++i) {
+      for (size_t j = i + 1; j < touched_blocks.size(); ++j) {
+        const EdgeKey key{touched_blocks[i], touched_blocks[j]};
+        auto& stats = block_edge_stats[key];
+        stats.bandwidth_gbps += pair_bandwidth;
+        stats.utilized_bandwidth_gbps += pair_bandwidth * utilization;
+      }
+    }
+  }
+
+  double max_block_bandwidth = 0.0;
+  for (const auto& [unused_key, stats] : block_edge_stats) {
+    max_block_bandwidth = std::max(max_block_bandwidth, stats.bandwidth_gbps);
+  }
+
+  constexpr int kCrossChipletBlockDelayMultiplier = 2;
+  int max_block_link_delay = 1;
+  for (auto& [key, stats] : block_edge_stats) {
+    if (stats.bandwidth_gbps > 0.0 && max_block_bandwidth > 0.0) {
+      stats.link_delay = std::max(
+          1, static_cast<int>(std::ceil(max_block_bandwidth / stats.bandwidth_gbps)));
+    } else {
+      stats.link_delay = 1;
+    }
+    if (solution_[key.first] != solution_[key.second]) {
+      stats.link_delay *= kCrossChipletBlockDelayMultiplier;
+    }
+    max_block_link_delay = std::max(max_block_link_delay, stats.link_delay);
+  }
+
+  DisjointSet block_components(num_vertices_);
+  for (const auto& [key, unused_stats] : block_edge_stats) {
+    block_components.Union(key.first, key.second);
+  }
+  const int block_bridge_delay = std::max(1000, max_block_link_delay * 10);
+  for (int vertex = 1; vertex < num_vertices_; ++vertex) {
+    if (block_components.Union(0, vertex)) {
+      EdgeKey bridge_key{0, vertex};
+      auto& stats = block_edge_stats[bridge_key];
+      if (stats.bandwidth_gbps <= 0.0) {
+        stats.link_delay = block_bridge_delay;
+        stats.bridge_only = true;
+      }
+    }
+  }
+
+  const std::filesystem::path out_dir(output_dir);
+  std::filesystem::create_directories(out_dir);
+
+  const std::filesystem::path topology_file = out_dir / "topology.gv";
+  const std::filesystem::path chiplet_topology_file = out_dir / "chiplet_topology.gv";
+  const std::filesystem::path block_topology_file = out_dir / "block_topology.gv";
+  const std::filesystem::path bench_file = out_dir / "bench.txt";
+  const std::filesystem::path static_bench_file = out_dir / "static_bench.txt";
+  const std::filesystem::path yaml_file = out_dir / "gem5_popnet.yml";
+  const std::filesystem::path part_blocks_file = out_dir / "partition_to_blocks.tsv";
+  const std::filesystem::path gateway_file = out_dir / "chiplet_gateways.tsv";
+  const std::filesystem::path edge_file = out_dir / "chiplet_edges.tsv";
+  const std::filesystem::path block_edge_file = out_dir / "block_edges.tsv";
+  const std::filesystem::path workload_dir = out_dir / "src";
+  const std::filesystem::path workload_file = workload_dir / "synthetic_workload.cpp";
+  const std::filesystem::path makefile_file = out_dir / "Makefile";
+  const std::filesystem::path popnet_runner_file = out_dir / "run_popnet.sh";
+  const std::filesystem::path legosim_runner_file = out_dir / "run_legosim.sh";
+  const std::filesystem::path readme_file = out_dir / "README.md";
+
+  {
+    std::ofstream gv(chiplet_topology_file);
+    if (!gv.is_open()) {
+      throw std::runtime_error("Failed to write " + chiplet_topology_file.string());
+    }
+    gv << "graph " << SanitizeGraphName(current_design_.name + "_chiplet") << "\n";
+    gv << "{\n";
+    gv << "    node[pipeline_stage_delay=1]\n";
+    for (int chiplet = 0; chiplet < num_chiplets; ++chiplet) {
+      gv << "    " << chiplet << "\n";
+    }
+    gv << "\n";
+    for (const auto& [key, stats] : edge_stats) {
+      gv << "    " << key.first << "--" << key.second
+         << " [weight=" << stats.link_delay << "]\n";
+    }
+    gv << "}\n";
+  }
+
+  auto write_block_topology = [&](const std::filesystem::path& path) {
+    std::ofstream gv(path);
+    if (!gv.is_open()) {
+      throw std::runtime_error("Failed to write " + path.string());
+    }
+    gv << "graph " << SanitizeGraphName(current_design_.name + "_block") << "\n";
+    gv << "{\n";
+    gv << "    node[pipeline_stage_delay=1]\n";
+    for (int vertex = 0; vertex < num_vertices_; ++vertex) {
+      gv << "    " << vertex << "\n";
+    }
+    gv << "\n";
+    for (const auto& [key, stats] : block_edge_stats) {
+      gv << "    " << key.first << "--" << key.second
+         << " [weight=" << stats.link_delay << "]\n";
+    }
+    gv << "}\n";
+  };
+  write_block_topology(topology_file);
+  write_block_topology(block_topology_file);
+
+  {
+    std::ofstream bench(bench_file);
+    std::ofstream static_bench(static_bench_file);
+    if (!bench.is_open()) {
+      throw std::runtime_error("Failed to write " + bench_file.string());
+    }
+    if (!static_bench.is_open()) {
+      throw std::runtime_error("Failed to write " + static_bench_file.string());
+    }
+    long long start_time = 0;
+    for (const auto& [key, stats] : edge_stats) {
+      if (stats.bridge_only || stats.utilized_bandwidth_gbps <= 0.0) {
+        continue;
+      }
+      // Gbps * ns is bits. Divide by 8 to get bytes over the selected window.
+      const double bytes = stats.utilized_bandwidth_gbps * traffic_window_ns / 8.0;
+      const int packet_size = BytesToPopnetPacketSize(bytes);
+      bench << start_time << " " << start_time << " "
+            << key.first << " " << key.second << " "
+            << packet_size << " 0\n";
+      static_bench << start_time << " " << start_time << " "
+                   << key.first << " " << key.second << " "
+                   << packet_size << " 0\n";
+      start_time++;
+    }
+  }
+
+  {
+    std::filesystem::create_directories(workload_dir);
+    std::ofstream src(workload_file);
+    if (!src.is_open()) {
+      throw std::runtime_error("Failed to write " + workload_file.string());
+    }
+    src << "#include <algorithm>\n";
+    src << "#include <cstdlib>\n";
+    src << "#include <iostream>\n";
+    src << "#include <vector>\n\n";
+    src << "#include \"apis_c.h\"\n\n";
+    src << "namespace {\n";
+    src << "struct TrafficEdge {\n";
+    src << "  int src;\n";
+    src << "  int dst;\n";
+    src << "  int nbytes;\n";
+    src << "};\n\n";
+    src << "constexpr int kNumChiplets = " << num_chiplets << ";\n";
+    src << "constexpr TrafficEdge kTraffic[] = {\n";
+    for (const auto& [key, stats] : edge_stats) {
+      if (stats.bridge_only || stats.utilized_bandwidth_gbps <= 0.0) {
+        continue;
+      }
+      const double bytes = stats.utilized_bandwidth_gbps * traffic_window_ns / 8.0;
+      const int packet_size = BytesToPopnetPacketSize(bytes);
+      src << "    {" << key.first << ", " << key.second << ", "
+          << PopnetPacketSizeToBytes(packet_size) << "},\n";
+    }
+    src << "};\n";
+    src << "}  // namespace\n\n";
+    src << "int main(int argc, char** argv) {\n";
+    src << "  if (argc < 2) {\n";
+    src << "    std::cerr << \"usage: \" << argv[0] << \" <chiplet_id>\\n\";\n";
+    src << "    return 1;\n";
+    src << "  }\n";
+    src << "  const int chiplet_id = std::atoi(argv[1]);\n";
+    src << "  if (chiplet_id < 0 || chiplet_id >= kNumChiplets) {\n";
+    src << "    std::cerr << \"invalid chiplet id \" << chiplet_id << \"\\n\";\n";
+    src << "    return 1;\n";
+    src << "  }\n";
+    src << "  for (const auto& edge : kTraffic) {\n";
+    src << "    std::vector<char> payload(std::max(1, edge.nbytes), "
+           "static_cast<char>(chiplet_id));\n";
+    src << "    if (chiplet_id == edge.src) {\n";
+    src << "      InterChiplet::sendMessage(edge.dst, 0, edge.src, 0, "
+           "payload.data(), edge.nbytes);\n";
+    src << "    } else if (chiplet_id == edge.dst) {\n";
+    src << "      InterChiplet::receiveMessage(edge.dst, 0, edge.src, 0, "
+           "payload.data(), edge.nbytes);\n";
+    src << "    }\n";
+    src << "  }\n";
+    src << "  std::cout << \"chiplet \" << chiplet_id << \" finished synthetic "
+           "traffic\\n\";\n";
+    src << "  return 0;\n";
+    src << "}\n";
+  }
+
+  {
+    std::ofstream makefile(makefile_file);
+    if (!makefile.is_open()) {
+      throw std::runtime_error("Failed to write " + makefile_file.string());
+    }
+    makefile << "ifndef SIMULATOR_ROOT\n";
+    makefile << "$(error SIMULATOR_ROOT is not set. Run `source "
+                "/path/to/Chiplet_Heterogeneous_newVersion/setup_env.sh` first.)\n";
+    makefile << "endif\n\n";
+    makefile << "CXX ?= g++\n";
+    makefile << "CXXFLAGS ?= -std=c++17 -O2 -Wall -Wextra\n";
+    makefile << "CPPFLAGS += -I$(SIMULATOR_ROOT)/interchiplet/includes\n";
+    makefile << "INTERCHIPLET_LIB := "
+                "$(SIMULATOR_ROOT)/interchiplet/lib/libinterchiplet_c.a\n\n";
+    makefile << "all: bin/test_c\n\n";
+    makefile << "bin:\n";
+    makefile << "\tmkdir -p bin\n\n";
+    makefile << "bin/test_c: src/synthetic_workload.cpp $(INTERCHIPLET_LIB) | bin\n";
+    makefile << "\t$(CXX) $(CPPFLAGS) $(CXXFLAGS) $< $(INTERCHIPLET_LIB) -o $@\n\n";
+    makefile << "clean:\n";
+    makefile << "\trm -rf bin proc_r*_p*_t* bench.txt bench_popnet.txt delayInfo.txt "
+                "delayInfo.block.txt buffer* message_record.txt *.log\n\n";
+    makefile << ".PHONY: all clean\n";
+  }
+
+  {
+    std::ofstream runner(popnet_runner_file);
+    if (!runner.is_open()) {
+      throw std::runtime_error("Failed to write " + popnet_runner_file.string());
+    }
+    runner << "#!/usr/bin/env bash\n";
+    runner << "set -euo pipefail\n\n";
+    runner << "if [[ -z \"${SIMULATOR_ROOT:-}\" ]]; then\n";
+    runner << "  echo \"SIMULATOR_ROOT is not set\" >&2\n";
+    runner << "  exit 1\n";
+    runner << "fi\n\n";
+    runner << "awk 'BEGIN {";
+    for (int chiplet = 0; chiplet < num_chiplets; ++chiplet) {
+      runner << " gateway[" << chiplet << "]=" << chiplet_gateways[chiplet] << ";";
+    }
+    runner << " } NF == 8 { print $1, $2, gateway[$3], gateway[$5], $7, $8; next } "
+              "NF == 6 { print $1, $2, gateway[$3], gateway[$4], $5, $6; next } "
+              "{ print }' \\\n";
+    runner << "  ../bench.txt > ../bench_popnet.txt\n\n";
+    runner << "\"$SIMULATOR_ROOT/popnet_chiplet/build/popnet\" \\\n";
+    runner << "  -A " << num_vertices_
+           << " -c 1 -V 3 -B 12 -O 12 -F 4 -L 1000 -T 1000000000 \\\n";
+    runner << "  -r 1 -I ../bench_popnet.txt -R 4 -G ../topology.gv "
+              "-D ../delayInfo.block.txt -P\n\n";
+    runner << "awk 'BEGIN {";
+    for (int vertex = 0; vertex < num_vertices_; ++vertex) {
+      runner << " chiplet[" << vertex << "]=" << solution_[vertex] << ";";
+    }
+    runner << " } NF >= 4 { printf \"%s %s %s\", $1, chiplet[$2], chiplet[$3]; "
+              "for (i = 4; i <= NF; ++i) printf \" %s\", $i; printf \"\\n\"; next } "
+              "{ print }' \\\n";
+    runner << "  ../delayInfo.block.txt > ../delayInfo.txt\n";
+    runner.close();
+    std::filesystem::permissions(
+        popnet_runner_file,
+        std::filesystem::perms::owner_exec |
+            std::filesystem::perms::group_exec |
+            std::filesystem::perms::others_exec,
+        std::filesystem::perm_options::add);
+  }
+
+  {
+    std::ofstream runner(legosim_runner_file);
+    if (!runner.is_open()) {
+      throw std::runtime_error("Failed to write " + legosim_runner_file.string());
+    }
+    runner << "#!/usr/bin/env bash\n";
+    runner << "set -euo pipefail\n\n";
+    runner << "SCRIPT_DIR=\"$(cd \"$(dirname \"${BASH_SOURCE[0]}\")\" && pwd)\"\n";
+    runner << "cd \"$SCRIPT_DIR\"\n\n";
+    runner << "DEFAULT_SIMULATOR_ROOT=\"/home/jzli/project/Chiplet_Heterogeneous_newVersion\"\n";
+    runner << "SIMULATOR_ROOT=\"${SIMULATOR_ROOT:-$DEFAULT_SIMULATOR_ROOT}\"\n";
+    runner << "if [[ ! -x \"$SIMULATOR_ROOT/interchiplet/bin/interchiplet\" "
+              "&& -x \"$DEFAULT_SIMULATOR_ROOT/interchiplet/bin/interchiplet\" ]]; then\n";
+    runner << "  echo \"SIMULATOR_ROOT=$SIMULATOR_ROOT is not a valid LegoSim root; "
+              "using $DEFAULT_SIMULATOR_ROOT\" >&2\n";
+    runner << "  SIMULATOR_ROOT=\"$DEFAULT_SIMULATOR_ROOT\"\n";
+    runner << "fi\n";
+    runner << "THREADS=\"${THREADS:-1}\"\n\n";
+    runner << "export SIMULATOR_ROOT\n\n";
+    runner << "if [[ ! -x \"$SIMULATOR_ROOT/interchiplet/bin/interchiplet\" ]]; then\n";
+    runner << "  echo \"Cannot find executable: $SIMULATOR_ROOT/interchiplet/bin/interchiplet\" >&2\n";
+    runner << "  echo \"Set SIMULATOR_ROOT to the LegoSim repository root and retry.\" >&2\n";
+    runner << "  exit 1\n";
+    runner << "fi\n\n";
+    runner << "if [[ ! -x \"$SIMULATOR_ROOT/gem5/build/X86/gem5.opt\" ]]; then\n";
+    runner << "  echo \"Cannot find executable: $SIMULATOR_ROOT/gem5/build/X86/gem5.opt\" >&2\n";
+    runner << "  echo \"Build gem5 in LegoSim before running this script.\" >&2\n";
+    runner << "  exit 1\n";
+    runner << "fi\n\n";
+    runner << "make\n";
+    runner << "\"$SIMULATOR_ROOT/interchiplet/bin/interchiplet\" gem5_popnet.yml --cwd \"$SCRIPT_DIR\" -t \"$THREADS\"\n";
+    runner.close();
+    std::filesystem::permissions(
+        legosim_runner_file,
+        std::filesystem::perms::owner_exec |
+            std::filesystem::perms::group_exec |
+            std::filesystem::perms::others_exec,
+        std::filesystem::perm_options::add);
+  }
+
+  {
+    std::ofstream part_blocks(part_blocks_file);
+    if (!part_blocks.is_open()) {
+      throw std::runtime_error("Failed to write " + part_blocks_file.string());
+    }
+    part_blocks << "chiplet_id\tblock_id\tblock_name\n";
+    for (int vertex = 0; vertex < num_vertices_; ++vertex) {
+      part_blocks << solution_[vertex] << "\t" << vertex << "\t"
+                  << ordered_names[vertex] << "\n";
+    }
+  }
+
+  {
+    std::ofstream gateways(gateway_file);
+    if (!gateways.is_open()) {
+      throw std::runtime_error("Failed to write " + gateway_file.string());
+    }
+    gateways << "chiplet_id\tgateway_block_id\tgateway_block_name\n";
+    for (int chiplet = 0; chiplet < num_chiplets; ++chiplet) {
+      gateways << chiplet << "\t" << chiplet_gateways[chiplet] << "\t"
+               << ordered_names[chiplet_gateways[chiplet]] << "\n";
+    }
+  }
+
+  {
+    std::ofstream edges(edge_file);
+    if (!edges.is_open()) {
+      throw std::runtime_error("Failed to write " + edge_file.string());
+    }
+    edges << "src_chiplet\tdst_chiplet\tbandwidth_gbps\t"
+          << "utilized_bandwidth_gbps\tpopnet_weight\tbridge_only\n";
+    for (const auto& [key, stats] : edge_stats) {
+      edges << key.first << "\t" << key.second << "\t"
+            << stats.bandwidth_gbps << "\t"
+            << stats.utilized_bandwidth_gbps << "\t"
+            << stats.link_delay << "\t"
+            << (stats.bridge_only ? "yes" : "no") << "\n";
+    }
+  }
+
+  {
+    std::ofstream edges(block_edge_file);
+    if (!edges.is_open()) {
+      throw std::runtime_error("Failed to write " + block_edge_file.string());
+    }
+    edges << "src_block\tdst_block\tsrc_chiplet\tdst_chiplet\tbandwidth_gbps\t"
+          << "utilized_bandwidth_gbps\tpopnet_weight\tbridge_only\n";
+    for (const auto& [key, stats] : block_edge_stats) {
+      edges << key.first << "\t" << key.second << "\t"
+            << solution_[key.first] << "\t" << solution_[key.second] << "\t"
+            << stats.bandwidth_gbps << "\t"
+            << stats.utilized_bandwidth_gbps << "\t"
+            << stats.link_delay << "\t"
+            << (stats.bridge_only ? "yes" : "no") << "\n";
+    }
+  }
+
+  {
+    std::ofstream yaml(yaml_file);
+    if (!yaml.is_open()) {
+      throw std::runtime_error("Failed to write " + yaml_file.string());
+    }
+    yaml << "# Generated by ChipletPart_legosim.\n";
+    yaml << "# Build the synthetic gem5 workload with `make` before running LegoSim.\n";
+    yaml << "phase1:\n";
+    for (int chiplet = 0; chiplet < num_chiplets; ++chiplet) {
+      yaml << "  - cmd: \"$SIMULATOR_ROOT/gem5/build/X86/gem5.opt\"\n";
+      yaml << "    args: [\"$SIMULATOR_ROOT/gem5/configs/deprecated/example/se.py\", "
+              "\"--cpu-type\", \"TimingSimpleCPU\", \"--caches\", \"--cmd\", "
+              "\"$BENCHMARK_ROOT/bin/test_c\", \"-o\", \""
+           << chiplet << "\"]\n";
+      yaml << "    log: \"gem5." << chiplet << ".log\"\n";
+      yaml << "    is_to_stdout: false\n";
+      yaml << "    clock_rate: 500\n";
+    }
+    yaml << "\nphase2:\n";
+    yaml << "  - cmd: \"$BENCHMARK_ROOT/run_popnet.sh\"\n";
+    yaml << "    args: []\n";
+    yaml << "    log: \"popnet_0.log\"\n";
+    yaml << "    is_to_stdout: false\n";
+    yaml << "    clock_rate: 1\n\n";
+    yaml << "bench_file: \"./bench.txt\"\n";
+    yaml << "popnet_bench_file: \"./bench_popnet.txt\"\n";
+    yaml << "delayinfo_file: \"./delayInfo.txt\"\n";
+    yaml << "block_delayinfo_file: \"./delayInfo.block.txt\"\n";
+  }
+
+  {
+    std::ofstream readme(readme_file);
+    if (!readme.is_open()) {
+      throw std::runtime_error("Failed to write " + readme_file.string());
+    }
+    readme << "# ChipletPart to LegoSim export\n\n";
+    readme << "Generated files:\n\n";
+    readme << "- `topology.gv`: block-level Popnet graph topology. Use with "
+              "`-R 4 -G ../topology.gv`.\n";
+    readme << "- `block_topology.gv`: copy of the block-level Popnet topology.\n";
+    readme << "- `chiplet_topology.gv`: chiplet-level topology retained for comparison.\n";
+    readme << "- `bench.txt`: initial static Popnet traffic reference. LegoSim overwrites "
+              "this file with the Phase 1 traffic generated by `interchiplet`.\n";
+    readme << "- `static_bench.txt`: preserved copy of the static Popnet traffic reference.\n";
+    readme << "- `src/synthetic_workload.cpp`: generated gem5 workload that emits "
+              "ChipletPart-derived inter-chiplet traffic through InterChiplet APIs.\n";
+    readme << "- `Makefile`: builds `bin/test_c` for gem5 Phase 1.\n";
+    readme << "- `run_popnet.sh`: converts the 8-column `interchiplet` bench into "
+              "Popnet's 1D protocol trace format and launches Popnet.\n";
+    readme << "- `run_legosim.sh`: builds the generated workload and runs LegoSim. "
+              "Activate/configure your environment before calling it.\n";
+    readme << "- `gem5_popnet.yml`: LegoSim benchmark with one gem5 process per chiplet and "
+              "one Popnet phase2 process.\n";
+    readme << "- `partition_to_blocks.tsv`: block-to-chiplet mapping.\n";
+    readme << "- `chiplet_gateways.tsv`: selected block-level gateway for every chiplet.\n";
+    readme << "- `chiplet_edges.tsv`: aggregated chiplet-pair bandwidth and Popnet edge weights.\n";
+    readme << "- `block_edges.tsv`: block-level graph edges used by Popnet.\n\n";
+    readme << "Traffic conversion:\n\n";
+    readme << "- ChipletPart `bandwidth_gbps` is aggregated for every crossed chiplet pair.\n";
+    readme << "- Static packet size uses `ceil((bandwidth_gbps * utilization * "
+              "traffic_window_ns / 8) / 64) + 1` flits.\n";
+    readme << "- The synthetic gem5 workload sends `(packet_size - 1) * 64` bytes so "
+              "`interchiplet` regenerates the same Popnet flit count.\n";
+    readme << "- `bench_popnet.txt` is generated by `run_popnet.sh` from the "
+              "`interchiplet`-generated 8-column `bench.txt`. Chiplet addresses "
+              "are mapped to block gateway addresses before Popnet runs.\n";
+    readme << "- `delayInfo.block.txt` is Popnet's block-level delay output. "
+              "`run_popnet.sh` maps it back to chiplet addresses in `delayInfo.txt` "
+              "for LegoSim compatibility.\n";
+    readme << "- The traffic window used here is `" << traffic_window_ns << "` ns.\n\n";
+    readme << "Topology conversion:\n\n";
+    readme << "- Popnet edge `weight` is a delay-like value inversely scaled from aggregated "
+              "block-level bandwidth.\n";
+    readme << "- High-delay bridge edges may be inserted only to keep the graph connected for "
+              "Popnet routing-table construction.\n\n";
+    readme << "Build and run LegoSim:\n\n";
+    readme << "```bash\n";
+    readme << "cd " << out_dir.string() << "\n";
+    readme << "./run_legosim.sh\n";
+    readme << "```\n\n";
+    readme << "Popnet-only reference command:\n\n";
+    readme << "```bash\n";
+    readme << "$SIMULATOR_ROOT/popnet_chiplet/build/popnet -A " << num_vertices_
+           << " -c 1 -V 3 -B 12 -O 12 -F 4 -L 1000 -T 1000000000 "
+              "-r 1 -I bench_popnet.txt -R 4 -G topology.gv -D delayInfo.block.txt -P\n";
+    readme << "```\n";
+  }
+
+  Console::Success("LegoSim export written to " + out_dir.string());
+  Console::Info("  topology: " + topology_file.string());
+  Console::Info("  traffic : " + bench_file.string());
+  Console::Info("  template: " + yaml_file.string());
 }
 
 void ChipletPart::ReadChipletGraphFromOpenDB()

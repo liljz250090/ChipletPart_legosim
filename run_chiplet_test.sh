@@ -29,6 +29,8 @@ show_help() {
     echo "  --population <num>    Specify population size for genetic algorithm (default: 50)"
     echo "  --evaluate-partition  Specify path to partition file for evaluation"
     echo "  --3dblox             Use 3dblox_test_cases/<testcase>_3dblox/<testcase>.3dbx/.3dbv as frontend input"
+    echo "  --legosim            Export LegoSim input files to results/<testcase>_legosim"
+    echo "                       This implies --3dblox and overwrites the output folder"
     echo "  --help                Display this help message"
     echo
     echo "Examples:"
@@ -37,6 +39,7 @@ show_help() {
     echo "  $0 design3 --canonical-ga --tech-nodes 7nm,14nm,28nm --generations 30"
     echo "  $0 design4 --tech-enum --tech-nodes 7nm,14nm,28nm --max-partitions 3"
     echo "  $0 ga100 --seed 1 --3dblox"
+    echo "  $0 ga100 --seed 1 --3dblox --legosim"
 }
 
 # Check if no arguments were provided
@@ -71,6 +74,7 @@ DETAILED_OUTPUT=false
 TECH_NODES=""
 EVALUATE_PARTITION=""
 USE_3DBLOX=false
+USE_LEGOSIM=false
 
 # Parse command line arguments
 while [ "$#" -gt 0 ]; do
@@ -139,6 +143,11 @@ while [ "$#" -gt 0 ]; do
             USE_3DBLOX=true
             shift
             ;;
+        --legosim)
+            USE_LEGOSIM=true
+            USE_3DBLOX=true
+            shift
+            ;;
         --odb)
             echo -e "${RED}Error: this standalone ChipletPart build does not include OpenDB/ODB support.${NC}"
             echo -e "${YELLOW}Use the legacy XML input path or --3dblox instead.${NC}"
@@ -186,6 +195,11 @@ BLOCKS="${TEST_DATA_DIR}/block_definitions.txt"
 THREEDBLOX_DIR="${BASE_DIR}/3dblox_test_cases/${TEST_CASE_NAME}_3dblox"
 DBX="${THREEDBLOX_DIR}/${TEST_CASE_NAME}.3dbx"
 DBV="${THREEDBLOX_DIR}/${TEST_CASE_NAME}.3dbv"
+LEGOSIM_OUTPUT_DIR="${BASE_DIR}/results/${TEST_CASE_NAME}_legosim"
+LEGOSIM_ARGS=()
+if [ "$USE_LEGOSIM" = true ]; then
+    LEGOSIM_ARGS=(--export-legosim "$LEGOSIM_OUTPUT_DIR")
+fi
 
 if [ "$USE_3DBLOX" = true ]; then
 	    for file in "$DBX" "$DBV"; do
@@ -208,6 +222,10 @@ fi
 
 # Check if we're evaluating an existing partition
 if [ -n "$EVALUATE_PARTITION" ]; then
+    if [ "$USE_LEGOSIM" = true ]; then
+        echo -e "${RED}Error: --legosim cannot be used with --evaluate-partition.${NC}"
+        exit 1
+    fi
     if [ "$USE_3DBLOX" = true ]; then
         echo -e "${RED}Error: --evaluate-partition is not wired to the --3dblox script path yet.${NC}"
         exit 1
@@ -243,6 +261,13 @@ if [ -n "$EVALUATE_PARTITION" ]; then
     fi
     
     exit $exit_code
+fi
+
+if [ "$USE_LEGOSIM" = true ]; then
+    echo -e "${BLUE}LegoSim export enabled.${NC}"
+    echo -e "${BLUE}Output directory: ${LEGOSIM_OUTPUT_DIR}${NC}"
+    echo -e "${YELLOW}Removing existing LegoSim output directory if present.${NC}"
+    rm -rf "$LEGOSIM_OUTPUT_DIR"
 fi
 
 # Build the command based on which algorithm we're using
@@ -282,7 +307,8 @@ if [ "$USE_TECH_ENUM" = true ]; then
             --max-partitions "$DEFAULT_MAX_PARTITIONS" \
             $DETAIL_FLAG \
             --seed "$DEFAULT_SEED" \
-            "${THREAD_ARGS[@]}"
+            "${THREAD_ARGS[@]}" \
+            "${LEGOSIM_ARGS[@]}"
     else
         "$EXECUTABLE" \
             "$IO" \
@@ -299,7 +325,8 @@ if [ "$USE_TECH_ENUM" = true ]; then
             --max-partitions "$DEFAULT_MAX_PARTITIONS" \
             $DETAIL_FLAG \
             --seed "$DEFAULT_SEED" \
-            "${THREAD_ARGS[@]}"
+            "${THREAD_ARGS[@]}" \
+            "${LEGOSIM_ARGS[@]}"
     fi
         
 elif [ "$USE_CANONICAL_GA" = true ]; then
@@ -332,7 +359,8 @@ elif [ "$USE_CANONICAL_GA" = true ]; then
             --generations "$DEFAULT_GENERATIONS" \
             --population "$DEFAULT_POPULATION" \
             --seed "$DEFAULT_SEED" \
-            "${THREAD_ARGS[@]}"
+            "${THREAD_ARGS[@]}" \
+            "${LEGOSIM_ARGS[@]}"
     else
         "$EXECUTABLE" \
             "$IO" \
@@ -349,7 +377,8 @@ elif [ "$USE_CANONICAL_GA" = true ]; then
             --generations "$DEFAULT_GENERATIONS" \
             --population "$DEFAULT_POPULATION" \
             --seed "$DEFAULT_SEED" \
-            "${THREAD_ARGS[@]}"
+            "${THREAD_ARGS[@]}" \
+            "${LEGOSIM_ARGS[@]}"
     fi
         
 elif [ "$USE_GENETIC" = true ]; then
@@ -375,7 +404,8 @@ elif [ "$USE_GENETIC" = true ]; then
             --generations "$DEFAULT_GENERATIONS" \
             --population "$DEFAULT_POPULATION" \
             --seed "$DEFAULT_SEED" \
-            "${THREAD_ARGS[@]}"
+            "${THREAD_ARGS[@]}" \
+            "${LEGOSIM_ARGS[@]}"
     else
         "$EXECUTABLE" \
             "$IO" \
@@ -392,7 +422,8 @@ elif [ "$USE_GENETIC" = true ]; then
             --generations "$DEFAULT_GENERATIONS" \
             --population "$DEFAULT_POPULATION" \
             --seed "$DEFAULT_SEED" \
-            "${THREAD_ARGS[@]}"
+            "${THREAD_ARGS[@]}" \
+            "${LEGOSIM_ARGS[@]}"
     fi
 else
     echo -e "${GREEN}Running standard partitioning for test case: ${TEST_CASE_NAME}${NC}"
@@ -407,7 +438,8 @@ else
             "$DEFAULT_SEPARATION" \
             "$DEFAULT_TECH" \
             --seed "$DEFAULT_SEED" \
-            "${THREAD_ARGS[@]}"
+            "${THREAD_ARGS[@]}" \
+            "${LEGOSIM_ARGS[@]}"
     else
         "$EXECUTABLE" \
             "$IO" \
@@ -421,7 +453,8 @@ else
             "$DEFAULT_SEPARATION" \
             "$DEFAULT_TECH" \
             --seed "$DEFAULT_SEED" \
-            "${THREAD_ARGS[@]}"
+            "${THREAD_ARGS[@]}" \
+            "${LEGOSIM_ARGS[@]}"
     fi
 fi
 

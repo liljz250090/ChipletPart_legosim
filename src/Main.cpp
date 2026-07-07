@@ -40,6 +40,7 @@
 #include "Utilities.h"
 #include "evaluator_cpp.h" // Include the cost model evaluator_cpp.h instead of evaluator.h
 #include <chrono>
+#include <ctime>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
@@ -142,6 +143,9 @@ void displayUsage(const char* programName) {
   std::cout << "  --population <value>  : Population size for genetic algorithm (default: 50)" << std::endl;
   std::cout << "  --max-partitions <value> : Maximum number of partitions for tech enumeration (default: 4)" << std::endl;
   std::cout << "  --detailed-output     : Generate detailed output for tech enumeration" << std::endl;
+  std::cout << "  --export-legosim <dir>: Override LegoSim export directory (default: results/legosim_<timestamp>)" << std::endl;
+  std::cout << "  --no-export-legosim  : Disable default LegoSim/Popnet export" << std::endl;
+  std::cout << "  --legosim-traffic-window-ns <value> : Time window used to convert bandwidth to Popnet flits (default: 1.0)" << std::endl;
   std::cout << "Examples:" << std::endl;
   std::cout << "  " << programName << " io.xml layer.xml wafer.xml assembly.xml test.xml netlist.xml blocks.txt 0.5 0.25 7nm" << std::endl;
   std::cout << "  " << programName << " --3dblox ga100.3dbx --3dbv ga100.3dbv 0.5 0.25 7nm" << std::endl;
@@ -242,6 +246,30 @@ bool getArgValue(int argc, char* argv[], const std::string& option, std::string&
   return false;
 }
 
+bool getOptionalArgValue(int argc, char* argv[], const std::string& option, std::string& value) {
+  for (int i = 1; i < argc; ++i) {
+    if (option == argv[i]) {
+      if (i + 1 < argc && std::string(argv[i + 1]).rfind("--", 0) != 0) {
+        value = argv[i + 1];
+      }
+      return true;
+    }
+  }
+  return false;
+}
+
+int getOptionalArgCount(int argc, char* argv[], const std::string& option) {
+  for (int i = 1; i < argc; ++i) {
+    if (option == argv[i]) {
+      if (i + 1 < argc && std::string(argv[i + 1]).rfind("--", 0) != 0) {
+        return 2;
+      }
+      return 1;
+    }
+  }
+  return 0;
+}
+
 // Function to check if a flag is present
 bool hasFlag(int argc, char* argv[], const std::string& option) {
   for (int i = 1; i < argc; ++i) {
@@ -250,6 +278,50 @@ bool hasFlag(int argc, char* argv[], const std::string& option) {
     }
   }
   return false;
+}
+
+std::filesystem::path findProjectRoot(const char* programName) {
+  std::vector<std::filesystem::path> starts;
+  starts.push_back(std::filesystem::current_path());
+  if (programName != nullptr && std::string(programName).size() > 0) {
+    starts.push_back(std::filesystem::absolute(programName).parent_path());
+  }
+
+  for (auto start : starts) {
+    std::error_code ec;
+    start = std::filesystem::weakly_canonical(start, ec);
+    if (ec) {
+      start = std::filesystem::absolute(start);
+    }
+    for (auto path = start; !path.empty(); path = path.parent_path()) {
+      if (std::filesystem::exists(path / "CMakeLists.txt")
+          && std::filesystem::exists(path / "src" / "ChipletPart.cpp")) {
+        return path;
+      }
+      if (path == path.root_path()) {
+        break;
+      }
+    }
+  }
+  return std::filesystem::current_path();
+}
+
+std::filesystem::path makeDefaultLegoSimExportDir(const char* programName) {
+  const auto now = std::chrono::system_clock::now();
+  const std::time_t now_time = std::chrono::system_clock::to_time_t(now);
+  std::tm tm_snapshot{};
+#if defined(_WIN32)
+  localtime_s(&tm_snapshot, &now_time);
+#else
+  localtime_r(&now_time, &tm_snapshot);
+#endif
+  std::ostringstream stamp;
+  stamp << std::put_time(&tm_snapshot, "%Y%m%d_%H%M%S");
+  const auto millis = std::chrono::duration_cast<std::chrono::milliseconds>(
+                          now.time_since_epoch()).count()
+                      % 1000;
+  stamp << "_" << std::setw(3) << std::setfill('0') << millis;
+  return findProjectRoot(programName) / "results" / ("legosim_" + stamp.str());
 }
 
 #if defined(CHIPLETPART_ENABLE_OPENDB_BACKEND)
@@ -544,6 +616,29 @@ int main(int argc, char *argv[]) {
     const bool hasMapFile = getArgValue(argc, argv, "--map-file", mapFile);
     std::string odbOutFile;
     const bool hasODBOut = getArgValue(argc, argv, "--odb-out", odbOutFile);
+    std::string legoSimExportDir;
+    const bool hasLegoSimExportOverride =
+        getOptionalArgValue(argc, argv, "--export-legosim", legoSimExportDir);
+    const int legoSimExportArgCount =
+        getOptionalArgCount(argc, argv, "--export-legosim");
+    const bool disableLegoSimExport = hasFlag(argc, argv, "--no-export-legosim");
+    const bool hasLegoSimExport = !disableLegoSimExport;
+    if (hasLegoSimExport && legoSimExportDir.empty()) {
+      legoSimExportDir = makeDefaultLegoSimExportDir(argv[0]).string();
+    } else if (hasLegoSimExport && hasLegoSimExportOverride) {
+      Console::Info("Using requested LegoSim export directory: " + legoSimExportDir);
+    }
+    std::string legoSimTrafficWindowStr;
+    const bool hasLegoSimTrafficWindow =
+        getArgValue(argc, argv, "--legosim-traffic-window-ns", legoSimTrafficWindowStr);
+    double legoSimTrafficWindowNs = 1.0;
+    if (hasLegoSimTrafficWindow) {
+      legoSimTrafficWindowNs =
+          safeStof(legoSimTrafficWindowStr, "legosim-traffic-window-ns");
+      if (legoSimTrafficWindowNs <= 0.0) {
+        throw std::runtime_error("legosim-traffic-window-ns must be positive");
+      }
+    }
 
 #if !defined(CHIPLETPART_ENABLE_OPENDB_BACKEND)
     if (hasODBInput || hasReadCpart || hasMapFile || hasODBOut) {
@@ -631,6 +726,12 @@ int main(int argc, char *argv[]) {
     
     // Create ChipletPart instance
     auto chiplet_part = std::make_shared<chiplet::ChipletPart>(seed);
+    auto exportLegoSimIfRequested = [&]() {
+      if (hasLegoSimExport) {
+        chiplet_part->ExportLegoSimArtifacts(legoSimExportDir,
+                                             legoSimTrafficWindowNs);
+      }
+    };
 
     if (hasODBInput) {
 #if !defined(CHIPLETPART_ENABLE_OPENDB_BACKEND)
@@ -643,12 +744,19 @@ int main(int argc, char *argv[]) {
         const std::string arg = argv[i];
         if (arg == "--seed" || arg == "--threads" || arg == "--odb"
             || arg == "--odb-out" || arg == "--read-cpart"
-            || arg == "--map-file") {
+            || arg == "--map-file" || arg == "--legosim-traffic-window-ns") {
           ++i;
           continue;
         }
+        if (arg == "--export-legosim") {
+          if (i + 1 < argc && std::string(argv[i + 1]).rfind("--", 0) != 0) {
+            ++i;
+          }
+          continue;
+        }
         if (arg == "--canonical-ga" || arg == "--tech-enum"
-            || arg == "--genetic-tech-part" || arg == "--detailed-output") {
+            || arg == "--genetic-tech-part" || arg == "--detailed-output"
+            || arg == "--no-export-legosim") {
           continue;
         }
         if (arg == "--generations" || arg == "--population"
@@ -729,6 +837,7 @@ int main(int argc, char *argv[]) {
                       safeStof(cleanArgs[7], "reach"),
                       safeStof(cleanArgs[8], "separation"),
                       seed);
+        exportLegoSimIfRequested();
         return 0;
       }
 
@@ -753,6 +862,7 @@ int main(int argc, char *argv[]) {
                          seed,
                          population,
                          generations);
+        exportLegoSimIfRequested();
         return 0;
       }
 
@@ -785,6 +895,7 @@ int main(int argc, char *argv[]) {
                                       techNodes,
                                       population,
                                       generations);
+        exportLegoSimIfRequested();
         return 0;
       }
 
@@ -809,6 +920,7 @@ int main(int argc, char *argv[]) {
                                           reach,
                                           separation,
                                           parseTechList(tech));
+        exportLegoSimIfRequested();
       } else {
         chiplet_part->Partition(cleanArgs[0],
                                 cleanArgs[1],
@@ -820,6 +932,7 @@ int main(int argc, char *argv[]) {
                                 reach,
                                 separation,
                                 tech);
+        exportLegoSimIfRequested();
       }
       return 0;
 #endif
@@ -830,12 +943,21 @@ int main(int argc, char *argv[]) {
       for (int i = 1; i < argc; ++i) {
         const std::string arg = argv[i];
         if (arg == "--seed" || arg == "--threads" || arg == "--3dblox" || arg == "--3dbv"
+            || arg == "--legosim-traffic-window-ns"
             || arg == "--canonical-ga" || arg == "--tech-enum"
-            || arg == "--genetic-tech-part" || arg == "--detailed-output") {
+            || arg == "--genetic-tech-part" || arg == "--detailed-output"
+            || arg == "--no-export-legosim") {
           ++i;
           if (arg == "--canonical-ga" || arg == "--tech-enum"
-              || arg == "--genetic-tech-part" || arg == "--detailed-output") {
+              || arg == "--genetic-tech-part" || arg == "--detailed-output"
+              || arg == "--no-export-legosim") {
             --i;
+          }
+          continue;
+        }
+        if (arg == "--export-legosim") {
+          if (i + 1 < argc && std::string(argv[i + 1]).rfind("--", 0) != 0) {
+            ++i;
           }
           continue;
         }
@@ -872,7 +994,6 @@ int main(int argc, char *argv[]) {
       chiplet_part->Set3DBloxInput(dbxFile, dbvFile);
 
       Console::Info("Partitioning using 3dblox frontend input");
-      Console::Info("Materialized temporary collateral in " + legacy_files.base_dir.string());
 
       if (useTechEnum) {
         if (cleanArgs.size() != 2) {
@@ -895,6 +1016,7 @@ int main(int argc, char *argv[]) {
                       reach,
                       separation,
                       seed);
+        exportLegoSimIfRequested();
         return 0;
       }
 
@@ -921,6 +1043,7 @@ int main(int argc, char *argv[]) {
                          seed,
                          population,
                          generations);
+        exportLegoSimIfRequested();
         return 0;
       }
 
@@ -955,6 +1078,7 @@ int main(int argc, char *argv[]) {
                                       techNodes,
                                       population,
                                       generations);
+        exportLegoSimIfRequested();
         return 0;
       }
 
@@ -980,6 +1104,7 @@ int main(int argc, char *argv[]) {
                                           reach,
                                           separation,
                                           techs);
+        exportLegoSimIfRequested();
       } else {
         chiplet_part->Partition(legacy_files.io_file,
                                 legacy_files.layer_file,
@@ -991,6 +1116,7 @@ int main(int argc, char *argv[]) {
                                 reach,
                                 separation,
                                 tech);
+        exportLegoSimIfRequested();
       }
       return 0;
     }
@@ -1002,11 +1128,19 @@ int main(int argc, char *argv[]) {
         std::vector<std::string> cleanArgs;
         for (int i = 1; i < argc; i++) {
           std::string arg = argv[i];
-          if (arg == "--tech-enum" || arg == "--detailed-output") {
+          if (arg == "--tech-enum" || arg == "--detailed-output"
+              || arg == "--no-export-legosim") {
             continue; // Skip the flag itself
           }
-          if (arg == "--seed" || arg == "--threads" || arg == "--max-partitions" || arg == "--tech-nodes") {
+          if (arg == "--seed" || arg == "--threads" || arg == "--max-partitions"
+              || arg == "--tech-nodes" || arg == "--legosim-traffic-window-ns") {
             i++; // Skip the flag and its value
+            continue;
+          }
+          if (arg == "--export-legosim") {
+            if (i + 1 < argc && std::string(argv[i + 1]).rfind("--", 0) != 0) {
+              i++;
+            }
             continue;
           }
           cleanArgs.push_back(arg);
@@ -1046,6 +1180,7 @@ int main(int argc, char *argv[]) {
             separation,
             seed
         );
+        exportLegoSimIfRequested();
         
         return 0;
       } catch (const std::exception& e) {
@@ -1070,7 +1205,9 @@ int main(int argc, char *argv[]) {
       for (size_t i = 0; i < args.size(); i++) {
         if (args[i] == "--genetic-tech-part" || args[i] == "--seed" || args[i] == "--threads" ||
             args[i] == "--generations" || args[i] == "--population" ||
-            args[i] == "--tech-nodes") {
+            args[i] == "--tech-nodes" || args[i] == "--export-legosim" ||
+            args[i] == "--legosim-traffic-window-ns" ||
+            args[i] == "--no-export-legosim") {
           if (firstOptionalIdx == -1 || static_cast<int>(i) < firstOptionalIdx) {
             firstOptionalIdx = i;
           }
@@ -1128,6 +1265,7 @@ int main(int argc, char *argv[]) {
           assembly_process_definitions_file, test_definitions_file, block_level_netlist_file, 
           block_definitions_file, reach, separation, techNodes,
           population, generations);
+      exportLegoSimIfRequested();
       
       return 0;
     }
@@ -1138,11 +1276,19 @@ int main(int argc, char *argv[]) {
         std::vector<std::string> cleanArgs;
         for (int i = 1; i < argc; i++) {
           std::string arg = argv[i];
-          if (arg == "--canonical-ga") {
+          if (arg == "--canonical-ga" || arg == "--no-export-legosim") {
             continue; // Skip the flag itself
           }
-          if (arg == "--seed" || arg == "--threads" || arg == "--generations" || arg == "--population" || arg == "--tech-nodes") {
+          if (arg == "--seed" || arg == "--threads" || arg == "--generations"
+              || arg == "--population" || arg == "--tech-nodes"
+              || arg == "--legosim-traffic-window-ns") {
             i++; // Skip the flag and its value
+            continue;
+          }
+          if (arg == "--export-legosim") {
+            if (i + 1 < argc && std::string(argv[i + 1]).rfind("--", 0) != 0) {
+              i++;
+            }
             continue;
           }
           cleanArgs.push_back(arg);
@@ -1196,6 +1342,7 @@ int main(int argc, char *argv[]) {
             population,
             generations
         );
+        exportLegoSimIfRequested();
         
         return 0;
       } catch (const std::exception& e) {
@@ -1216,6 +1363,15 @@ int main(int argc, char *argv[]) {
     }
     if (hasThreads) {
       effectiveArgc -= 2; // Remove --threads and its value from the count
+    }
+    if (legoSimExportArgCount > 0) {
+      effectiveArgc -= legoSimExportArgCount; // Remove --export-legosim and optional value
+    }
+    if (disableLegoSimExport) {
+      effectiveArgc -= 1; // Remove --no-export-legosim
+    }
+    if (hasLegoSimTrafficWindow) {
+      effectiveArgc -= 2; // Remove --legosim-traffic-window-ns and its value
     }
     
     // Check if we have the correct number of arguments
@@ -1255,8 +1411,18 @@ int main(int argc, char *argv[]) {
       std::vector<std::string> cleanArgs;
       for (int i = 0; i < argc; i++) {
         std::string arg = argv[i];
-        if (arg == "--seed" || arg == "--threads") {
+        if (arg == "--seed" || arg == "--threads"
+            || arg == "--legosim-traffic-window-ns") {
           i++; // Skip the seed value
+          continue;
+        }
+        if (arg == "--export-legosim") {
+          if (i + 1 < argc && std::string(argv[i + 1]).rfind("--", 0) != 0) {
+            i++;
+          }
+          continue;
+        }
+        if (arg == "--no-export-legosim") {
           continue;
         }
         if (i > 0) { // Skip program name
@@ -1285,6 +1451,7 @@ int main(int argc, char *argv[]) {
             io_definitions_file, layer_definitions_file, wafer_process_definitions_file,
             assembly_process_definitions_file, test_definitions_file, block_level_netlist_file, 
             block_definitions_file, reach, separation, techs);
+        exportLegoSimIfRequested();
       } else {
         // Single technology partitioning
         std::cout << "[INFO] Partitioning using XML input files" << std::endl;
@@ -1293,6 +1460,7 @@ int main(int argc, char *argv[]) {
             io_definitions_file, layer_definitions_file, wafer_process_definitions_file,
             assembly_process_definitions_file, test_definitions_file, block_level_netlist_file, 
             block_definitions_file, reach, separation, tech);
+        exportLegoSimIfRequested();
       }
     } else if (effectiveArgc == 12) {
       // Evaluation mode
@@ -1300,8 +1468,18 @@ int main(int argc, char *argv[]) {
       std::vector<std::string> cleanArgs;
       for (int i = 0; i < argc; i++) {
         std::string arg = argv[i];
-        if (arg == "--seed" || arg == "--threads") {
+        if (arg == "--seed" || arg == "--threads"
+            || arg == "--legosim-traffic-window-ns") {
           i++; // Skip the seed value
+          continue;
+        }
+        if (arg == "--export-legosim") {
+          if (i + 1 < argc && std::string(argv[i + 1]).rfind("--", 0) != 0) {
+            i++;
+          }
+          continue;
+        }
+        if (arg == "--no-export-legosim") {
           continue;
         }
         if (i > 0) { // Skip program name
@@ -1328,6 +1506,7 @@ int main(int argc, char *argv[]) {
           hypergraph_part, io_definitions_file, layer_definitions_file, wafer_process_definitions_file,
           assembly_process_definitions_file, test_definitions_file, block_level_netlist_file, 
           block_definitions_file, reach, separation, tech);
+      exportLegoSimIfRequested();
     }
     
     return 0;

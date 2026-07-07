@@ -196,6 +196,10 @@ public:
   std::vector<int> KWayCuts(int &num_parts);
   std::vector<int> KWayCutsParallel(int &num_parts);
 
+  // Export the final ChipletPart solution as LegoSim/Popnet collateral.
+  void ExportLegoSimArtifacts(const std::string& output_dir,
+                              double traffic_window_ns = 1.0) const;
+
   /// Get the number of vertices in the hypergraph
   int GetNumVertices() const {
     if (hypergraph_) {

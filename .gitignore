@@ -2,6 +2,7 @@ build/
 build-*/
 runlog/
 testlog/
+results/
 output.map
 *.log
 *.o
@@ -15,4 +16,3 @@ __pycache__/
 ga_timing.log
 ga_generations_timing.log
 ga_operations_timing.log
-
