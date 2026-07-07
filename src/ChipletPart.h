@@ -330,6 +330,9 @@ private:
   std::vector<float> reach_;
   std::vector<float> io_sizes_;
   IRDesign current_design_;
+  std::vector<float> final_aspect_ratios_;
+  std::vector<float> final_x_locations_;
+  std::vector<float> final_y_locations_;
   InputSource input_source_ = InputSource::kLegacyXml;
   void* opendb_block_handle_ = nullptr;
   std::string threedblox_dbx_file_;

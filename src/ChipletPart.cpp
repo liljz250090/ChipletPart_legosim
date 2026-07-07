@@ -125,7 +125,11 @@ void PrintInputFileRows(ChipletPart::InputSource input_source,
 struct LegoSimEdgeStats {
   double bandwidth_gbps = 0.0;
   double utilized_bandwidth_gbps = 0.0;
+  double wirelength_distance = 0.0;
+  int bandwidth_delay = 1;
+  int wirelength_delay = 0;
   int link_delay = 1;
+  bool cross_chiplet = false;
   bool bridge_only = false;
 };
 
@@ -2496,8 +2500,14 @@ void ChipletPart::Partition(
     refiner->SetYLocations(best_result.y_locations);
     std::vector<int> best_partition = best_result.partition;
     auto floor_result = refiner->RunFloorplanner(
-      best_partition, hypergraph_, 10000, 10000, 0.00001);
-      std::string success = std::get<3>(floor_result) ? "Yes" : "No";
+        best_partition, hypergraph_, 10000, 10000, 0.00001);
+    final_aspect_ratios_ = std::get<0>(floor_result);
+    final_x_locations_ = std::get<1>(floor_result);
+    final_y_locations_ = std::get<2>(floor_result);
+    refiner->SetAspectRatios(final_aspect_ratios_);
+    refiner->SetXLocations(final_x_locations_);
+    refiner->SetYLocations(final_y_locations_);
+    std::string success = std::get<3>(floor_result) ? "Yes" : "No";
     Console::Info("Floorplanner results: " + success);
 
     solution_ = best_result.partition;
@@ -3743,16 +3753,60 @@ void ChipletPart::ExportLegoSimArtifacts(const std::string& output_dir,
     max_block_bandwidth = std::max(max_block_bandwidth, stats.bandwidth_gbps);
   }
 
+  std::vector<double> chiplet_x(num_chiplets, 0.0);
+  std::vector<double> chiplet_y(num_chiplets, 0.0);
+  const bool has_floorplan_locations =
+      final_x_locations_.size() >= static_cast<size_t>(num_chiplets)
+      && final_y_locations_.size() >= static_cast<size_t>(num_chiplets);
+  if (has_floorplan_locations) {
+    for (int chiplet = 0; chiplet < num_chiplets; ++chiplet) {
+      chiplet_x[chiplet] = final_x_locations_[chiplet];
+      chiplet_y[chiplet] = final_y_locations_[chiplet];
+    }
+  } else {
+    const int columns =
+        std::max(1, static_cast<int>(std::ceil(std::sqrt(num_chiplets))));
+    for (int chiplet = 0; chiplet < num_chiplets; ++chiplet) {
+      chiplet_x[chiplet] = static_cast<double>(chiplet % columns);
+      chiplet_y[chiplet] = static_cast<double>(chiplet / columns);
+    }
+    Console::Warning(
+        "LegoSim export did not find final floorplan locations; "
+        "using chiplet-id grid distances for block topology weights");
+  }
+
+  double max_block_wirelength = 0.0;
+  for (auto& [key, stats] : block_edge_stats) {
+    const int src_chiplet = solution_[key.first];
+    const int dst_chiplet = solution_[key.second];
+    stats.cross_chiplet = src_chiplet != dst_chiplet;
+    stats.wirelength_distance =
+        std::abs(chiplet_x[src_chiplet] - chiplet_x[dst_chiplet])
+        + std::abs(chiplet_y[src_chiplet] - chiplet_y[dst_chiplet]);
+    max_block_wirelength =
+        std::max(max_block_wirelength, stats.wirelength_distance);
+  }
+
   constexpr int kCrossChipletBlockDelayMultiplier = 2;
+  constexpr int kWirelengthDelayScale = 10;
   int max_block_link_delay = 1;
   for (auto& [key, stats] : block_edge_stats) {
     if (stats.bandwidth_gbps > 0.0 && max_block_bandwidth > 0.0) {
-      stats.link_delay = std::max(
+      stats.bandwidth_delay = std::max(
           1, static_cast<int>(std::ceil(max_block_bandwidth / stats.bandwidth_gbps)));
     } else {
-      stats.link_delay = 1;
+      stats.bandwidth_delay = 1;
     }
-    if (solution_[key.first] != solution_[key.second]) {
+    if (max_block_wirelength > 0.0) {
+      stats.wirelength_delay = static_cast<int>(std::ceil(
+          kWirelengthDelayScale
+          * stats.wirelength_distance / max_block_wirelength));
+    } else {
+      stats.wirelength_delay = 0;
+    }
+    stats.link_delay =
+        std::max(1, stats.bandwidth_delay + stats.wirelength_delay);
+    if (stats.cross_chiplet) {
       stats.link_delay *= kCrossChipletBlockDelayMultiplier;
     }
     max_block_link_delay = std::max(max_block_link_delay, stats.link_delay);
@@ -3768,6 +3822,14 @@ void ChipletPart::ExportLegoSimArtifacts(const std::string& output_dir,
       EdgeKey bridge_key{0, vertex};
       auto& stats = block_edge_stats[bridge_key];
       if (stats.bandwidth_gbps <= 0.0) {
+        const int src_chiplet = solution_[bridge_key.first];
+        const int dst_chiplet = solution_[bridge_key.second];
+        stats.cross_chiplet = src_chiplet != dst_chiplet;
+        stats.wirelength_distance =
+            std::abs(chiplet_x[src_chiplet] - chiplet_x[dst_chiplet])
+            + std::abs(chiplet_y[src_chiplet] - chiplet_y[dst_chiplet]);
+        stats.bandwidth_delay = block_bridge_delay;
+        stats.wirelength_delay = 0;
         stats.link_delay = block_bridge_delay;
         stats.bridge_only = true;
       }
@@ -4070,12 +4132,17 @@ void ChipletPart::ExportLegoSimArtifacts(const std::string& output_dir,
       throw std::runtime_error("Failed to write " + block_edge_file.string());
     }
     edges << "src_block\tdst_block\tsrc_chiplet\tdst_chiplet\tbandwidth_gbps\t"
-          << "utilized_bandwidth_gbps\tpopnet_weight\tbridge_only\n";
+          << "utilized_bandwidth_gbps\twirelength_distance\tbandwidth_weight\t"
+          << "wirelength_weight\tcross_chiplet\tpopnet_weight\tbridge_only\n";
     for (const auto& [key, stats] : block_edge_stats) {
       edges << key.first << "\t" << key.second << "\t"
             << solution_[key.first] << "\t" << solution_[key.second] << "\t"
             << stats.bandwidth_gbps << "\t"
             << stats.utilized_bandwidth_gbps << "\t"
+            << stats.wirelength_distance << "\t"
+            << stats.bandwidth_delay << "\t"
+            << stats.wirelength_delay << "\t"
+            << (stats.cross_chiplet ? "yes" : "no") << "\t"
             << stats.link_delay << "\t"
             << (stats.bridge_only ? "yes" : "no") << "\n";
     }
@@ -4152,8 +4219,12 @@ void ChipletPart::ExportLegoSimArtifacts(const std::string& output_dir,
               "for LegoSim compatibility.\n";
     readme << "- The traffic window used here is `" << traffic_window_ns << "` ns.\n\n";
     readme << "Topology conversion:\n\n";
-    readme << "- Popnet edge `weight` is a delay-like value inversely scaled from aggregated "
-              "block-level bandwidth.\n";
+    readme << "- Popnet block edge `weight` combines inverse block-level bandwidth, "
+              "floorplan-derived Manhattan wirelength, and a cross-chiplet "
+              "multiplier.\n";
+    readme << "- `block_edges.tsv` records `wirelength_distance`, `bandwidth_weight`, "
+              "`wirelength_weight`, `cross_chiplet`, and final `popnet_weight` "
+              "for every block-level edge.\n";
     readme << "- High-delay bridge edges may be inserted only to keep the graph connected for "
               "Popnet routing-table construction.\n\n";
     readme << "Build and run LegoSim:\n\n";
