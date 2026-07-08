@@ -57,6 +57,20 @@ Git
 make or ninja
 ```
 
+如果希望用系统包管理器安装依赖，可以先预览安装命令：
+
+```bash
+./scripts/install_chipletpart_deps.sh
+```
+
+确认命令没问题后再实际执行：
+
+```bash
+./scripts/install_chipletpart_deps.sh --execute --yes
+```
+
+这个脚本只调用系统包管理器，支持 `apt-get`、`dnf`、`yum`、`pacman` 和 `brew`。如果当前用户没有系统安装权限，可以把脚本打印出的命令交给有权限的账号执行。
+
 检查当前环境、初始化子模块并编译：
 
 ```bash
