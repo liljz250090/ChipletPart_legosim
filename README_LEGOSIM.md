@@ -183,25 +183,99 @@ delayInfo.block.txt       # Popnet block-level delay 输出
 delayInfo.txt             # 映射回 chiplet id 的 delay 输出
 ```
 
-## 运行 LegoSim
+## 修改 LegoSim 调用位置
+
+`run_legosim.sh` 需要知道 LegoSim 仓库根目录，也就是包含这些路径的目录：
+
+```text
+interchiplet/bin/interchiplet
+gem5/build/X86/gem5.opt
+popnet_chiplet/build/popnet
+```
+
+默认生成的 `run_legosim.sh` 使用：
+
+```text
+/home/jzli/project/Chiplet_Heterogeneous_newVersion
+```
+
+如果只是本次运行临时指定 LegoSim 位置，推荐直接设置 `SIMULATOR_ROOT`：
+
+```bash
+cd /home/jzli/project/ChipletPart_legosim/results/ga100_legosim
+SIMULATOR_ROOT=/path/to/Chiplet_Heterogeneous_newVersion ./run_legosim.sh
+```
+
+如果想修改某个已经生成的输出目录，编辑该目录下的 `run_legosim.sh`：
+
+```bash
+vim /home/jzli/project/ChipletPart_legosim/results/ga100_legosim/run_legosim.sh
+```
+
+把这一行改成你的 LegoSim 仓库路径：
+
+```bash
+DEFAULT_SIMULATOR_ROOT="/path/to/Chiplet_Heterogeneous_newVersion"
+```
+
+如果想修改以后所有新生成目录里的默认路径，修改 ChipletPart 生成脚本的位置：
+
+```text
+src/ChipletPart.cpp
+```
+
+搜索并修改：
+
+```text
+DEFAULT_SIMULATOR_ROOT="/home/jzli/project/Chiplet_Heterogeneous_newVersion"
+```
+
+修改后重新编译 ChipletPart，再重新生成 LegoSim 输出目录。
+
+## 生成输出后运行 LegoSim
 
 运行前请确保当前 shell 已经具备 LegoSim、gem5、interchiplet 和 Popnet 所需依赖。
+
+先用 ChipletPart 生成 LegoSim 输入目录：
+
+```bash
+cd /home/jzli/project/ChipletPart_legosim
+./run_chiplet_test.sh ga100 --seed 1 --3dblox --legosim
+```
+
+生成结果会覆盖写入：
+
+```text
+results/ga100_legosim/
+```
+
+进入输出目录并启动仿真：
 
 ```bash
 cd /home/jzli/project/ChipletPart_legosim/results/ga100_legosim
 ./run_legosim.sh
 ```
 
-`run_legosim.sh` 默认使用：
-
-```text
-/home/jzli/project/Chiplet_Heterogeneous_newVersion
-```
-
-如果 LegoSim 在别的位置：
+如果 LegoSim 仓库不在默认位置：
 
 ```bash
 SIMULATOR_ROOT=/path/to/Chiplet_Heterogeneous_newVersion ./run_legosim.sh
+```
+
+`run_legosim.sh` 会先执行 `make` 编译生成的 synthetic workload，然后调用：
+
+```text
+$SIMULATOR_ROOT/interchiplet/bin/interchiplet gem5_popnet.yml --cwd <输出目录>
+```
+
+仿真日志和结果会写回当前输出目录，例如：
+
+```text
+proc_r1_p1_t*/gem5.*.log
+proc_r1_p2_t0/popnet.log
+proc_r1_p2_t0/popnet_0.log
+delayInfo.txt
+delayInfo.block.txt
 ```
 
 ## 查看实验指标
