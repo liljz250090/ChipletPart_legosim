@@ -1,5 +1,8 @@
 # ChipletPart_legosim
 
+For the LegoSim export workflow, environment setup, generated files, and Popnet
+weight model, see [README_LEGOSIM.md](README_LEGOSIM.md).
+
 **ChipletPart** is an efficient framework designed for partitioning driven by chiplets technology. It aids in organizing and optimizing the design and layout of chiplets within a semiconductor module.
 An example of an SoC netlist is the [Mempool testcase](https://github.com/bodhi91/ChipletPart/blob/main/MempoolGroupFromMempoolPaper.png). 
 
