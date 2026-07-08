@@ -204,40 +204,6 @@ cd /home/jzli/project/ChipletPart_legosim/results/ga100_legosim
 SIMULATOR_ROOT=/path/to/Chiplet_Heterogeneous_newVersion ./run_legosim.sh
 ```
 
-## Popnet 边权生成逻辑
-
-`block_topology.gv` 中的边权 `weight` 由三部分组成：
-
-```text
-popnet_weight = (bandwidth_weight + wirelength_weight) * cross_chiplet_factor
-```
-
-其中：
-
-```text
-bandwidth_weight = ceil(max_block_bandwidth / edge_bandwidth)
-wirelength_weight = ceil(10 * edge_wirelength / max_wirelength)
-cross_chiplet_factor = 2 if src_chiplet != dst_chiplet else 1
-```
-
-线长估计当前使用 chiplet/partition 的 floorplan 坐标：
-
-```text
-edge_wirelength =
-  abs(chiplet_x[src_chiplet] - chiplet_x[dst_chiplet])
-+ abs(chiplet_y[src_chiplet] - chiplet_y[dst_chiplet])
-```
-
-因此现在不是精确 block 内部布线长度，而是用 block 所属 chiplet 的 floorplan 位置做近似。`block_edges.tsv` 会记录每条边的分解：
-
-```text
-wirelength_distance
-bandwidth_weight
-wirelength_weight
-cross_chiplet
-popnet_weight
-```
-
 ## 查看实验指标
 
 主要看这些文件：
@@ -291,7 +257,3 @@ SIMULATOR_ROOT=/home/jzli/project/Chiplet_Heterogeneous_newVersion ./run_legosim
 ```bash
 git submodule update --init --recursive
 ```
-
-### 不想上传 results
-
-`results/` 已经在 `.gitignore` 中，默认不会被提交。
