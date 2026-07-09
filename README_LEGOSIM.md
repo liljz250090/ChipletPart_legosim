@@ -42,7 +42,24 @@ git submodule update --init --recursive
 
 ## 环境配置
 
-项目不需要 sudo。这里提供的脚本不会创建环境，也不会安装依赖；它只检查当前 shell 是否已经具备编译条件、初始化子模块，并可选执行编译。
+项目不需要 sudo。推荐先用脚本创建独立 conda 环境并安装依赖：
+
+```bash
+./scripts/create_conda_env.sh --name chipletpart_legosim --build --jobs 16
+```
+
+后续重新进入环境：
+
+```bash
+source /opt/conda/miniforge3/etc/profile.d/conda.sh
+conda activate chipletpart_legosim
+```
+
+如果 conda 安装在其他位置，可以指定 `CONDA_SH`：
+
+```bash
+CONDA_SH=/path/to/conda.sh ./scripts/create_conda_env.sh --build
+```
 
 主要依赖如下：
 
@@ -57,7 +74,7 @@ Git
 make or ninja
 ```
 
-如果希望用系统包管理器安装依赖，可以先预览安装命令：
+如果不使用 conda，也可以用系统包管理器安装依赖。先预览安装命令：
 
 ```bash
 ./scripts/install_chipletpart_deps.sh
@@ -71,7 +88,7 @@ make or ninja
 
 这个脚本只调用系统包管理器，支持 `apt-get`、`dnf`、`yum`、`pacman` 和 `brew`。如果当前用户没有系统安装权限，可以把脚本打印出的命令交给有权限的账号执行。
 
-检查当前环境、初始化子模块并编译：
+如果依赖已经装好，只需要检查当前环境、初始化子模块并编译：
 
 ```bash
 ./scripts/setup_chipletpart_env.sh --build
