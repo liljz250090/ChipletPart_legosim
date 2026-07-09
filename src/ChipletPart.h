@@ -248,6 +248,14 @@ private:
                          const std::string& chiplet_blocks_file);
   void WritePartitionArtifacts(const std::string& chiplet_netlist_file,
                                int num_parts);
+  void RunFinalFloorplanForSolution(
+      const std::string& chiplet_io_file,
+      const std::string& chiplet_layer_file,
+      const std::string& chiplet_wafer_process_file,
+      const std::string& chiplet_assembly_process_file,
+      const std::string& chiplet_test_file,
+      const std::string& chiplet_netlist_file,
+      const std::string& chiplet_blocks_file);
   void WriteSolutionToOpenDBIfNeeded();
   // Helper method that converts XML files to hypergraph representation
   void ConvertXMLToHypergraph(const std::string& netlist_file,

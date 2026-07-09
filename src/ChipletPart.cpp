@@ -1451,6 +1451,13 @@ void ChipletPart::GeneticTechPart(
   // Store the solution in our class for further use if needed
   solution_ = solution.partition;
   num_parts_ = solution.num_partitions;
+  RunFinalFloorplanForSolution(chiplet_io_file,
+                               chiplet_layer_file,
+                               chiplet_wafer_process_file,
+                               chiplet_assembly_process_file,
+                               chiplet_test_file,
+                               chiplet_netlist_file,
+                               chiplet_blocks_file);
   WriteSolutionToOpenDBIfNeeded();
   
   Console::Success("Enhanced genetic algorithm completed successfully!");
@@ -3578,6 +3585,64 @@ void ChipletPart::WritePartitionArtifacts(const std::string& chiplet_netlist_fil
   }
 }
 
+void ChipletPart::RunFinalFloorplanForSolution(
+    const std::string& chiplet_io_file,
+    const std::string& chiplet_layer_file,
+    const std::string& chiplet_wafer_process_file,
+    const std::string& chiplet_assembly_process_file,
+    const std::string& chiplet_test_file,
+    const std::string& chiplet_netlist_file,
+    const std::string& chiplet_blocks_file)
+{
+  if (solution_.empty()) {
+    Console::Warning("Skipping final floorplan because no partition solution is available");
+    return;
+  }
+  if (hypergraph_ == nullptr) {
+    Console::Warning("Skipping final floorplan because hypergraph is not available");
+    return;
+  }
+  if (num_parts_ <= 0) {
+    Console::Warning("Skipping final floorplan because num_parts is invalid");
+    return;
+  }
+
+  try {
+    Console::Info("Running final floorplanner for LegoSim topology coordinates");
+    std::vector<int> reaches(hypergraph_->GetNumHyperedges(), 1);
+    auto refiner = std::make_shared<chiplet::ChipletRefiner>(
+        num_parts_,
+        1,
+        std::max(1, static_cast<int>(hypergraph_->GetNumVertices() * 0.05)),
+        reaches,
+        true,
+        chiplet_io_file,
+        chiplet_layer_file,
+        chiplet_wafer_process_file,
+        chiplet_assembly_process_file,
+        chiplet_test_file,
+        chiplet_netlist_file,
+        chiplet_blocks_file);
+
+    auto floor_result = refiner->RunFloorplanner(
+        solution_, hypergraph_, 10000, 10000, 0.00001);
+    final_aspect_ratios_ = std::get<0>(floor_result);
+    final_x_locations_ = std::get<1>(floor_result);
+    final_y_locations_ = std::get<2>(floor_result);
+    refiner->SetAspectRatios(final_aspect_ratios_);
+    refiner->SetXLocations(final_x_locations_);
+    refiner->SetYLocations(final_y_locations_);
+
+    if (std::get<3>(floor_result)) {
+      Console::Success("Final floorplanner coordinates are available for LegoSim export");
+    } else {
+      Console::Warning("Final floorplanner ran but reported an infeasible layout");
+    }
+  } catch (const std::exception& e) {
+    Console::Warning("Final floorplanner failed: " + std::string(e.what()));
+  }
+}
+
 void ChipletPart::ExportLegoSimArtifacts(const std::string& output_dir,
                                          double traffic_window_ns) const
 {
@@ -4549,6 +4614,13 @@ void ChipletPart::CanonicalGeneticTechPart(
     // Store the solution in our class
     solution_ = solution.partition;
     num_parts_ = solution.tech_nodes.size();
+    RunFinalFloorplanForSolution(chiplet_io_file,
+                                 chiplet_layer_file,
+                                 chiplet_wafer_process_file,
+                                 chiplet_assembly_process_file,
+                                 chiplet_test_file,
+                                 chiplet_netlist_file,
+                                 chiplet_blocks_file);
     WriteSolutionToOpenDBIfNeeded();
     
     // Calculate total runtime
@@ -5515,6 +5587,19 @@ std::tuple<float, std::vector<int>, std::vector<std::string>> ChipletPart::Enume
         }
         part_out.close();
         Console::Success("Best partition saved to " + partition_file);
+    }
+
+    if (!best_partition.empty()) {
+        solution_ = best_partition;
+        num_parts_ = best_num_parts;
+        RunFinalFloorplanForSolution(chiplet_io_file,
+                                     chiplet_layer_file,
+                                     chiplet_wafer_process_file,
+                                     chiplet_assembly_process_file,
+                                     chiplet_test_file,
+                                     chiplet_netlist_file,
+                                     chiplet_blocks_file);
+        WriteSolutionToOpenDBIfNeeded();
     }
     
     // Return the best solution found
