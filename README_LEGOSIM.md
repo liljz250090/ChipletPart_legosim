@@ -239,7 +239,7 @@ DEFAULT_SIMULATOR_ROOT="/home/jzli/project/Chiplet_Heterogeneous_newVersion"
 
 ```bash
 cd /home/jzli/project/ChipletPart_legosim
-./run_chiplet_test.sh ga100 --seed 1 --3dblox --legosim
+./run_chiplet_test.sh ga100 --seed 1 --3dblox --legosim --threads 16
 ```
 
 生成结果会覆盖写入：
