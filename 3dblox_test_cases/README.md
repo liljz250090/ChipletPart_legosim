@@ -5,7 +5,6 @@ This directory collects self-contained 3dblox-style conversions of ChipletPart t
 ## Per-testcase directories
 - `ga100_3dblox/`
 - `epyc7282_3dblox/`
-- `mempool_group_3dblox/`
 - `48_1_14_4_1600_1600_3dblox/`
 - `48_2_14_4_1600_1600_3dblox/`
 - `48_4_14_4_1600_1600_3dblox/`

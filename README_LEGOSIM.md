@@ -126,7 +126,6 @@ build/bin/chipletPart
 ```text
 ga100
 epyc7282
-mempool_group
 48_1_14_4_1600_1600
 48_2_14_4_1600_1600
 48_4_14_4_1600_1600
